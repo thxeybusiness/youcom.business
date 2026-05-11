@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Services — You'Com Studio B2B</title>
+<meta name="description" content="Les 7 services You'Com : SaaS sur-mesure, Communication, Graphisme, Montage Vidéo, Acquisition, Réseaux sociaux, Automatisation IA." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#fff;--bg-soft:#f4f9ff;--bg-blue:#e9f2ff;--bg-paper:#f7faff;
+  --ink:#0a1a2f;--ink-2:#1a2942;--muted:#5b6b85;
+  --line:rgba(10,26,47,.08);--line-strong:rgba(10,26,47,.16);
+  --blue:#2563eb;--blue-2:#3b82f6;--blue-3:#60a5fa;--sky:#38bdf8;--sky-2:#0ea5e9;--ice:#dbeafe;
+  --radius:22px;--ease:cubic-bezier(.2,.7,.2,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--bg);color:var(--ink);font-family:"Inter",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;-webkit-font-smoothing:antialiased}
+html{scroll-behavior:smooth}
+body{overflow-x:hidden;line-height:1.5}
+a{color:inherit;text-decoration:none}
+img,svg{display:block;max-width:100%}
+button{font:inherit;border:none;cursor:pointer;background:none;color:inherit}
+.serif{font-family:"Instrument Serif",serif;font-weight:400;font-style:italic}
+::selection{background:var(--blue);color:#fff}
+
+/* ---------- LOGO ---------- */
+.logo{display:inline-flex;align-items:center;gap:10px;font-weight:700;line-height:1}
+.logo-mark{width:38px;height:38px;border-radius:11px;background:linear-gradient(135deg,var(--blue),var(--blue-3));display:flex;align-items:center;justify-content:center;position:relative;flex-shrink:0;box-shadow:0 8px 20px -6px rgba(37,99,235,.45)}
+.logo-mark svg{width:62%;height:62%}
+.logo-mark svg path{fill:#fff}
+.logo-mark .dot-apos{position:absolute;top:6px;right:6px;width:6px;height:6px;border-radius:50%;background:#fff;animation:pulseDot 2.4s ease-in-out infinite;box-shadow:0 0 0 0 rgba(255,255,255,.6)}
+@keyframes pulseDot{50%{box-shadow:0 0 0 6px rgba(255,255,255,0)}}
+.logo-text{font-size:20px;letter-spacing:-.02em;color:var(--ink)}
+.logo-text .apos{color:var(--blue);font-weight:800}
+.logo.size-lg .logo-mark{width:54px;height:54px;border-radius:16px}
+.logo.size-lg .logo-text{font-size:30px}
+.logo.inv .logo-text{color:#fff}
+
+/* ---------- NAV ---------- */
+.nav{position:fixed;top:18px;left:50%;transform:translateX(-50%);z-index:80;display:inline-flex;align-items:center;gap:6px;padding:6px 6px 6px 16px;border:1px solid var(--line);background:rgba(255,255,255,.92);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-radius:999px;box-shadow:0 14px 50px -8px rgba(10,26,47,.14);height:54px}
+.nav .logo{padding:0 14px 0 0;height:42px;display:inline-flex;align-items:center;border-right:1px solid var(--line);margin-right:8px}
+.nav ul{display:inline-flex;align-items:center;gap:2px;list-style:none;height:100%}
+.nav ul li{display:inline-flex;align-items:center;height:100%}
+.nav ul a{padding:10px 16px;border-radius:999px;font-size:14px;font-weight:500;color:var(--ink-2);transition:.25s var(--ease)}
+.nav ul a:hover,.nav ul a.is-active{background:var(--bg-blue);color:var(--blue)}
+.nav .cta{margin-left:8px;padding:10px 18px;border-radius:999px;background:var(--ink);color:#fff;font-size:13px;font-weight:600;height:42px;display:inline-flex;align-items:center;letter-spacing:-.01em;transition:.25s var(--ease)}
+.nav .cta:hover{background:var(--blue);transform:translateY(-1px);box-shadow:0 10px 24px -6px rgba(37,99,235,.5)}
+@media (max-width:980px){.nav ul{display:none}.nav .logo{border-right:none;margin-right:0;padding-right:8px}.nav{top:10px;height:50px}}
+
+/* ---------- PAGE HEADER ---------- */
+.page-head{padding:160px 6vw 80px;background:linear-gradient(180deg,var(--bg-soft) 0%,#fff 80%);position:relative;overflow:hidden;text-align:center}
+.page-head::before{content:"";position:absolute;top:-100px;left:50%;transform:translateX(-50%);width:780px;height:780px;border-radius:50%;background:radial-gradient(circle,rgba(56,189,248,.18),transparent 65%);filter:blur(40px);pointer-events:none}
+.page-head .pill{display:inline-block;padding:8px 16px;border:1px solid var(--blue);color:var(--blue);font-size:12px;font-weight:600;border-radius:999px;letter-spacing:.04em;text-transform:uppercase;background:#fff;margin-bottom:24px;position:relative;z-index:2}
+.page-head h1{position:relative;z-index:2;font-size:clamp(48px,7vw,108px);font-weight:800;letter-spacing:-.045em;line-height:1;color:var(--ink);max-width:1100px;margin:0 auto}
+.page-head h1 em{font-family:"Instrument Serif",serif;font-style:italic;font-weight:400;background:linear-gradient(135deg,var(--blue),var(--sky));-webkit-background-clip:text;background-clip:text;color:transparent}
+.page-head p.lead{position:relative;z-index:2;max-width:680px;margin:32px auto 0;font-size:clamp(15px,1.2vw,18px);color:var(--ink-2);line-height:1.6}
+
+/* ---------- SERVICES NAV (chips) ---------- */
+.svc-chips{position:sticky;top:90px;z-index:50;display:flex;justify-content:center;gap:8px;padding:14px 6vw;background:rgba(255,255,255,.85);backdrop-filter:blur(20px);border-bottom:1px solid var(--line);flex-wrap:wrap}
+.svc-chips a{padding:8px 16px;border-radius:999px;font-size:13px;font-weight:600;color:var(--ink-2);border:1px solid var(--line);transition:.22s var(--ease);background:#fff;display:inline-flex;align-items:center;gap:8px}
+.svc-chips a span{font-size:10px;color:var(--blue);font-weight:700}
+.svc-chips a:hover{background:var(--blue);color:#fff;border-color:var(--blue);transform:translateY(-2px)}
+.svc-chips a:hover span{color:rgba(255,255,255,.7)}
+@media (max-width:780px){.svc-chips{top:80px;gap:6px;padding:10px 4vw}.svc-chips a{font-size:12px;padding:7px 12px}}
+
+/* ---------- SERVICE BLOCK ---------- */
+.svc{padding:120px 6vw;border-bottom:1px solid var(--line);position:relative;overflow:hidden}
+.svc:nth-child(even){background:var(--bg-soft)}
+.svc .grid{display:grid;grid-template-columns:1.05fr 1fr;gap:80px;align-items:center;max-width:1280px;margin:0 auto;position:relative;z-index:2}
+.svc .copy .num{font-family:"Instrument Serif",serif;font-style:italic;font-size:clamp(120px,14vw,200px);line-height:.85;color:transparent;-webkit-text-stroke:1.5px var(--blue);opacity:.18;letter-spacing:-.04em;margin-bottom:12px;display:block}
+.svc .copy .pill{display:inline-block;padding:6px 14px;background:var(--ice);color:var(--blue);font-size:11px;font-weight:700;border-radius:999px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:18px}
+.svc .copy h2{font-size:clamp(40px,5.5vw,72px);font-weight:800;letter-spacing:-.04em;line-height:1.02;color:var(--ink);margin-bottom:24px}
+.svc .copy h2 em{font-family:"Instrument Serif",serif;font-style:italic;font-weight:400;background:linear-gradient(135deg,var(--blue),var(--sky));-webkit-background-clip:text;background-clip:text;color:transparent}
+.svc .copy .desc{font-size:17px;color:var(--ink-2);line-height:1.65;max-width:560px;margin-bottom:32px}
+.svc .copy ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:36px}
+.svc .copy ul li{font-size:14px;color:var(--ink-2);padding-left:24px;position:relative;line-height:1.5}
+.svc .copy ul li::before{content:"";position:absolute;left:0;top:7px;width:14px;height:14px;border-radius:50%;background:var(--ice);border:2px solid var(--blue)}
+.svc .copy .actions{display:flex;gap:12px;flex-wrap:wrap}
+.svc .copy .btn{padding:14px 24px;border-radius:999px;font-size:14px;font-weight:600;display:inline-flex;align-items:center;gap:8px;transition:.25s var(--ease)}
+.svc .copy .btn.primary{background:var(--ink);color:#fff}
+.svc .copy .btn.primary:hover{background:var(--blue);transform:translateY(-2px);box-shadow:0 14px 30px -8px rgba(37,99,235,.5)}
+.svc .copy .btn.ghost{background:#fff;color:var(--ink);border:1px solid var(--line-strong)}
+.svc .copy .btn.ghost:hover{background:var(--ink);color:#fff}
+
+/* Visual side */
+.svc .visual{position:relative;height:520px;display:flex;align-items:center;justify-content:center}
+.svc .visual .vbox{position:relative;width:100%;height:100%;border-radius:28px;background:linear-gradient(160deg,#fff,var(--bg-soft));border:1px solid var(--line);overflow:hidden;box-shadow:0 30px 80px -20px rgba(10,26,47,.18)}
+.svc.flip .grid{grid-template-columns:1fr 1.05fr}
+.svc.flip .visual{order:-1}
+
+@media (max-width:980px){.svc .grid{grid-template-columns:1fr;gap:48px}.svc .visual{height:380px}.svc.flip .visual{order:0}.svc .copy ul{grid-template-columns:1fr}}
+
+/* ---------- VISUAL 1 — SaaS Dashboard mockup ---------- */
+.v-saas{position:absolute;inset:30px;border-radius:14px;background:#fff;border:1px solid var(--line);overflow:hidden;box-shadow:0 20px 60px -10px rgba(37,99,235,.2)}
+.v-saas .chrome{display:flex;gap:5px;padding:9px 12px;background:#f7f9fc;border-bottom:1px solid var(--line)}
+.v-saas .chrome i{width:9px;height:9px;border-radius:50%;background:#ddd;display:block}
+.v-saas .chrome i:nth-child(1){background:#ff6058}
+.v-saas .chrome i:nth-child(2){background:#ffbd2e}
+.v-saas .chrome i:nth-child(3){background:#27ca40}
+.v-saas .body{padding:18px;display:grid;grid-template-columns:90px 1fr;gap:16px;height:calc(100% - 32px)}
+.v-saas .side{display:flex;flex-direction:column;gap:8px}
+.v-saas .side .it{height:14px;background:var(--bg-soft);border-radius:6px}
+.v-saas .side .it.active{background:var(--blue);width:80%}
+.v-saas .main{display:flex;flex-direction:column;gap:14px}
+.v-saas .kpis{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px}
+.v-saas .kpi{padding:10px;background:var(--bg-soft);border-radius:10px;border:1px solid var(--line)}
+.v-saas .kpi .lab{font-size:9px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;font-weight:600}
+.v-saas .kpi .val{font-size:18px;font-weight:700;color:var(--ink);margin-top:4px}
+.v-saas .kpi .val .up{color:#10b981;font-size:10px;margin-left:4px}
+.v-saas .chart{flex:1;background:var(--bg-soft);border-radius:10px;border:1px solid var(--line);position:relative;overflow:hidden;min-height:140px}
+.v-saas .chart svg{position:absolute;inset:0;width:100%;height:100%}
+.v-saas .chart svg path{fill:none;stroke:var(--blue);stroke-width:2;stroke-dasharray:600;stroke-dashoffset:600;animation:dashAni 3s var(--ease) forwards 0.4s}
+.v-saas .chart svg path.s2{stroke:var(--sky);animation-delay:0.7s}
+@keyframes dashAni{to{stroke-dashoffset:0}}
+
+/* ---------- VISUAL 2 — Communication broadcast ---------- */
+.v-comm{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;perspective:1000px}
+.v-comm .center{width:120px;height:120px;border-radius:30px;background:linear-gradient(135deg,var(--blue),var(--sky));display:flex;align-items:center;justify-content:center;box-shadow:0 0 60px rgba(56,189,248,.4);animation:commPulse 3s ease-in-out infinite;position:relative;z-index:3}
+.v-comm .center svg{width:56px;height:56px;stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round}
+@keyframes commPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
+.v-comm .ring{position:absolute;border:2px solid rgba(56,189,248,.4);border-radius:50%;animation:ringExp 3s ease-out infinite}
+.v-comm .ring:nth-child(2){animation-delay:1s}
+.v-comm .ring:nth-child(3){animation-delay:2s}
+@keyframes ringExp{0%{width:120px;height:120px;opacity:1}100%{width:420px;height:420px;opacity:0}}
+.v-comm .channel{position:absolute;width:54px;height:54px;border-radius:14px;background:#fff;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;box-shadow:0 12px 30px -8px rgba(10,26,47,.18);font-size:10px;font-weight:700;color:var(--blue);letter-spacing:.06em;animation:chFloat 4s ease-in-out infinite}
+.v-comm .channel.c1{top:8%;left:12%;animation-delay:0s}
+.v-comm .channel.c2{top:14%;right:10%;animation-delay:.5s}
+.v-comm .channel.c3{bottom:18%;left:8%;animation-delay:1s}
+.v-comm .channel.c4{bottom:10%;right:14%;animation-delay:1.5s}
+.v-comm .channel.c5{top:50%;left:2%;animation-delay:2s}
+.v-comm .channel.c6{top:52%;right:2%;animation-delay:2.5s}
+@keyframes chFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+
+/* ---------- VISUAL 3 — Graphisme color palette ---------- */
+.v-graph{position:absolute;inset:30px;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.v-graph .swatch{border-radius:14px;display:flex;align-items:flex-end;padding:14px;color:#fff;font-size:11px;font-weight:600;letter-spacing:.04em;box-shadow:0 14px 30px -10px rgba(10,26,47,.2);animation:swPop .8s var(--ease) backwards}
+.v-graph .swatch:nth-child(1){background:linear-gradient(135deg,#2563eb,#60a5fa);animation-delay:.1s}
+.v-graph .swatch:nth-child(2){background:linear-gradient(135deg,#0ea5e9,#7dd3fc);animation-delay:.2s}
+.v-graph .swatch:nth-child(3){background:linear-gradient(135deg,#1e293b,#475569);animation-delay:.3s}
+.v-graph .swatch:nth-child(4){background:linear-gradient(135deg,#fb923c,#fbbf24);animation-delay:.4s}
+@keyframes swPop{from{opacity:0;transform:scale(.85)}to{opacity:1;transform:scale(1)}}
+
+/* ---------- VISUAL 4 — Vidéo timeline ---------- */
+.v-video{position:absolute;inset:30px;background:#0a1a2f;border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
+.v-video .preview{flex:1;background:linear-gradient(135deg,#1e3a8a,#0ea5e9);position:relative;display:flex;align-items:center;justify-content:center}
+.v-video .play{width:70px;height:70px;border-radius:50%;background:rgba(255,255,255,.2);backdrop-filter:blur(10px);display:flex;align-items:center;justify-content:center;border:2px solid #fff;animation:playPulse 2s ease-in-out infinite}
+.v-video .play::after{content:"";width:0;height:0;border-left:18px solid #fff;border-top:11px solid transparent;border-bottom:11px solid transparent;margin-left:5px}
+@keyframes playPulse{0%,100%{transform:scale(1);box-shadow:0 0 0 0 rgba(255,255,255,.5)}50%{transform:scale(1.05);box-shadow:0 0 0 16px rgba(255,255,255,0)}}
+.v-video .timeline{height:80px;background:#0f1f3a;border-top:1px solid rgba(255,255,255,.1);padding:14px;display:flex;flex-direction:column;gap:8px}
+.v-video .track{height:18px;border-radius:4px;background:rgba(255,255,255,.06);position:relative;overflow:hidden}
+.v-video .track .clip{position:absolute;top:2px;bottom:2px;border-radius:3px}
+.v-video .track .clip.c1{left:5%;width:35%;background:linear-gradient(90deg,#3b82f6,#60a5fa)}
+.v-video .track .clip.c2{left:42%;width:25%;background:linear-gradient(90deg,#0ea5e9,#7dd3fc)}
+.v-video .track .clip.c3{left:70%;width:25%;background:linear-gradient(90deg,#fb923c,#fbbf24)}
+.v-video .play-head{position:absolute;top:0;bottom:0;width:2px;background:#fff;left:30%;animation:playhead 4s linear infinite}
+@keyframes playhead{0%{left:5%}100%{left:95%}}
+
+/* ---------- VISUAL 5 — Acquisition funnel ---------- */
+.v-acq{position:absolute;inset:30px;display:flex;flex-direction:column;justify-content:center;gap:14px}
+.v-acq .funnel{height:50px;border-radius:14px;display:flex;align-items:center;padding:0 24px;color:#fff;font-weight:600;font-size:13px;justify-content:space-between;box-shadow:0 12px 30px -10px rgba(10,26,47,.2);animation:funFlow 1s var(--ease) backwards}
+.v-acq .funnel:nth-child(1){width:100%;background:linear-gradient(90deg,#2563eb,#60a5fa);animation-delay:.1s}
+.v-acq .funnel:nth-child(2){width:80%;background:linear-gradient(90deg,#3b82f6,#7dd3fc);animation-delay:.25s;align-self:center}
+.v-acq .funnel:nth-child(3){width:60%;background:linear-gradient(90deg,#0ea5e9,#a5f3fc);animation-delay:.4s;align-self:center}
+.v-acq .funnel:nth-child(4){width:40%;background:linear-gradient(90deg,#0a1a2f,#1e3a8a);animation-delay:.55s;align-self:center}
+@keyframes funFlow{from{opacity:0;transform:translateY(20px) scale(.95)}to{opacity:1;transform:translateY(0) scale(1)}}
+.v-acq .funnel .pct{font-size:11px;opacity:.85}
+
+/* ---------- VISUAL 6 — Réseaux sociaux feed ---------- */
+.v-social{position:absolute;inset:30px;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.v-social .post{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px;display:flex;flex-direction:column;gap:10px;box-shadow:0 14px 30px -10px rgba(10,26,47,.12);animation:pIn .6s var(--ease) backwards}
+.v-social .post:nth-child(1){animation-delay:.1s}
+.v-social .post:nth-child(2){animation-delay:.2s}
+.v-social .post:nth-child(3){animation-delay:.3s}
+.v-social .post:nth-child(4){animation-delay:.4s}
+@keyframes pIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.v-social .post .head{display:flex;align-items:center;gap:8px}
+.v-social .post .av{width:26px;height:26px;border-radius:50%;background:linear-gradient(135deg,var(--blue),var(--sky))}
+.v-social .post .name{font-size:11px;font-weight:700;color:var(--ink)}
+.v-social .post .img{height:80px;border-radius:8px;background:linear-gradient(135deg,var(--bg-soft),var(--ice))}
+.v-social .post .lines{display:flex;flex-direction:column;gap:4px}
+.v-social .post .lines span{height:5px;background:var(--bg-soft);border-radius:3px}
+.v-social .post .lines span:nth-child(2){width:70%}
+.v-social .post .stats{display:flex;gap:10px;font-size:9px;color:var(--muted);font-weight:600}
+
+/* ---------- VISUAL 7 — IA neural ---------- */
+.v-ia{position:absolute;inset:30px;display:flex;align-items:center;justify-content:center}
+.v-ia svg{width:100%;height:100%}
+.v-ia .node{fill:#fff;stroke:var(--blue);stroke-width:2}
+.v-ia .node-c{fill:var(--blue)}
+.v-ia .link{stroke:var(--blue);stroke-width:1.2;opacity:.3;stroke-dasharray:4 3;animation:linkAni 3s linear infinite}
+@keyframes linkAni{to{stroke-dashoffset:-21}}
+.v-ia .pulse{animation:nodePulse 2s ease-in-out infinite}
+@keyframes nodePulse{0%,100%{r:6}50%{r:9}}
+
+/* ---------- PROCESS ---------- */
+.process{padding:140px 6vw;background:var(--ink);color:#fff}
+.process .top{max-width:1280px;margin:0 auto 80px;text-align:center}
+.process .top .pill{display:inline-block;padding:6px 14px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);font-size:11px;font-weight:700;border-radius:999px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:20px}
+.process .top h2{font-size:clamp(40px,5.5vw,80px);font-weight:800;letter-spacing:-.04em;line-height:1.02}
+.process .top h2 em{font-family:"Instrument Serif",serif;font-style:italic;font-weight:400;background:linear-gradient(135deg,var(--sky),#a5f3fc);-webkit-background-clip:text;background-clip:text;color:transparent}
+.process .timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;max-width:1280px;margin:0 auto;position:relative}
+.process .timeline::before{content:"";position:absolute;top:36px;left:5%;right:5%;height:1px;background:linear-gradient(90deg,transparent,var(--sky),var(--sky),transparent)}
+.process .step{position:relative;padding-top:80px}
+.process .step .dot{position:absolute;top:24px;left:0;width:24px;height:24px;border-radius:50%;background:var(--sky);box-shadow:0 0 0 6px rgba(56,189,248,.2),0 0 0 12px rgba(56,189,248,.1)}
+.process .step .num{font-size:11px;font-weight:700;color:var(--sky);letter-spacing:.1em;text-transform:uppercase;margin-bottom:10px}
+.process .step h4{font-size:22px;font-weight:700;letter-spacing:-.02em;margin-bottom:10px}
+.process .step p{font-size:14px;color:rgba(255,255,255,.7);line-height:1.6}
+@media (max-width:980px){.process .timeline{grid-template-columns:1fr 1fr;gap:40px}.process .timeline::before{display:none}}
+@media (max-width:560px){.process .timeline{grid-template-columns:1fr}}
+
+/* ---------- CTA FINAL ---------- */
+.cta-final{padding:140px 6vw;text-align:center;background:linear-gradient(180deg,#fff,var(--bg-soft));position:relative;overflow:hidden}
+.cta-final::before{content:"";position:absolute;top:50%;left:50%;width:800px;height:800px;border-radius:50%;background:radial-gradient(circle,rgba(56,189,248,.15),transparent 60%);transform:translate(-50%,-50%);filter:blur(40px)}
+.cta-final h2{position:relative;z-index:2;font-size:clamp(40px,6vw,90px);font-weight:800;letter-spacing:-.04em;line-height:1.02;color:var(--ink)}
+.cta-final h2 em{font-family:"Instrument Serif",serif;font-style:italic;font-weight:400;background:linear-gradient(135deg,var(--blue),var(--sky));-webkit-background-clip:text;background-clip:text;color:transparent}
+.cta-final p{position:relative;z-index:2;max-width:560px;margin:24px auto 36px;color:var(--ink-2);font-size:17px;line-height:1.6}
+.cta-final .btn{position:relative;z-index:2;display:inline-flex;align-items:center;gap:10px;padding:18px 32px;border-radius:999px;background:var(--ink);color:#fff;font-size:15px;font-weight:600;transition:.3s var(--ease);box-shadow:0 18px 40px -10px rgba(10,26,47,.4)}
+.cta-final .btn:hover{background:var(--blue);transform:translateY(-3px);box-shadow:0 26px 60px -10px rgba(37,99,235,.55)}
+
+/* ---------- FOOTER ---------- */
+footer{background:var(--ink);color:#fff;padding:90px 6vw 40px}
+footer .grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:60px;max-width:1280px;margin:0 auto;border-bottom:1px solid rgba(255,255,255,.1);padding-bottom:60px}
+footer .brand-block p{margin-top:24px;color:rgba(255,255,255,.65);font-size:14px;line-height:1.6;max-width:340px}
+footer h5{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#fff;margin-bottom:20px}
+footer ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+footer ul a{color:rgba(255,255,255,.85);font-size:14px;transition:.2s var(--ease)}
+footer ul a:hover{color:var(--sky);padding-left:6px}
+footer .bot{display:flex;justify-content:space-between;padding-top:28px;font-size:12px;color:rgba(255,255,255,.4);max-width:1280px;margin:0 auto;flex-wrap:wrap;gap:14px}
+@media (max-width:900px){footer .grid{grid-template-columns:1fr 1fr;gap:40px}}
+
+/* ---------- SCROLL REVEAL ---------- */
+.sr{opacity:0;transform:translateY(48px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.sr.in{opacity:1;transform:translateY(0)}
+.sr-x{opacity:0;transform:translateX(-60px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.sr-x.in{opacity:1;transform:translateX(0)}
+.sr-zoom{opacity:0;transform:scale(.94);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.sr-zoom.in{opacity:1;transform:scale(1)}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.sr,.sr-x,.sr-zoom{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <a href="youcome.html" class="logo">
+    <span class="logo-mark">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M5 4 L12 13 L19 4 L16 4 L12 9 L8 4 Z M10.5 12 L13.5 12 L13.5 20 L10.5 20 Z"/>
+      </svg>
+      <span class="dot-apos"></span>
+    </span>
+    <span class="logo-text">You<span class="apos">'</span>Com</span>
+  </a>
+  <ul>
+    <li><a href="services.html" class="is-active">Services</a></li>
+    <li><a href="about.html">À propos</a></li>
+    <li><a href="services.html#process">Méthode</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <a href="contact.html" class="cta">Démarrer un projet →</a>
+</nav>
+
+<!-- HEADER -->
+<header class="page-head">
+  <span class="pill">Catalogue complet</span>
+  <h1>Sept expertises.<br/>Une seule <em>équipe.</em></h1>
+  <p class="lead">SaaS sur-mesure et communication intégrée comme piliers, complétés par cinq leviers stratégiques. Chaque service est designé pour s'orchestrer avec les autres.</p>
+</header>
+
+<!-- CHIPS -->
+<nav class="svc-chips" aria-label="Sommaire des services">
+  <a href="#saas"><span>01</span> SaaS</a>
+  <a href="#comm"><span>02</span> Communication</a>
+  <a href="#graph"><span>03</span> Graphisme</a>
+  <a href="#video"><span>04</span> Vidéo</a>
+  <a href="#acq"><span>05</span> Acquisition</a>
+  <a href="#social"><span>06</span> Réseaux</a>
+  <a href="#ia"><span>07</span> IA</a>
+</nav>
+
+<!-- 01 SAAS -->
+<section class="svc" id="saas">
+  <div class="grid">
+    <div class="copy sr-x">
+      <span class="num">01</span>
+      <span class="pill">Cœur de métier</span>
+      <h2>SaaS <em>sur-mesure</em></h2>
+      <p class="desc">Notre expertise principale. Plateformes B2B, dashboards opérationnels, portails clients white-label, automatisations internes. Conçus comme des produits, pas comme des prototypes — avec architecture scalable, documentation et roadmap.</p>
+      <ul>
+        <li>Dashboards & reporting BI</li>
+        <li>Portails clients white-label</li>
+        <li>Architecture & API REST/GraphQL</li>
+        <li>Tests, CI/CD, monitoring</li>
+        <li>Maintenance & évolutions</li>
+        <li>Stack moderne (Next, Supabase…)</li>
+      </ul>
+      <div class="actions">
+        <a href="contact.html" class="btn primary">Lancer un projet SaaS →</a>
+        <a href="#process" class="btn ghost">Voir la méthode</a>
+      </div>
+    </div>
+    <div class="visual sr-zoom">
+      <div class="vbox">
+        <div class="v-saas">
+          <div class="chrome"><i></i><i></i><i></i></div>
+          <div class="body">
+            <div class="side"><div class="it active"></div><div class="it"></div><div class="it"></div><div class="it"></div><div class="it"></div></div>
+            <div class="main">
+              <div class="kpis">
+                <div class="kpi"><div class="lab">MRR</div><div class="val">€48k <span class="up">+12%</span></div></div>
+                <div class="kpi"><div class="lab">Users</div><div class="val">2 184</div></div>
+                <div class="kpi"><div class="lab">NPS</div><div class="val">62</div></div>
+              </div>
+              <div class="chart">
+                <svg viewBox="0 0 300 140" preserveAspectRatio="none">
+                  <path d="M0 100 Q40 80 70 70 T140 50 T220 30 T300 18"/>
+                  <path class="s2" d="M0 110 Q40 100 70 90 T140 80 T220 70 T300 55"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 02 COMMUNICATION -->
+<section class="svc flip" id="comm">
+  <div class="grid">
+    <div class="copy sr-x">
+      <span class="num">02</span>
+      <span class="pill">Pilier majeur</span>
+      <h2>Communication <em>intégrée</em></h2>
+      <p class="desc">Notre second métier le plus sollicité. Nous structurons la prise de parole de votre marque sur tous les canaux — éditorial, social, presse, événementiel — pour transformer votre visibilité en pipeline qualifié.</p>
+      <ul>
+        <li>Stratégie éditoriale & ligne</li>
+        <li>Production texte & visuel</li>
+        <li>Relations presse & influence</li>
+        <li>Brand content & storytelling</li>
+        <li>Newsletter & emailing</li>
+        <li>Événements & lancements</li>
+      </ul>
+      <div class="actions">
+        <a href="contact.html" class="btn primary">Structurer ma communication →</a>
+        <a href="#process" class="btn ghost">Voir la méthode</a>
+      </div>
+    </div>
+    <div class="visual sr-zoom">
+      <div class="vbox">
+        <div class="v-comm">
+          <span class="ring"></span><span class="ring"></span><span class="ring"></span>
+          <div class="center">
+            <svg viewBox="0 0 24 24"><path d="M3 11a9 9 0 0 1 18 0v6l-3 3H3z"/><line x1="8" y1="11" x2="16" y2="11"/><line x1="8" y1="15" x2="13" y2="15"/></svg>
+          </div>
+          <div class="channel c1">SLACK</div>
+          <div class="channel c2">LINK</div>
+          <div class="channel c3">MAIL</div>
+          <div class="channel c4">PRESS</div>
+          <div class="channel c5">SOC</div>
+          <div class="channel c6">PR</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 03 GRAPHISME -->
+<section class="svc" id="graph">
+  <div class="grid">
+    <div class="copy sr-x">
+      <span class="num">03</span>
+      <span class="pill">Identité visuelle</span>
+      <h2>Graphisme <em>premium</em></h2>
+      <p class="desc">Identité visuelle, design system, supports print et digital. Une signature graphique qui élève votre perception perçue et reste cohérente sur tous les points de contact — du keynote investor au feed Instagram.</p>
+      <ul>
+        <li>Logos & identités</li>
+        <li>Design systems</li>
+        <li>Pitch decks & rapports</li>
+        <li>Print & packaging</li>
+        <li>Social templates</li>
+        <li>Motion graphics</li>
+      </ul>
+      <div class="actions">
+        <a href="contact.html" class="btn primary">Refondre mon identité →</a>
+        <a href="#process" class="btn ghost">Voir la méthode</a>
+      </div>
+    </div>
+    <div class="visual sr-zoom">
+      <div class="vbox">
+        <div class="v-graph">
+          <div class="swatch">PRIMARY · #2563EB</div>
+          <div class="swatch">SKY · #38BDF8</div>
+          <div class="swatch">INK · #0A1A2F</div>
+          <div class="swatch">ACCENT · #FB923C</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 04 VIDEO -->
+<section class="svc flip" id="video">
+  <div class="grid">
+    <div class="copy sr-x">
+      <span class="num">04</span>
+      <span class="pill">Production vidéo</span>
+      <h2>Montage <em>vidéo</em></h2>
+      <p class="desc">Pubs, capsules sociales, motion design éditorial, vidéos produit. De l'écriture du script au mixage final, nous produisons des vidéos qui captivent dès la 3e seconde et convertissent dès la première vue.</p>
+      <ul>
+        <li>Capsules réseaux sociaux</li>
+        <li>Vidéos produit & démo</li>
+        <li>Pubs YouTube/Meta</li>
+        <li>Motion design</li>
+        <li>Sous-titrage & versions</li>
+        <li>Reels & shorts</li>
+      </ul>
+      <div class="actions">
+        <a href="contact.html" class="btn primary">Produire une vidéo →</a>
+        <a href="#process" class="btn ghost">Voir la méthode</a>
+      </div>
+    </div>
+    <div class="visual sr-zoom">
+      <div class="vbox">
+        <div class="v-video">
+          <div class="preview"><div class="play"></div></div>
+          <div class="timeline">
+            <div class="track"><span class="clip c1"></span><span class="clip c2"></span><span class="clip c3"></span><span class="play-head"></span></div>
+            <div class="track"><span class="clip c2" style="left:10%;width:30%"></span><span class="clip c1" style="left:50%;width:35%"></span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 05 ACQUISITION -->
+<section class="svc" id="acq">
+  <div class="grid">
+    <div class="copy sr-x">
+      <span class="num">05</span>
+      <span class="pill">Performance marketing</span>
+      <h2>Stratégie <em>d'acquisition</em></h2>
+      <p class="desc">SEO, ads, funnels et performance marketing. Nous construisons des canaux d'acquisition prédictibles et mesurables — chaque euro investi est tracé, chaque KPI documenté, chaque hypothèse testée.</p>
+      <ul>
+        <li>SEO & content stratégique</li>
+        <li>Google & Meta Ads</li>
+        <li>LinkedIn Ads B2B</li>
+        <li>Funnels & landing pages</li>
+        <li>A/B testing</li>
+        <li>Tracking GA4/Plausible</li>
+      </ul>
+      <div class="actions">
+        <a href="contact.html" class="btn primary">Booster mon acquisition →</a>
+        <a href="#process" class="btn ghost">Voir la méthode</a>
+      </div>
+    </div>
+    <div class="visual sr-zoom">
+      <div class="vbox">
+        <div class="v-acq">
+          <div class="funnel"><span>Visiteurs</span><span class="pct">100%</span></div>
+          <div class="funnel"><span>Leads</span><span class="pct">28%</span></div>
+          <div class="funnel"><span>Qualifiés</span><span class="pct">12%</span></div>
+          <div class="funnel"><span>Clients</span><span class="pct">4.5%</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 06 SOCIAL -->
+<section class="svc flip" id="social">
+  <div class="grid">
+    <div class="copy sr-x">
+      <span class="num">06</span>
+      <span class="pill">Community management</span>
+      <h2>Gestion des <em>réseaux</em></h2>
+      <p class="desc">Optimisation du temps, planning éditorial et community management pro. Nous prenons en main la cadence de publication, la modération et le reporting — vous gardez la voix, nous gérons l'opérationnel.</p>
+      <ul>
+        <li>Planning éditorial mensuel</li>
+        <li>Community management</li>
+        <li>Modération & réponses</li>
+        <li>Analytics & reporting</li>
+        <li>Audit & repositionnement</li>
+        <li>LinkedIn personal branding</li>
+      </ul>
+      <div class="actions">
+        <a href="contact.html" class="btn primary">Déléguer mes réseaux →</a>
+        <a href="#process" class="btn ghost">Voir la méthode</a>
+      </div>
+    </div>
+    <div class="visual sr-zoom">
+      <div class="vbox">
+        <div class="v-social">
+          <div class="post"><div class="head"><div class="av"></div><div class="name">@youcom</div></div><div class="img"></div><div class="lines"><span></span><span></span></div><div class="stats"><span>♥ 248</span><span>↗ 64</span></div></div>
+          <div class="post"><div class="head"><div class="av"></div><div class="name">@youcom</div></div><div class="img" style="background:linear-gradient(135deg,#fb923c,#fbbf24)"></div><div class="lines"><span></span><span></span></div><div class="stats"><span>♥ 412</span><span>↗ 88</span></div></div>
+          <div class="post"><div class="head"><div class="av"></div><div class="name">@youcom</div></div><div class="img" style="background:linear-gradient(135deg,#0a1a2f,#1e3a8a)"></div><div class="lines"><span></span><span></span></div><div class="stats"><span>♥ 192</span><span>↗ 32</span></div></div>
+          <div class="post"><div class="head"><div class="av"></div><div class="name">@youcom</div></div><div class="img"></div><div class="lines"><span></span><span></span></div><div class="stats"><span>♥ 678</span><span>↗ 124</span></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 07 IA -->
+<section class="svc" id="ia">
+  <div class="grid">
+    <div class="copy sr-x">
+      <span class="num">07</span>
+      <span class="pill">Intelligence artificielle</span>
+      <h2>Automatisation <em>IA</em></h2>
+      <p class="desc">Agents custom, workflows IA, intégrations LLM dans vos outils. Nous identifions les tâches manuelles à fort coût et nous les remplaçons par des automatisations intelligentes — RAG, agents, scoring, génération de contenu.</p>
+      <ul>
+        <li>Agents IA sur-mesure</li>
+        <li>RAG (recherche documentaire)</li>
+        <li>Scoring & qualification leads</li>
+        <li>Génération de contenu</li>
+        <li>Workflows n8n / Make</li>
+        <li>Fine-tuning sectoriel</li>
+      </ul>
+      <div class="actions">
+        <a href="contact.html" class="btn primary">Lancer un projet IA →</a>
+        <a href="#process" class="btn ghost">Voir la méthode</a>
+      </div>
+    </div>
+    <div class="visual sr-zoom">
+      <div class="vbox">
+        <div class="v-ia">
+          <svg viewBox="0 0 320 280">
+            <line class="link" x1="60" y1="60" x2="160" y2="140"/>
+            <line class="link" x1="60" y1="220" x2="160" y2="140"/>
+            <line class="link" x1="260" y1="60" x2="160" y2="140"/>
+            <line class="link" x1="260" y1="220" x2="160" y2="140"/>
+            <line class="link" x1="160" y1="40" x2="160" y2="140"/>
+            <line class="link" x1="160" y1="240" x2="160" y2="140"/>
+            <circle class="node" cx="60" cy="60" r="6"/>
+            <circle class="node" cx="60" cy="220" r="6"/>
+            <circle class="node" cx="260" cy="60" r="6"/>
+            <circle class="node" cx="260" cy="220" r="6"/>
+            <circle class="node" cx="160" cy="40" r="6"/>
+            <circle class="node" cx="160" cy="240" r="6"/>
+            <circle class="node-c pulse" cx="160" cy="140" r="9"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process" id="process">
+  <div class="top sr">
+    <span class="pill">Notre méthode</span>
+    <h2>De l'idée à <em>l'impact</em>, en quatre étapes.</h2>
+  </div>
+  <div class="timeline">
+    <div class="step sr"><div class="dot"></div><div class="num">Étape 01</div><h4>Découverte</h4><p>Atelier stratégique de 90 min. On clarifie vos enjeux, KPIs, et on cartographie le terrain. Sortie : un brief signé.</p></div>
+    <div class="step sr"><div class="dot"></div><div class="num">Étape 02</div><h4>Conception</h4><p>Architecture, prototypes, direction éditoriale. On itère vite jusqu'à validation, à l'écrit comme au pixel.</p></div>
+    <div class="step sr"><div class="dot"></div><div class="num">Étape 03</div><h4>Production</h4><p>Sprint dédié, équipes en flow. Livraisons hebdomadaires, points de revue clairs, transparence totale.</p></div>
+    <div class="step sr"><div class="dot"></div><div class="num">Étape 04</div><h4>Lancement</h4><p>Mise en ligne, formation, suivi des KPIs. On reste partenaires pour piloter la performance et itérer.</p></div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta-final sr-zoom">
+  <h2>Un seul service.<br/>Un seul <em>partenaire.</em></h2>
+  <p>Vous pouvez nous solliciter pour un projet ponctuel ou pour orchestrer toute votre stack. Démarrons par un appel de 30 min.</p>
+  <a href="contact.html" class="btn">Démarrer un projet →</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="grid">
+    <div class="brand-block">
+      <div class="logo size-lg inv">
+        <span class="logo-mark">
+          <svg viewBox="0 0 24 24"><path d="M5 4 L12 13 L19 4 L16 4 L12 9 L8 4 Z M10.5 12 L13.5 12 L13.5 20 L10.5 20 Z"/></svg>
+          <span class="dot-apos"></span>
+        </span>
+        <span class="logo-text">You<span class="apos">'</span>Com</span>
+      </div>
+      <p>Studio B2B. SaaS sur-mesure et communication intégrée pour transformer les marques ambitieuses en moteurs de croissance.</p>
+    </div>
+    <div>
+      <h5>Studio</h5>
+      <ul>
+        <li><a href="about.html">À propos</a></li>
+        <li><a href="services.html#process">Méthode</a></li>
+        <li><a href="services.html">Cas clients</a></li>
+        <li><a href="contact.html">Carrières</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>Services</h5>
+      <ul>
+        <li><a href="services.html#saas">SaaS sur-mesure</a></li>
+        <li><a href="services.html#comm">Communication</a></li>
+        <li><a href="services.html#graph">Graphisme</a></li>
+        <li><a href="services.html#video">Montage vidéo</a></li>
+        <li><a href="services.html#acq">Acquisition</a></li>
+        <li><a href="services.html#social">Réseaux</a></li>
+        <li><a href="services.html#ia">Automatisation IA</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>Contact</h5>
+      <ul>
+        <li><a href="mailto:hello@youcom.studio">hello@youcom.studio</a></li>
+        <li><a href="contact.html">Formulaire</a></li>
+        <li><a href="#">LinkedIn</a></li>
+        <li><a href="#">Behance</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="bot">
+    <span>© 2026 You'Com Studio · Tous droits réservés</span>
+    <span>Paris &amp; Montréal · Remote-first</span>
+  </div>
+</footer>
+
+<script>
+const sio = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){e.target.classList.add('in');sio.unobserve(e.target)}
+  });
+},{threshold:0.15, rootMargin:'0px 0px -60px 0px'});
+document.querySelectorAll('.sr, .sr-x, .sr-zoom').forEach(el=>sio.observe(el));
+</script>
+</body>
+</html>

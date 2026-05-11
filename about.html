@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>À propos — You'Com Studio B2B</title>
+<meta name="description" content="L'histoire de You'Com — studio B2B obsessionnel de la performance. SaaS, communication et croissance sous le même toit." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#fff;--bg-soft:#f4f9ff;--bg-blue:#e9f2ff;--bg-paper:#f7faff;
+  --ink:#0a1a2f;--ink-2:#1a2942;--muted:#5b6b85;
+  --line:rgba(10,26,47,.08);--line-strong:rgba(10,26,47,.16);
+  --blue:#2563eb;--blue-2:#3b82f6;--blue-3:#60a5fa;--sky:#38bdf8;--sky-2:#0ea5e9;--ice:#dbeafe;
+  --radius:22px;--ease:cubic-bezier(.2,.7,.2,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--bg);color:var(--ink);font-family:"Inter",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;-webkit-font-smoothing:antialiased}
+html{scroll-behavior:smooth}
+body{overflow-x:hidden;line-height:1.5}
+a{color:inherit;text-decoration:none}
+img,svg{display:block;max-width:100%}
+button{font:inherit;border:none;cursor:pointer;background:none;color:inherit}
+.serif{font-family:"Instrument Serif",serif;font-weight:400;font-style:italic}
+::selection{background:var(--blue);color:#fff}
+
+/* LOGO + NAV */
+.logo{display:inline-flex;align-items:center;gap:10px;font-weight:700;line-height:1}
+.logo-mark{width:38px;height:38px;border-radius:11px;background:linear-gradient(135deg,var(--blue),var(--blue-3));display:flex;align-items:center;justify-content:center;position:relative;flex-shrink:0;box-shadow:0 8px 20px -6px rgba(37,99,235,.45)}
+.logo-mark svg{width:62%;height:62%}.logo-mark svg path{fill:#fff}
+.logo-mark .dot-apos{position:absolute;top:6px;right:6px;width:6px;height:6px;border-radius:50%;background:#fff;animation:pulseDot 2.4s ease-in-out infinite;box-shadow:0 0 0 0 rgba(255,255,255,.6)}
+@keyframes pulseDot{50%{box-shadow:0 0 0 6px rgba(255,255,255,0)}}
+.logo-text{font-size:20px;letter-spacing:-.02em;color:var(--ink)}.logo-text .apos{color:var(--blue);font-weight:800}
+.logo.size-lg .logo-mark{width:54px;height:54px;border-radius:16px}.logo.size-lg .logo-text{font-size:30px}.logo.inv .logo-text{color:#fff}
+
+.nav{position:fixed;top:18px;left:50%;transform:translateX(-50%);z-index:80;display:inline-flex;align-items:center;gap:6px;padding:6px 6px 6px 16px;border:1px solid var(--line);background:rgba(255,255,255,.92);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-radius:999px;box-shadow:0 14px 50px -8px rgba(10,26,47,.14);height:54px}
+.nav .logo{padding:0 14px 0 0;height:42px;display:inline-flex;align-items:center;border-right:1px solid var(--line);margin-right:8px}
+.nav ul{display:inline-flex;align-items:center;gap:2px;list-style:none;height:100%}
+.nav ul li{display:inline-flex;align-items:center;height:100%}
+.nav ul a{padding:10px 16px;border-radius:999px;font-size:14px;font-weight:500;color:var(--ink-2);transition:.25s var(--ease)}
+.nav ul a:hover,.nav ul a.is-active{background:var(--bg-blue);color:var(--blue)}
+.nav .cta{margin-left:8px;padding:10px 18px;border-radius:999px;background:var(--ink);color:#fff;font-size:13px;font-weight:600;height:42px;display:inline-flex;align-items:center;letter-spacing:-.01em;transition:.25s var(--ease)}
+.nav .cta:hover{background:var(--blue);transform:translateY(-1px);box-shadow:0 10px 24px -6px rgba(37,99,235,.5)}
+@media (max-width:980px){.nav ul{display:none}.nav .logo{border-right:none;margin-right:0;padding-right:8px}.nav{top:10px;height:50px}}
+
+/* HEADER */
+.page-head{padding:160px 6vw 100px;background:linear-gradient(180deg,var(--bg-soft) 0%,#fff 80%);position:relative;overflow:hidden;text-align:center}
+.page-head::before{content:"";position:absolute;top:-100px;left:50%;transform:translateX(-50%);width:780px;height:780px;border-radius:50%;background:radial-gradient(circle,rgba(56,189,248,.18),transparent 65%);filter:blur(40px);pointer-events:none}
+.page-head .pill{display:inline-block;padding:8px 16px;border:1px solid var(--blue);color:var(--blue);font-size:12px;font-weight:600;border-radius:999px;letter-spacing:.04em;text-transform:uppercase;background:#fff;margin-bottom:24px;position:relative;z-index:2}
+.page-head h1{position:relative;z-index:2;font-size:clamp(48px,7vw,108px);font-weight:800;letter-spacing:-.045em;line-height:1;color:var(--ink);max-width:1100px;margin:0 auto}
+.page-head h1 em{font-family:"Instrument Serif",serif;font-style:italic;font-weight:400;background:linear-gradient(135deg,var(--blue),var(--sky));-webkit-background-clip:text;background-clip:text;color:transparent}
+.page-head p.lead{position:relative;z-index:2;max-width:680px;margin:32px auto 0;font-size:clamp(15px,1.2vw,18px);color:var(--ink-2);line-height:1.6}
+
+/* STORY */
+.story{padding:120px 6vw;max-width:1080px;margin:0 auto}
+.story .chap{margin-bottom:80px;display:grid;grid-template-columns:120px 1fr;gap:60px;align-items:start}
+.story .chap .num{font-family:"Instrument Serif",serif;font-style:italic;font-size:96px;line-height:1;color:transparent;-webkit-text-stroke:1.5px var(--blue);opacity:.25}
+.story .chap h3{font-size:clamp(32px,3.5vw,48px);font-weight:800;letter-spacing:-.03em;line-height:1.05;margin-bottom:18px;color:var(--ink)}
+.story .chap h3 em{font-family:"Instrument Serif",serif;font-style:italic;font-weight:400;background:linear-gradient(135deg,var(--blue),var(--sky));-webkit-background-clip:text;background-clip:text;color:transparent}
+.story .chap p{font-size:17px;line-height:1.75;color:var(--ink-2);max-width:680px}
+.story .chap p + p{margin-top:18px}
+@media (max-width:780px){.story .chap{grid-template-columns:1fr;gap:18px}.story .chap .num{font-size:56px}}
+
+/* VALUES */
+.values{padding:140px 6vw;background:var(--bg-soft)}
+.values .top{max-width:1280px;margin:0 auto 80px;text-align:center}
+.values .top .pill{display:inline-block;padding:6px 14px;background:#fff;color:var(--blue);font-size:11px;font-weight:700;border-radius:999px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:20px;border:1px solid var(--line)}
+.values .top h2{font-size:clamp(40px,5.5vw,80px);font-weight:800;letter-spacing:-.04em;line-height:1.02}
+.values .top h2 em{font-family:"Instrument Serif",serif;font-style:italic;font-weight:400;background:linear-gradient(135deg,var(--blue),var(--sky));-webkit-background-clip:text;background-clip:text;color:transparent}
+.values .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;max-width:1280px;margin:0 auto}
+.values .card{background:#fff;border:1px solid var(--line);border-radius:24px;padding:36px 28px;transition:.4s var(--ease);position:relative;overflow:hidden}
+.values .card:hover{transform:translateY(-6px);box-shadow:0 30px 70px -20px rgba(10,26,47,.18);border-color:var(--blue)}
+.values .card .ic{width:48px;height:48px;border-radius:14px;background:linear-gradient(135deg,var(--blue),var(--sky));display:flex;align-items:center;justify-content:center;margin-bottom:24px;color:#fff;font-size:22px;font-weight:700}
+.values .card h4{font-size:20px;font-weight:700;letter-spacing:-.02em;margin-bottom:12px}
+.values .card p{font-size:14px;color:var(--muted);line-height:1.6}
+@media (max-width:980px){.values .grid{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.values .grid{grid-template-columns:1fr}}
+
+/* STATS */
+.stats{padding:140px 6vw;text-align:center}
+.stats h2{font-size:clamp(40px,5vw,72px);font-weight:800;letter-spacing:-.04em;margin-bottom:60px}
+.stats h2 em{font-family:"Instrument Serif",serif;font-style:italic;font-weight:400;background:linear-gradient(135deg,var(--blue),var(--sky));-webkit-background-clip:text;background-clip:text;color:transparent}
+.stats .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:40px;max-width:1080px;margin:0 auto}
+.stats .stat{display:flex;flex-direction:column;gap:10px;align-items:center;padding:30px 20px;border-left:1px solid var(--line)}
+.stats .stat:first-child{border-left:none}
+.stats .stat .num{font-size:clamp(48px,5vw,72px);font-weight:800;letter-spacing:-.03em;color:var(--ink);line-height:1;font-family:"Instrument Serif",serif;font-style:italic;background:linear-gradient(135deg,var(--blue),var(--sky));-webkit-background-clip:text;background-clip:text;color:transparent}
+.stats .stat .lab{font-size:12px;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;font-weight:600}
+@media (max-width:780px){.stats .grid{grid-template-columns:1fr 1fr;gap:24px}.stats .stat{border-left:none;border-top:1px solid var(--line)}.stats .stat:nth-child(1),.stats .stat:nth-child(2){border-top:none}}
+
+/* TEAM */
+.team{padding:140px 6vw;background:var(--ink);color:#fff}
+.team .top{max-width:1280px;margin:0 auto 60px;text-align:center}
+.team .top .pill{display:inline-block;padding:6px 14px;background:rgba(255,255,255,.1);color:var(--sky);font-size:11px;font-weight:700;border-radius:999px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:20px;border:1px solid rgba(255,255,255,.18)}
+.team .top h2{font-size:clamp(40px,5.5vw,72px);font-weight:800;letter-spacing:-.04em;line-height:1.02}
+.team .top h2 em{font-family:"Instrument Serif",serif;font-style:italic;font-weight:400;background:linear-gradient(135deg,var(--sky),#a5f3fc);-webkit-background-clip:text;background-clip:text;color:transparent}
+.team .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;max-width:1280px;margin:0 auto}
+.team .person{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:20px;padding:28px;transition:.3s var(--ease)}
+.team .person:hover{background:rgba(56,189,248,.08);border-color:var(--sky);transform:translateY(-4px)}
+.team .person .av{width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,var(--blue),var(--sky));display:flex;align-items:center;justify-content:center;font-weight:700;font-size:22px;color:#fff;margin-bottom:18px}
+.team .person h4{font-size:18px;font-weight:700;margin-bottom:4px}
+.team .person .role{font-size:12px;color:var(--sky);font-weight:600;letter-spacing:.04em;text-transform:uppercase;margin-bottom:14px}
+.team .person p{font-size:13px;color:rgba(255,255,255,.7);line-height:1.6}
+@media (max-width:980px){.team .grid{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.team .grid{grid-template-columns:1fr}}
+
+/* MANIFESTO */
+.manifesto{padding:160px 6vw;background:linear-gradient(180deg,#fff,var(--bg-soft));text-align:center;position:relative;overflow:hidden}
+.manifesto::before{content:"";position:absolute;top:50%;left:50%;width:900px;height:900px;border-radius:50%;background:radial-gradient(circle,rgba(56,189,248,.12),transparent 65%);transform:translate(-50%,-50%);filter:blur(40px)}
+.manifesto blockquote{position:relative;z-index:2;max-width:1000px;margin:0 auto;font-family:"Instrument Serif",serif;font-style:italic;font-size:clamp(36px,4.5vw,64px);font-weight:400;line-height:1.2;letter-spacing:-.02em;color:var(--ink)}
+.manifesto blockquote em{background:linear-gradient(135deg,var(--blue),var(--sky));-webkit-background-clip:text;background-clip:text;color:transparent;font-style:italic}
+.manifesto .sig{position:relative;z-index:2;margin-top:40px;font-size:13px;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;font-weight:600}
+
+/* CTA FINAL */
+.cta-final{padding:140px 6vw;text-align:center;background:#fff}
+.cta-final h2{font-size:clamp(40px,6vw,90px);font-weight:800;letter-spacing:-.04em;line-height:1.02}
+.cta-final h2 em{font-family:"Instrument Serif",serif;font-style:italic;font-weight:400;background:linear-gradient(135deg,var(--blue),var(--sky));-webkit-background-clip:text;background-clip:text;color:transparent}
+.cta-final p{max-width:560px;margin:24px auto 36px;color:var(--ink-2);font-size:17px;line-height:1.6}
+.cta-final .btn{display:inline-flex;align-items:center;gap:10px;padding:18px 32px;border-radius:999px;background:var(--ink);color:#fff;font-size:15px;font-weight:600;transition:.3s var(--ease);box-shadow:0 18px 40px -10px rgba(10,26,47,.4)}
+.cta-final .btn:hover{background:var(--blue);transform:translateY(-3px);box-shadow:0 26px 60px -10px rgba(37,99,235,.55)}
+
+/* FOOTER */
+footer{background:var(--ink);color:#fff;padding:90px 6vw 40px}
+footer .grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:60px;max-width:1280px;margin:0 auto;border-bottom:1px solid rgba(255,255,255,.1);padding-bottom:60px}
+footer .brand-block p{margin-top:24px;color:rgba(255,255,255,.65);font-size:14px;line-height:1.6;max-width:340px}
+footer h5{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-bottom:20px}
+footer ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+footer ul a{color:rgba(255,255,255,.85);font-size:14px;transition:.2s var(--ease)}
+footer ul a:hover{color:var(--sky);padding-left:6px}
+footer .bot{display:flex;justify-content:space-between;padding-top:28px;font-size:12px;color:rgba(255,255,255,.4);max-width:1280px;margin:0 auto;flex-wrap:wrap;gap:14px}
+@media (max-width:900px){footer .grid{grid-template-columns:1fr 1fr;gap:40px}}
+
+/* SCROLL REVEAL */
+.sr{opacity:0;transform:translateY(48px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.sr.in{opacity:1;transform:translateY(0)}
+.sr-x{opacity:0;transform:translateX(-60px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.sr-x.in{opacity:1;transform:translateX(0)}
+.sr-stagger > *{opacity:0;transform:translateY(36px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.sr-stagger.in > *:nth-child(1){transition-delay:0s}
+.sr-stagger.in > *:nth-child(2){transition-delay:.1s}
+.sr-stagger.in > *:nth-child(3){transition-delay:.2s}
+.sr-stagger.in > *:nth-child(4){transition-delay:.3s}
+.sr-stagger.in > *{opacity:1;transform:translateY(0)}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.sr,.sr-x,.sr-stagger > *{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <a href="youcome.html" class="logo">
+    <span class="logo-mark">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4 L12 13 L19 4 L16 4 L12 9 L8 4 Z M10.5 12 L13.5 12 L13.5 20 L10.5 20 Z"/></svg>
+      <span class="dot-apos"></span>
+    </span>
+    <span class="logo-text">You<span class="apos">'</span>Com</span>
+  </a>
+  <ul>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="about.html" class="is-active">À propos</a></li>
+    <li><a href="services.html#process">Méthode</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <a href="contact.html" class="cta">Démarrer un projet →</a>
+</nav>
+
+<header class="page-head">
+  <span class="pill">Qui sommes-nous</span>
+  <h1>Un studio<br/><em>obsessionnel</em><br/>de la performance.</h1>
+  <p class="lead">Fondé en 2023, You'Com est né du constat qu'une marque B2B mérite mieux qu'un patchwork d'agences. Nous orchestrons SaaS, communication et croissance dans une seule équipe, avec une seule obsession : votre impact.</p>
+</header>
+
+<!-- STORY -->
+<section class="story">
+  <div class="chap sr">
+    <div class="num">01</div>
+    <div>
+      <h3>Le constat <em>de départ.</em></h3>
+      <p>Nous avons passé une décennie dans l'écosystème SaaS, en tant que développeurs, designers, marketeurs et fondateurs. Partout, le même problème : pour scaler, une marque devait jongler entre 12 outils, 7 agences spécialisées et 3 freelances. Résultat : des silos, des KPIs incohérents, une marque diluée.</p>
+      <p>Les clients voulaient un produit logiciel solide, une communication maîtrisée et des canaux d'acquisition prédictibles. Mais aucune agence ne couvrait l'ensemble — et les rares qui essayaient le faisaient mal.</p>
+    </div>
+  </div>
+
+  <div class="chap sr">
+    <div class="num">02</div>
+    <div>
+      <h3>L'idée <em>folle.</em></h3>
+      <p>Et si une seule équipe pouvait livrer, sous un même toit, le SaaS, la communication, le graphisme, la vidéo, l'acquisition, les réseaux sociaux et l'IA ? Avec la même rigueur, le même niveau d'exécution, les mêmes KPIs partagés.</p>
+      <p>You'Com est né de cette conviction : la performance d'une marque B2B vient de la cohérence entre toutes ses expressions. Et la cohérence ne se sous-traite pas — elle se construit, en interne, avec des spécialistes qui se parlent tous les jours.</p>
+    </div>
+  </div>
+
+  <div class="chap sr">
+    <div class="num">03</div>
+    <div>
+      <h3>Le studio <em>aujourd'hui.</em></h3>
+      <p>14 spécialistes répartis entre Paris et Montréal, en remote-first. Une dizaine de clients accompagnés en parallèle, du SaaS B2B en série A à l'industrie en transformation digitale. Une seule règle : chaque livrable est connecté à un KPI, chaque mois est documenté, chaque euro investi est tracé.</p>
+      <p>Nous refusons les missions où nous ne pouvons pas mesurer notre impact. Et nous acceptons celles où le client est prêt à itérer avec nous, sur la durée, comme un vrai partenaire.</p>
+    </div>
+  </div>
+</section>
+
+<!-- VALUES -->
+<section class="values">
+  <div class="top sr">
+    <span class="pill">Nos valeurs</span>
+    <h2>Quatre <em>obsessions</em><br/>qui nous guident.</h2>
+  </div>
+  <div class="grid sr-stagger">
+    <div class="card">
+      <div class="ic">⟁</div>
+      <h4>Tech-first</h4>
+      <p>Notre cœur de métier, c'est le SaaS. Tout part d'un produit logiciel solide, scalable et documenté.</p>
+    </div>
+    <div class="card">
+      <div class="ic">◊</div>
+      <h4>Cohérence</h4>
+      <p>Une marque parle d'une seule voix. Nous orchestrons toute votre stack créative et technique.</p>
+    </div>
+    <div class="card">
+      <div class="ic">∞</div>
+      <h4>IA opérationnelle</h4>
+      <p>Nous intégrons l'IA là où elle a un vrai ROI : automatisations, scoring, génération de contenu.</p>
+    </div>
+    <div class="card">
+      <div class="ic">⊕</div>
+      <h4>Mesurable</h4>
+      <p>Chaque livrable est connecté à un KPI : conversion, rétention, vitesse. Nous documentons l'impact.</p>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats">
+  <h2 class="sr">Quelques <em>chiffres</em>.</h2>
+  <div class="grid sr-stagger">
+    <div class="stat"><div class="num">14</div><div class="lab">Spécialistes</div></div>
+    <div class="stat"><div class="num">42+</div><div class="lab">Projets livrés</div></div>
+    <div class="stat"><div class="num">96%</div><div class="lab">Clients fidélisés</div></div>
+    <div class="stat"><div class="num">2.4M</div><div class="lab">€ générés en 2025</div></div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section class="team">
+  <div class="top sr">
+    <span class="pill">Le studio</span>
+    <h2>Une équipe <em>tight</em>.</h2>
+  </div>
+  <div class="grid sr-stagger">
+    <div class="person"><div class="av">NL</div><h4>Noa Lefèvre</h4><div class="role">Co-fondateur · Strategy</div><p>10 ans en SaaS B2B. Pilote la vision produit et les partenariats stratégiques.</p></div>
+    <div class="person"><div class="av">TM</div><h4>Théo Martin</h4><div class="role">Co-fondateur · Tech Lead</div><p>Architecte logiciel. Supervise toute la stack technique et l'intégration IA.</p></div>
+    <div class="person"><div class="av">CR</div><h4>Camille Roy</h4><div class="role">Head of Design</div><p>Direction artistique premium. Identités visuelles, design systems, motion.</p></div>
+    <div class="person"><div class="av">YK</div><h4>Yanis Kaci</h4><div class="role">Head of Growth</div><p>Stratégie d'acquisition. SEO, ads, funnels, analytics — la performance.</p></div>
+  </div>
+</section>
+
+<!-- MANIFESTO -->
+<section class="manifesto">
+  <blockquote class="sr">"Une marque B2B forte n'est pas la somme de ses canaux.<br/>C'est <em>la cohérence</em> entre eux."</blockquote>
+  <div class="sig">— Le manifeste You'Com</div>
+</section>
+
+<!-- CTA -->
+<section class="cta-final">
+  <h2 class="sr">Travaillons<br/><em>ensemble</em>.</h2>
+  <p>Un appel de 30 minutes pour comprendre vos enjeux. Sans pitch commercial, sans engagement.</p>
+  <a href="contact.html" class="btn">Démarrer un projet →</a>
+</section>
+
+<footer>
+  <div class="grid">
+    <div class="brand-block">
+      <div class="logo size-lg inv">
+        <span class="logo-mark"><svg viewBox="0 0 24 24"><path d="M5 4 L12 13 L19 4 L16 4 L12 9 L8 4 Z M10.5 12 L13.5 12 L13.5 20 L10.5 20 Z"/></svg><span class="dot-apos"></span></span>
+        <span class="logo-text">You<span class="apos">'</span>Com</span>
+      </div>
+      <p>Studio B2B. SaaS sur-mesure et communication intégrée pour transformer les marques ambitieuses en moteurs de croissance.</p>
+    </div>
+    <div><h5>Studio</h5><ul><li><a href="about.html">À propos</a></li><li><a href="services.html#process">Méthode</a></li><li><a href="services.html">Cas clients</a></li><li><a href="contact.html">Carrières</a></li></ul></div>
+    <div><h5>Services</h5><ul><li><a href="services.html#saas">SaaS sur-mesure</a></li><li><a href="services.html#comm">Communication</a></li><li><a href="services.html#graph">Graphisme</a></li><li><a href="services.html#video">Vidéo</a></li><li><a href="services.html#acq">Acquisition</a></li><li><a href="services.html#social">Réseaux</a></li><li><a href="services.html#ia">IA</a></li></ul></div>
+    <div><h5>Contact</h5><ul><li><a href="mailto:hello@youcom.studio">hello@youcom.studio</a></li><li><a href="contact.html">Formulaire</a></li><li><a href="#">LinkedIn</a></li><li><a href="#">Behance</a></li></ul></div>
+  </div>
+  <div class="bot"><span>© 2026 You'Com Studio · Tous droits réservés</span><span>Paris &amp; Montréal · Remote-first</span></div>
+</footer>
+
+<script>
+const sio = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');sio.unobserve(e.target)}});
+},{threshold:0.15, rootMargin:'0px 0px -60px 0px'});
+document.querySelectorAll('.sr, .sr-x, .sr-stagger').forEach(el=>sio.observe(el));
+</script>
+</body>
+</html>

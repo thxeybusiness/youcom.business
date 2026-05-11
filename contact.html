@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Contact — You'Com Studio B2B</title>
+<meta name="description" content="Discutons de votre projet. Un appel de 30 minutes, sans pitch commercial." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#fff;--bg-soft:#f4f9ff;--bg-blue:#e9f2ff;--bg-paper:#f7faff;
+  --ink:#0a1a2f;--ink-2:#1a2942;--muted:#5b6b85;
+  --line:rgba(10,26,47,.08);--line-strong:rgba(10,26,47,.16);
+  --blue:#2563eb;--blue-2:#3b82f6;--blue-3:#60a5fa;--sky:#38bdf8;--sky-2:#0ea5e9;--ice:#dbeafe;
+  --radius:22px;--ease:cubic-bezier(.2,.7,.2,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--bg);color:var(--ink);font-family:"Inter",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;-webkit-font-smoothing:antialiased}
+html{scroll-behavior:smooth}
+body{overflow-x:hidden;line-height:1.5}
+a{color:inherit;text-decoration:none}
+img,svg{display:block;max-width:100%}
+button{font:inherit;border:none;cursor:pointer;background:none;color:inherit}
+::selection{background:var(--blue);color:#fff}
+
+.logo{display:inline-flex;align-items:center;gap:10px;font-weight:700;line-height:1}
+.logo-mark{width:38px;height:38px;border-radius:11px;background:linear-gradient(135deg,var(--blue),var(--blue-3));display:flex;align-items:center;justify-content:center;position:relative;flex-shrink:0;box-shadow:0 8px 20px -6px rgba(37,99,235,.45)}
+.logo-mark svg{width:62%;height:62%}.logo-mark svg path{fill:#fff}
+.logo-mark .dot-apos{position:absolute;top:6px;right:6px;width:6px;height:6px;border-radius:50%;background:#fff;animation:pulseDot 2.4s ease-in-out infinite;box-shadow:0 0 0 0 rgba(255,255,255,.6)}
+@keyframes pulseDot{50%{box-shadow:0 0 0 6px rgba(255,255,255,0)}}
+.logo-text{font-size:20px;letter-spacing:-.02em;color:var(--ink)}.logo-text .apos{color:var(--blue);font-weight:800}
+.logo.size-lg .logo-mark{width:54px;height:54px;border-radius:16px}.logo.size-lg .logo-text{font-size:30px}.logo.inv .logo-text{color:#fff}
+
+.nav{position:fixed;top:18px;left:50%;transform:translateX(-50%);z-index:80;display:inline-flex;align-items:center;gap:6px;padding:6px 6px 6px 16px;border:1px solid var(--line);background:rgba(255,255,255,.92);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-radius:999px;box-shadow:0 14px 50px -8px rgba(10,26,47,.14);height:54px}
+.nav .logo{padding:0 14px 0 0;height:42px;display:inline-flex;align-items:center;border-right:1px solid var(--line);margin-right:8px}
+.nav ul{display:inline-flex;align-items:center;gap:2px;list-style:none;height:100%}
+.nav ul li{display:inline-flex;align-items:center;height:100%}
+.nav ul a{padding:10px 16px;border-radius:999px;font-size:14px;font-weight:500;color:var(--ink-2);transition:.25s var(--ease)}
+.nav ul a:hover,.nav ul a.is-active{background:var(--bg-blue);color:var(--blue)}
+.nav .cta{margin-left:8px;padding:10px 18px;border-radius:999px;background:var(--ink);color:#fff;font-size:13px;font-weight:600;height:42px;display:inline-flex;align-items:center;letter-spacing:-.01em;transition:.25s var(--ease)}
+.nav .cta:hover{background:var(--blue);transform:translateY(-1px);box-shadow:0 10px 24px -6px rgba(37,99,235,.5)}
+@media (max-width:980px){.nav ul{display:none}.nav .logo{border-right:none;margin-right:0;padding-right:8px}.nav{top:10px;height:50px}}
+
+/* HEADER */
+.page-head{padding:160px 6vw 60px;background:linear-gradient(180deg,var(--bg-soft) 0%,#fff 100%);position:relative;overflow:hidden;text-align:center}
+.page-head::before{content:"";position:absolute;top:-100px;left:50%;transform:translateX(-50%);width:780px;height:780px;border-radius:50%;background:radial-gradient(circle,rgba(56,189,248,.18),transparent 65%);filter:blur(40px);pointer-events:none}
+.page-head .pill{display:inline-block;padding:8px 16px;border:1px solid var(--blue);color:var(--blue);font-size:12px;font-weight:600;border-radius:999px;letter-spacing:.04em;text-transform:uppercase;background:#fff;margin-bottom:24px;position:relative;z-index:2}
+.page-head h1{position:relative;z-index:2;font-size:clamp(48px,7vw,108px);font-weight:800;letter-spacing:-.045em;line-height:1;color:var(--ink);max-width:1100px;margin:0 auto}
+.page-head h1 em{font-family:"Instrument Serif",serif;font-style:italic;font-weight:400;background:linear-gradient(135deg,var(--blue),var(--sky));-webkit-background-clip:text;background-clip:text;color:transparent}
+.page-head p.lead{position:relative;z-index:2;max-width:680px;margin:32px auto 0;font-size:clamp(15px,1.2vw,18px);color:var(--ink-2);line-height:1.6}
+
+/* CONTACT GRID */
+.contact-wrap{padding:80px 6vw 140px;max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1.4fr 1fr;gap:60px;align-items:start}
+@media (max-width:980px){.contact-wrap{grid-template-columns:1fr;gap:40px}}
+
+/* FORM */
+.form-card{background:#fff;border:1px solid var(--line);border-radius:28px;padding:48px;box-shadow:0 30px 80px -25px rgba(10,26,47,.15)}
+.form-card h2{font-size:clamp(24px,2.5vw,32px);font-weight:700;letter-spacing:-.02em;margin-bottom:8px}
+.form-card .subt{font-size:14px;color:var(--muted);margin-bottom:32px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:18px}
+.field{display:flex;flex-direction:column;gap:8px}
+.field.full{grid-column:1/-1}
+.field label{font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.field input,.field textarea,.field select{font:inherit;padding:14px 16px;border:1.5px solid var(--line-strong);border-radius:12px;background:#fff;color:var(--ink);font-size:14px;transition:.25s var(--ease);outline:none;font-family:inherit}
+.field input:focus,.field textarea:focus,.field select:focus{border-color:var(--blue);box-shadow:0 0 0 4px rgba(37,99,235,.12)}
+.field textarea{resize:vertical;min-height:120px;line-height:1.5}
+.field select{appearance:none;-webkit-appearance:none;background-image:linear-gradient(45deg,transparent 50%,var(--ink) 50%),linear-gradient(135deg,var(--ink) 50%,transparent 50%);background-position:calc(100% - 18px) 50%,calc(100% - 12px) 50%;background-size:6px 6px,6px 6px;background-repeat:no-repeat;cursor:pointer}
+
+/* Budget chips */
+.budget-chips{display:flex;flex-wrap:wrap;gap:8px}
+.budget-chips label{position:relative;cursor:pointer}
+.budget-chips input{position:absolute;opacity:0;pointer-events:none}
+.budget-chips span{display:inline-flex;align-items:center;padding:10px 16px;border:1.5px solid var(--line-strong);border-radius:999px;font-size:13px;font-weight:600;color:var(--ink-2);background:#fff;transition:.2s var(--ease)}
+.budget-chips input:checked + span{background:var(--blue);border-color:var(--blue);color:#fff;box-shadow:0 8px 18px -4px rgba(37,99,235,.45)}
+.budget-chips label:hover span{border-color:var(--blue);color:var(--blue)}
+
+/* Service chips */
+.svc-chips-form{display:flex;flex-wrap:wrap;gap:8px}
+.svc-chips-form label{position:relative;cursor:pointer}
+.svc-chips-form input{position:absolute;opacity:0;pointer-events:none}
+.svc-chips-form span{display:inline-flex;align-items:center;padding:8px 14px;border:1.5px solid var(--line-strong);border-radius:999px;font-size:12px;font-weight:600;color:var(--ink-2);background:#fff;transition:.2s var(--ease);letter-spacing:.02em}
+.svc-chips-form input:checked + span{background:var(--ink);border-color:var(--ink);color:#fff}
+.svc-chips-form label:hover span{border-color:var(--blue);color:var(--blue)}
+
+.submit-row{margin-top:30px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
+.submit-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 30px;border-radius:999px;background:var(--ink);color:#fff;font-size:14px;font-weight:600;transition:.3s var(--ease);box-shadow:0 14px 30px -8px rgba(10,26,47,.4);cursor:pointer}
+.submit-btn:hover{background:var(--blue);transform:translateY(-2px);box-shadow:0 22px 50px -10px rgba(37,99,235,.55)}
+.submit-btn svg{width:14px;height:14px;stroke:#fff;fill:none;stroke-width:2.5;transition:transform .25s var(--ease)}
+.submit-btn:hover svg{transform:translateX(4px)}
+.privacy{font-size:12px;color:var(--muted);max-width:280px;line-height:1.5}
+.privacy a{color:var(--blue);text-decoration:underline}
+
+@media (max-width:560px){.form-card{padding:30px 24px}.form-row{grid-template-columns:1fr}}
+
+/* SIDE INFO */
+.side{display:flex;flex-direction:column;gap:20px;position:sticky;top:90px}
+.info-card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:28px;transition:.3s var(--ease)}
+.info-card:hover{transform:translateY(-3px);box-shadow:0 20px 40px -15px rgba(10,26,47,.15);border-color:var(--blue)}
+.info-card .ic{width:42px;height:42px;border-radius:12px;background:linear-gradient(135deg,var(--blue),var(--sky));display:flex;align-items:center;justify-content:center;margin-bottom:16px;color:#fff}
+.info-card .ic svg{width:20px;height:20px;stroke:#fff;fill:none;stroke-width:2}
+.info-card h4{font-size:16px;font-weight:700;letter-spacing:-.01em;margin-bottom:6px}
+.info-card p{font-size:14px;color:var(--muted);line-height:1.6}
+.info-card a{color:var(--blue);font-weight:600}
+.info-card a:hover{text-decoration:underline}
+
+@media (max-width:980px){.side{position:static}}
+
+/* FAQ */
+.faq{padding:140px 6vw;background:var(--bg-soft);max-width:none}
+.faq .top{max-width:1080px;margin:0 auto 60px;text-align:center}
+.faq .top .pill{display:inline-block;padding:6px 14px;background:#fff;color:var(--blue);font-size:11px;font-weight:700;border-radius:999px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:20px;border:1px solid var(--line)}
+.faq .top h2{font-size:clamp(36px,5vw,64px);font-weight:800;letter-spacing:-.04em;line-height:1.05}
+.faq .top h2 em{font-family:"Instrument Serif",serif;font-style:italic;font-weight:400;background:linear-gradient(135deg,var(--blue),var(--sky));-webkit-background-clip:text;background-clip:text;color:transparent}
+.faq .list{max-width:880px;margin:0 auto;display:flex;flex-direction:column;gap:14px}
+.faq details{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px 28px;transition:.3s var(--ease)}
+.faq details[open]{border-color:var(--blue);box-shadow:0 16px 40px -16px rgba(37,99,235,.18)}
+.faq summary{cursor:pointer;font-size:17px;font-weight:600;letter-spacing:-.01em;color:var(--ink);list-style:none;display:flex;justify-content:space-between;align-items:center;gap:20px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-size:22px;font-weight:300;color:var(--blue);transition:transform .25s var(--ease)}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{margin-top:14px;font-size:14px;color:var(--ink-2);line-height:1.7}
+
+/* SUCCESS */
+.toast{position:fixed;bottom:30px;left:50%;transform:translateX(-50%) translateY(120px);background:var(--ink);color:#fff;padding:16px 28px;border-radius:999px;font-size:14px;font-weight:600;box-shadow:0 20px 60px -10px rgba(10,26,47,.5);transition:.5s var(--ease);z-index:200;display:inline-flex;align-items:center;gap:12px}
+.toast.show{transform:translateX(-50%) translateY(0)}
+.toast .check{width:24px;height:24px;border-radius:50%;background:#10b981;display:flex;align-items:center;justify-content:center;color:#fff;font-size:14px;font-weight:700}
+
+/* FOOTER */
+footer{background:var(--ink);color:#fff;padding:90px 6vw 40px}
+footer .grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:60px;max-width:1280px;margin:0 auto;border-bottom:1px solid rgba(255,255,255,.1);padding-bottom:60px}
+footer .brand-block p{margin-top:24px;color:rgba(255,255,255,.65);font-size:14px;line-height:1.6;max-width:340px}
+footer h5{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-bottom:20px}
+footer ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+footer ul a{color:rgba(255,255,255,.85);font-size:14px;transition:.2s var(--ease)}
+footer ul a:hover{color:var(--sky);padding-left:6px}
+footer .bot{display:flex;justify-content:space-between;padding-top:28px;font-size:12px;color:rgba(255,255,255,.4);max-width:1280px;margin:0 auto;flex-wrap:wrap;gap:14px}
+@media (max-width:900px){footer .grid{grid-template-columns:1fr 1fr;gap:40px}}
+
+/* SCROLL REVEAL */
+.sr{opacity:0;transform:translateY(48px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.sr.in{opacity:1;transform:translateY(0)}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.sr{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <a href="youcome.html" class="logo">
+    <span class="logo-mark">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4 L12 13 L19 4 L16 4 L12 9 L8 4 Z M10.5 12 L13.5 12 L13.5 20 L10.5 20 Z"/></svg>
+      <span class="dot-apos"></span>
+    </span>
+    <span class="logo-text">You<span class="apos">'</span>Com</span>
+  </a>
+  <ul>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="about.html">À propos</a></li>
+    <li><a href="services.html#process">Méthode</a></li>
+    <li><a href="contact.html" class="is-active">Contact</a></li>
+  </ul>
+  <a href="contact.html" class="cta">Démarrer un projet →</a>
+</nav>
+
+<header class="page-head">
+  <span class="pill">Discutons</span>
+  <h1>Parlons de votre<br/><em>prochain</em> chapitre.</h1>
+  <p class="lead">Un appel de 30 minutes, sans pitch commercial. On comprend vos enjeux, on vous dit honnêtement si on est le bon partenaire — et si oui, on vous propose un cadre de mission clair sous 5 jours.</p>
+</header>
+
+<div class="contact-wrap">
+  <!-- FORM -->
+  <form class="form-card sr" id="contactForm">
+    <h2>Démarrer un projet</h2>
+    <p class="subt">Remplissez ce formulaire — nous revenons vers vous sous 24h ouvrées.</p>
+
+    <div class="form-row">
+      <div class="field">
+        <label for="firstname">Prénom *</label>
+        <input id="firstname" name="firstname" type="text" required placeholder="Votre prénom">
+      </div>
+      <div class="field">
+        <label for="lastname">Nom *</label>
+        <input id="lastname" name="lastname" type="text" required placeholder="Votre nom">
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="field">
+        <label for="email">Email pro *</label>
+        <input id="email" name="email" type="email" required placeholder="vous@entreprise.com">
+      </div>
+      <div class="field">
+        <label for="company">Société</label>
+        <input id="company" name="company" type="text" placeholder="Nom de votre société">
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="field full">
+        <label>Services qui vous intéressent</label>
+        <div class="svc-chips-form">
+          <label><input type="checkbox" name="svc" value="saas"><span>SaaS</span></label>
+          <label><input type="checkbox" name="svc" value="comm"><span>Communication</span></label>
+          <label><input type="checkbox" name="svc" value="graph"><span>Graphisme</span></label>
+          <label><input type="checkbox" name="svc" value="video"><span>Vidéo</span></label>
+          <label><input type="checkbox" name="svc" value="acq"><span>Acquisition</span></label>
+          <label><input type="checkbox" name="svc" value="social"><span>Réseaux</span></label>
+          <label><input type="checkbox" name="svc" value="ia"><span>IA</span></label>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="field full">
+        <label>Budget envisagé</label>
+        <div class="budget-chips">
+          <label><input type="radio" name="budget" value="<10"><span>&lt; 10 k€</span></label>
+          <label><input type="radio" name="budget" value="10-30"><span>10 — 30 k€</span></label>
+          <label><input type="radio" name="budget" value="30-80"><span>30 — 80 k€</span></label>
+          <label><input type="radio" name="budget" value="80-200"><span>80 — 200 k€</span></label>
+          <label><input type="radio" name="budget" value="200+"><span>200 k€+</span></label>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="field full">
+        <label for="timeline">Timing</label>
+        <select id="timeline" name="timeline">
+          <option value="">Choisir une option…</option>
+          <option value="urgent">Urgent — démarrage immédiat</option>
+          <option value="1m">Sous 1 mois</option>
+          <option value="3m">Sous 3 mois</option>
+          <option value="explore">En exploration — pas de timing fixé</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="field full">
+        <label for="message">Décrivez votre projet *</label>
+        <textarea id="message" name="message" required placeholder="Contexte, objectifs, contraintes — soyez aussi précis que possible."></textarea>
+      </div>
+    </div>
+
+    <div class="submit-row">
+      <button type="submit" class="submit-btn">Envoyer ma demande <svg viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18"/></svg></button>
+      <p class="privacy">En envoyant ce formulaire, vous acceptez notre <a href="#">politique de confidentialité</a>. Vos données ne sont jamais partagées.</p>
+    </div>
+  </form>
+
+  <!-- SIDE INFO -->
+  <aside class="side">
+    <div class="info-card sr">
+      <div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="13" rx="2"/><polyline points="3 7 12 13 21 7"/></svg></div>
+      <h4>Email direct</h4>
+      <p><a href="mailto:hello@youcom.studio">hello@youcom.studio</a><br>Réponse sous 24h ouvrées</p>
+    </div>
+    <div class="info-card sr">
+      <div class="ic"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+      <h4>Présence</h4>
+      <p>Paris &amp; Montréal<br>Remote-first · Déplacements possibles</p>
+    </div>
+    <div class="info-card sr">
+      <div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+      <h4>Disponibilité</h4>
+      <p>2 nouveaux projets / mois maximum<br>Pour rester focus sur la qualité</p>
+    </div>
+    <div class="info-card sr">
+      <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 2 L13.8 8.4 L20 11 L13.8 13.6 L12 20 L10.2 13.6 L4 11 L10.2 8.4 Z"/></svg></div>
+      <h4>Formats</h4>
+      <p>Mission ponctuelle, partenariat long-terme ou advisory technique mensuel.</p>
+    </div>
+  </aside>
+</div>
+
+<!-- FAQ -->
+<section class="faq">
+  <div class="top sr">
+    <span class="pill">Questions fréquentes</span>
+    <h2>Avant de <em>nous écrire</em>.</h2>
+  </div>
+  <div class="list">
+    <details class="sr"><summary>Comment fonctionne notre première rencontre ?</summary><p>Un appel de 30 minutes en visio, sans préparation lourde. Vous expliquez votre contexte, on pose les bonnes questions, et on vous dit honnêtement si on est le bon partenaire. Sortie : un compte-rendu écrit + recommandation, même si on ne travaille pas ensemble.</p></details>
+    <details class="sr"><summary>Quels sont vos délais et tarifs typiques ?</summary><p>Une mission SaaS démarre généralement entre 30 et 80 k€ pour un MVP, 80 à 200 k€ pour une plateforme complète. Une mission de communication intégrée démarre à 8 k€/mois. Les délais : 4 à 12 semaines selon le périmètre.</p></details>
+    <details class="sr"><summary>Travaillez-vous avec des startups early-stage ?</summary><p>Oui, mais sous conditions : vous devez avoir une vision claire du problème que vous résolvez et un budget cohérent. Nous proposons aussi un format "advisory" pour les fondateurs qui ont besoin de conseil stratégique sans budget de prod.</p></details>
+    <details class="sr"><summary>Pouvez-vous travailler avec notre équipe interne ?</summary><p>C'est même notre format préféré. Nous nous intégrons dans vos rituels (Slack, Notion, Linear) et formons vos équipes au passage. À la fin de la mission, vous repartez avec un produit que vous savez maintenir.</p></details>
+    <details class="sr"><summary>Êtes-vous éligibles aux dispositifs publics (CIR, France 2030, etc.) ?</summary><p>Oui, nous sommes éligibles au Crédit Impôt Recherche en France et accompagnons régulièrement des projets financés par France 2030, Bpifrance ou des dispositifs canadiens. Nous fournissons toute la documentation requise.</p></details>
+  </div>
+</section>
+
+<!-- TOAST -->
+<div class="toast" id="toast"><span class="check">✓</span><span>Message envoyé. On revient vers vous sous 24h.</span></div>
+
+<footer>
+  <div class="grid">
+    <div class="brand-block">
+      <div class="logo size-lg inv">
+        <span class="logo-mark"><svg viewBox="0 0 24 24"><path d="M5 4 L12 13 L19 4 L16 4 L12 9 L8 4 Z M10.5 12 L13.5 12 L13.5 20 L10.5 20 Z"/></svg><span class="dot-apos"></span></span>
+        <span class="logo-text">You<span class="apos">'</span>Com</span>
+      </div>
+      <p>Studio B2B. SaaS sur-mesure et communication intégrée pour transformer les marques ambitieuses en moteurs de croissance.</p>
+    </div>
+    <div><h5>Studio</h5><ul><li><a href="about.html">À propos</a></li><li><a href="services.html#process">Méthode</a></li><li><a href="services.html">Cas clients</a></li><li><a href="contact.html">Carrières</a></li></ul></div>
+    <div><h5>Services</h5><ul><li><a href="services.html#saas">SaaS sur-mesure</a></li><li><a href="services.html#comm">Communication</a></li><li><a href="services.html#graph">Graphisme</a></li><li><a href="services.html#video">Vidéo</a></li><li><a href="services.html#acq">Acquisition</a></li><li><a href="services.html#social">Réseaux</a></li><li><a href="services.html#ia">IA</a></li></ul></div>
+    <div><h5>Contact</h5><ul><li><a href="mailto:hello@youcom.studio">hello@youcom.studio</a></li><li><a href="contact.html">Formulaire</a></li><li><a href="#">LinkedIn</a></li><li><a href="#">Behance</a></li></ul></div>
+  </div>
+  <div class="bot"><span>© 2026 You'Com Studio · Tous droits réservés</span><span>Paris &amp; Montréal · Remote-first</span></div>
+</footer>
+
+<script>
+const sio = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');sio.unobserve(e.target)}});
+},{threshold:0.15, rootMargin:'0px 0px -60px 0px'});
+document.querySelectorAll('.sr').forEach(el=>sio.observe(el));
+
+document.getElementById('contactForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  const toast = document.getElementById('toast');
+  toast.classList.add('show');
+  setTimeout(()=>toast.classList.remove('show'), 4500);
+  this.reset();
+});
+</script>
+</body>
+</html>
