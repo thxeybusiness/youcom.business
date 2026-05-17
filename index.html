@@ -8,6 +8,12 @@
 <meta http-equiv="Expires" content="0" />
 <title>You'Com — Studio B2B • SaaS, Communication & Croissance</title>
 <meta name="description" content="You'Com — Studio B2B. SaaS sur-mesure, Communication, Graphisme, Montage, Stratégie d'acquisition, Gestion réseaux et Automatisation IA." />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+<link rel="icon" type="image/png" sizes="64x64" href="/favicon-64.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#2563eb">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
@@ -86,17 +92,23 @@ button{font:inherit;border:none;cursor:pointer;background:none;color:inherit}
 /* ---------- LOGO (bulletproof, no glitch) ---------- */
 .logo{display:inline-flex;align-items:center;gap:10px;font-weight:700;letter-spacing:-.02em;line-height:1}
 .logo-mark{width:32px;height:auto;border-radius:0;background:none;box-shadow:none;display:flex;align-items:center;justify-content:center;position:relative;flex-shrink:0;transition:transform .35s var(--ease)}
+.nav .logo .logo-text{white-space:nowrap;font-size:18px}
 .logo-mark img{width:100%;height:auto;display:block;object-fit:contain}
 .logo-mark .dot-apos{display:none}
 @keyframes pulseDot{50%{box-shadow:0 0 0 6px rgba(255,255,255,0)}}
 .logo:hover .logo-mark{transform:rotate(-8deg) scale(1.05)}
 .logo-text{font-size:20px;letter-spacing:-.02em;color:var(--ink)}
 .logo-text .apos{color:var(--blue);font-weight:800}
+.logo-text .apos-img,.logo-text .nav-apos-img{display:inline-block;width:.68em;height:.68em;object-fit:contain;vertical-align:.12em;margin:0 -.06em;mix-blend-mode:multiply}
+.nav .logo-text .apos-img,.nav .logo-text .nav-apos-img{margin:0 -.13em 0 -.06em}
+.logo-mark img{mix-blend-mode:multiply}
 .logo.size-lg{gap:14px}
 .logo.size-lg .logo-mark{width:44px;height:auto;border-radius:0}
 .logo.size-lg .logo-text{font-size:30px}
 .logo.inv .logo-text{color:#fff}
-.logo.inv .logo-mark{background:rgba(255,255,255,.95);border-radius:10px;padding:5px;box-shadow:0 2px 12px rgba(0,0,0,.15)}
+.logo.inv .logo-mark{background:none;box-shadow:none;padding:0}
+.logo.inv .logo-mark img{mix-blend-mode:screen}
+.logo.inv .logo-text .apos-img,.logo.inv .logo-text .nav-apos-img{mix-blend-mode:screen;vertical-align:.28em;margin:0 -.16em 0 -.06em}
 
 /* ---------- Nav (centered, perfectly aligned) ---------- */
 .nav{position:fixed;top:18px;left:50%;transform:translateX(-50%);z-index:80;display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:6px 6px 6px 16px;border:1px solid var(--line);background:rgba(255,255,255,.92);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-radius:999px;box-shadow:0 14px 50px -8px rgba(10,26,47,.14);height:54px}
@@ -168,20 +180,8 @@ section{position:relative;padding:140px 6vw}
 @keyframes sepReveal{to{transform:scaleY(1)}}
 .hero-stats .s .num{font-size:clamp(28px,3vw,40px);font-weight:700;letter-spacing:-.025em;color:var(--ink);line-height:1;display:inline-block;transition:transform .3s cubic-bezier(.22,1,.36,1)}
 .hero-stats .s:hover .num{transform:scale(1.08) translateY(-2px)}
-.hero-stats .s .num.counting{color:var(--blue);text-shadow:0 0 12px rgba(37,99,235,.5)}
-.hero-stats .s .num.counted{animation:blueDisperse 2s ease-out forwards}
-@keyframes blueDisperse{
-  0%  {color:#2563eb;text-shadow:0 0 6px rgba(37,99,235,.95),0 0 16px rgba(37,99,235,.7)}
-  22% {color:#2563eb;text-shadow:0 0 22px rgba(37,99,235,.85),0 0 55px rgba(37,99,235,.5),0 0 85px rgba(37,99,235,.2)}
-  45% {color:#2563eb;text-shadow:0 0 42px rgba(37,99,235,.65),0 0 95px rgba(37,99,235,.35),0 0 170px rgba(37,99,235,.12)}
-  68% {color:#4a6898;text-shadow:0 0 62px rgba(37,99,235,.38),0 0 125px rgba(37,99,235,.14)}
-  86% {color:#0a1a2f;text-shadow:0 0 82px rgba(37,99,235,.08),0 0 160px rgba(37,99,235,.02)}
-  100%{color:#0a1a2f;text-shadow:0 0 100px rgba(37,99,235,0)}
-}
-@keyframes numGlow{0%,100%{filter:drop-shadow(0 0 0 rgba(37,99,235,0))}50%{filter:drop-shadow(0 0 20px rgba(37,99,235,.3))}}
-.hero-stats .s:nth-child(1) .num{animation:numGlow 3.2s ease-in-out infinite 1.2s}
-.hero-stats .s:nth-child(2) .num{animation:numGlow 3.2s ease-in-out infinite 1.6s}
-.hero-stats .s:nth-child(3) .num{animation:numGlow 3.2s ease-in-out infinite 2s}
+.hero-stats .s .num.counting{color:var(--ink)}
+.hero-stats .s .num.counted{color:var(--ink)}
 .hero-stats .s .num .unit{color:var(--blue);display:inline-block;animation:unitBounce 3.4s ease-in-out infinite 1.4s}
 .hero-stats .s:nth-child(2) .num .unit{animation-delay:1.8s}
 @keyframes unitBounce{0%,75%,100%{transform:scale(1) translateY(0)}38%{transform:scale(1.25) translateY(-3px) rotate(-7deg)}55%{transform:scale(.94) translateY(1px)}}
@@ -1180,10 +1180,9 @@ body.vsl-locked{overflow:hidden}
   width:.82em;
   height:.82em;
   object-fit:contain;
-  object-position:center center;
   vertical-align:.16em;
-  margin:0 -.1em;
-  mix-blend-mode:multiply; /* blanc → transparent, bleu reste intact */
+  margin:0 -.18em 0 -.12em;
+  mix-blend-mode:multiply;
 }
 .fly-center .fc-desc{
   font-size:16.5px;font-weight:400;color:var(--ink-2);
@@ -1220,15 +1219,10 @@ body.vsl-locked{overflow:hidden}
 .fly-app.fa4{top:38%; right:2%}   /* HubSpot — aligné avec Stripe             */
 
 /* === FLY-APP DEPTH LAYERS === */
-/* NEAR — centre (fa5 Linear, fa6 Slack) */
+/* Depth uniforme — pas de flou ni assombrissement */
 .fly-app.fa5,.fly-app.fa6{
-  filter:brightness(1.06);
   box-shadow:0 28px 70px -12px rgba(10,26,47,.32),0 10px 28px -6px rgba(37,99,235,.22);
 }
-/* MID — milieu (fa3 Figma, fa4 HubSpot) */
-.fly-app.fa3,.fly-app.fa4{filter:brightness(.95) blur(.22px)}
-/* FAR — bords (fa1 Stripe, fa2 Notion) */
-.fly-app.fa1,.fly-app.fa2{filter:brightness(.86) blur(.55px)}
 
 /* === STAT BADGES — fly-apps === */
 .fa-stat{
@@ -1462,6 +1456,288 @@ body.vsl-locked{overflow:hidden}
   opacity:0;animation:glowBurst 2s var(--ease) forwards;animation-delay:0.8s
 }
 @keyframes glowBurst{0%{opacity:0;transform:translate(-50%,-50%) scale(.6)}40%{opacity:1}100%{opacity:.55;transform:translate(-50%,-50%) scale(1.3)}}
+
+/* === SOCIAL NAV — TikTok + Instagram === */
+.social-nav{
+  position:fixed;
+  top:18px;
+  right:30px;
+  z-index:80;
+  display:inline-flex;
+  align-items:center;
+  gap:4px;
+  padding:6px;
+  border:1px solid var(--line);
+  background:rgba(255,255,255,.92);
+  backdrop-filter:blur(24px);
+  -webkit-backdrop-filter:blur(24px);
+  border-radius:999px;
+  box-shadow:0 14px 50px -8px rgba(10,26,47,.14);
+  height:54px
+}
+.social-nav a{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:42px;
+  height:42px;
+  border-radius:50%;
+  color:var(--ink-2);
+  transition:.25s var(--ease);
+  text-decoration:none
+}
+.social-nav a:hover{
+  background:var(--blue);
+  color:#fff;
+  transform:translateY(-2px);
+  box-shadow:0 10px 24px -6px rgba(37,99,235,.5)
+}
+.social-nav svg{width:18px;height:18px;display:block}
+
+/* === HERO + DASHBOARD + COMM-DEEP : fond blanc plein === */
+.hero,.hero-mockup,.comm-deep{background:#fff!important}
+.hero .blob{display:none!important}
+
+/* ============================================================
+   MOBILE (≤780px) — alignement & cohérence textuelle
+============================================================ */
+@media (max-width:780px){
+  /* Apostrophe logo — version mobile optimisée */
+  .logo-mark img,
+  .nav-apos-img,
+  .fc-apos-img,
+  .apos-img{
+    content:url('logo-apos-mobile.png')!important
+  }
+
+  /* Social nav mobile — sous la nav, centrée */
+  .social-nav{
+    top:auto;
+    bottom:14px;
+    right:50%;
+    transform:translateX(50%);
+    padding:4px;
+    height:40px;
+    gap:2px
+  }
+  .social-nav a{width:32px;height:32px}
+  .social-nav svg{width:15px;height:15px}
+
+  /* Nav complète mobile — taille réduite */
+  .nav{
+    padding:3px 3px 3px 8px;
+    height:38px;
+    gap:1px;
+    width:calc(100vw - 12px);
+    max-width:none
+  }
+  .nav .logo{
+    padding:0 6px 0 0;
+    height:32px;
+    margin-right:3px;
+    border-right:1px solid var(--line);
+    gap:3px
+  }
+  .nav .logo .logo-text{font-size:11px;letter-spacing:-.01em}
+  .nav .logo-mark{width:17px}
+  .nav ul{
+    display:inline-flex!important;
+    gap:0;
+    flex:1;
+    justify-content:space-around
+  }
+  .nav ul a{
+    padding:6px 3px;
+    font-size:8px;
+    letter-spacing:.03em;
+    line-height:1;
+    border-radius:6px;
+    white-space:nowrap
+  }
+  .nav .cta{
+    padding:5px 9px;
+    height:28px;
+    margin-left:3px;
+    white-space:nowrap;
+    border-radius:999px;
+    flex-shrink:0;
+    font-size:0
+  }
+  .nav .cta::after{content:"Projet →";font-size:9px;font-weight:700;letter-spacing:-.01em}
+
+  /* Hero — texte centré, titre adapté (garde min-height pour structure) */
+  .hero{padding:0 5vw 60px}
+  .hero h1{font-size:clamp(44px,11vw,68px);text-align:center;line-height:1}
+  .fly-center .fc-name{font-size:clamp(54px,14vw,80px);text-align:center;line-height:.95}
+  .fly-center .fc-badge{font-size:11px;padding:6px 14px}
+  .fly-center .fc-desc{font-size:14.5px;text-align:center;line-height:1.55;max-width:92%}
+  .fly-center .fc-cta,.btn,.btn.primary{max-width:88vw}
+
+  /* Cartes flottantes décoratives — on garde 4, on masque les overlaps */
+  .fly-app.fa3,.fly-app.fa4,.fly-app.fa5,.fly-app.fa6{display:none!important}
+  .orbit-app{display:none!important}
+
+  /* Section "Construire avec nous" */
+  .pitch-center,.pitch-center .pc-wordmark{text-align:center}
+  .pitch-center .pc-wordmark{font-size:clamp(36px,8vw,52px)}
+
+  /* Stats bar — colonne unique centrée */
+  .stats-bar{grid-template-columns:1fr;gap:28px;padding:60px 6vw;text-align:center}
+  .stats-bar .s{text-align:center;border:none;padding:0}
+  .stats-bar .s + .s::before{display:none}
+
+  /* svc-hier — services premium */
+  .svc-hier{padding:80px 5vw;text-align:center}
+  .svc-hier h2{font-size:clamp(32px,7vw,48px);text-align:center;line-height:1.05}
+  .svc-hier .desc,.svc-hier p{text-align:center;margin-left:auto;margin-right:auto}
+  .svc-hier .svc-primary,.svc-hier .svc-secondary,.svc-hier .grid{grid-template-columns:1fr!important;gap:18px}
+  .svc-hier .scard{text-align:left}
+
+  /* saas-deep — centrer & grille mono colonne */
+  .saas-deep{padding:80px 5vw;text-align:center}
+  .saas-deep h2{font-size:clamp(36px,8.5vw,56px);text-align:center;margin:0 auto 20px;max-width:100%}
+  .saas-deep .lead{text-align:center;margin:0 auto 40px;max-width:100%;color:rgba(255,255,255,.85)}
+  .saas-deep .label{text-align:center;display:block}
+  .saas-deep .grid,.saas-deep .grid-2,.saas-deep .nums{grid-template-columns:1fr;gap:16px}
+  .saas-deep .card{text-align:left}
+  .saas-deep .num,.saas-deep .num-block{text-align:center}
+  .saas-deep .actions,.saas-deep .ctas{justify-content:center;flex-wrap:wrap}
+  /* Stats internes des cards saas-deep — stack vertical propre */
+  .saas-deep .card .stats{display:flex;flex-direction:column;gap:14px;margin-top:18px}
+  .saas-deep .card .stats .s{text-align:left;display:flex;align-items:baseline;gap:12px}
+  .saas-deep .card .stats .num{font-size:clamp(22px,5.4vw,28px);font-weight:800;line-height:1;color:var(--sky)}
+  .saas-deep .card .stats .lbl{font-size:11px;letter-spacing:.08em;text-transform:uppercase;opacity:.7}
+  .saas-deep .card .chart{max-width:100%;overflow:hidden;margin-top:14px}
+  .saas-deep .card .chart svg{width:100%;height:auto;max-height:100px}
+
+  /* comm-deep / communication */
+  .comm-deep{padding:80px 5vw;text-align:center}
+  .comm-deep h2{font-size:clamp(36px,8vw,52px);text-align:center;line-height:1.05}
+  .comm-deep .lead,.comm-deep p{text-align:center;max-width:100%;margin-left:auto;margin-right:auto}
+  .comm-deep .grid,.comm-deep .ed-grid,.comm-deep .row{grid-template-columns:1fr;gap:16px}
+
+  /* Testimonials */
+  .testi{padding:80px 5vw}
+  .testi h2{font-size:clamp(32px,7vw,46px);text-align:center;line-height:1.05}
+  .testi .grid,.testi .testi-grid{grid-template-columns:1fr;gap:20px}
+
+  /* CTA final */
+  .cta-final{padding:100px 5vw;text-align:center}
+  .cta-final h2{font-size:clamp(40px,9vw,64px);text-align:center;line-height:.98}
+  .cta-final p,.cta-final .lead{text-align:center;max-width:100%;margin-left:auto;margin-right:auto}
+  .cta-final .actions,.cta-final .ctas{justify-content:center;flex-wrap:wrap;gap:12px}
+
+  /* About section — vrais selecteurs .ab-* */
+  .ab-section,.about-section{padding:80px 5vw;text-align:center}
+  .ab-intro{grid-template-columns:1fr!important;gap:24px;text-align:center}
+  .ab-pill{display:inline-flex;margin:0 auto 18px;justify-content:center}
+  .ab-headline{font-size:clamp(36px,8.5vw,56px);text-align:center;line-height:1.05;max-width:100%}
+  .ab-desc,.ab-intro-right p{text-align:center;max-width:100%;margin:0 auto}
+  .ab-intro-right{align-items:center}
+  .ab-cta-row{justify-content:center;gap:10px;flex-wrap:wrap}
+  .ab-pillars{grid-template-columns:1fr!important;gap:18px}
+  .ab-pillar{text-align:left}
+  .ab-pnum,.ab-ptitle,.ab-pbody{text-align:left}
+  .ab-ghost{font-size:clamp(72px,16vw,128px)}
+
+  /* Footer */
+  footer,.footer{padding:60px 6vw 40px;text-align:center}
+  footer .grid,.footer .grid,.footer-cols{grid-template-columns:1fr;gap:32px;text-align:center}
+  footer .logo,.footer .logo{justify-content:center}
+  footer ul,.footer ul{padding:0;list-style:none}
+  footer ul li,.footer ul li{padding:4px 0}
+  footer h5,.footer h5{margin-bottom:10px}
+
+  /* Boutons cohérents */
+  .btn,.btn.primary,.btn.ghost,.cta-btn{width:auto;max-width:90vw;justify-content:center}
+
+  /* Labels et pills uniformément centrés */
+  .pill,.label,.svc-hier .pill,.testi .label,.testi .pill,
+  .saas-deep .label,.cta-final .label,.cta-final .pill,
+  .comm-deep .label,.comm-deep .pill,.ab-section .pill{
+    display:inline-block;text-align:center;margin-left:auto;margin-right:auto
+  }
+  /* Conteneurs avec label/pill : centrer le bloc */
+  .testi .top,.saas-deep .top,.comm-deep .top,.cta-final .top,
+  .ab-section .top,.svc-hier .top{text-align:center}
+
+  /* Story chapters about — centrer chaque chapitre */
+  .ab-section .ab-row,.ab-section .ab-chap,.story .chap{
+    grid-template-columns:1fr!important;gap:14px;text-align:center
+  }
+  .story .chap .num,.ab-section .num,.ab-section .ab-num{
+    text-align:center;margin:0 auto
+  }
+  .story .chap h3,.story .chap p,
+  .ab-section h2,.ab-section h3,.ab-section p{text-align:center}
+
+  /* Cards internes : contenu lisible (gauche) mais carte centrée dans la grille */
+  .saas-deep .card,.svc-hier .scard,.values .card{
+    text-align:left;margin-left:auto;margin-right:auto;max-width:100%
+  }
+  .saas-deep .card ul,.svc-hier .scard ul,.svc-hier ul{
+    text-align:left;padding-left:18px
+  }
+
+  /* Réduire l'overflow latéral des éléments décoratifs */
+  body{overflow-x:hidden}
+  .saas-deep::before,.saas-deep::after,
+  .comm-deep::before,.comm-deep::after,
+  .cta-final::before,.cta-final::after{display:none!important}
+
+  /* Sections génériques padding */
+  section{padding-left:5vw;padding-right:5vw}
+
+  /* ====== HIDE / CONTAIN DECORATIVE ELEMENTS ====== */
+  /* Cartes flottantes (toutes) */
+  .fly-app,.fly-apps,.orbit-app,.orbit{display:none!important}
+  /* Glow, blobs, halos, pseudo-éléments décoratifs */
+  .hero .blob,.hero .b1,.hero .b2,.hero .b3,
+  .pitch-glow,.glow,.blob,
+  .saas-deep::before,.saas-deep::after,
+  .comm-deep::before,.comm-deep::after,
+  .cta-final::before,.cta-final::after,
+  .testi::before,.testi::after,
+  .svc-hier::before,.svc-hier::after,
+  .ab-section::before,.ab-section::after,
+  .ab-intro::before,.ab-intro::after,
+  .stats-bar::before{display:none!important}
+  /* Mockups/visuels qui peuvent chevaucher */
+  .saas-deep .code-mockup,.saas-deep .visual-overlay,
+  .saas-deep .floating-card,.saas-deep .float,
+  .comm-deep .float,.comm-deep .floating-card,
+  .hero .mock-float,.hero .float,
+  .pcard-deco,.svc-primary .pcard .visual,.svc-secondary .visual,
+  .pcard .deco,.pcard::before,.pcard::after{display:none!important}
+  /* Pcards en colonne unique */
+  .svc-primary,.svc-secondary{grid-template-columns:1fr!important;gap:18px}
+  .svc-primary .pcard,.svc-secondary .scard{
+    min-height:auto;padding:32px 24px;text-align:left
+  }
+  .svc-primary .pcard h3,.svc-secondary .scard h4{font-size:clamp(26px,6vw,36px)}
+  .svc-primary .pcard p,.svc-secondary .scard p{max-width:100%;font-size:14.5px}
+  /* Connexions SVG entre fly-apps */
+  #flyConnSvg,.fly-conn-svg{display:none!important}
+  /* Liens scroll-hint */
+  .hero .scroll-hint{display:none!important}
+  /* Forcer largeur max sur les images et svg dans les sections */
+  section img,section svg{max-width:100%;height:auto}
+  /* Évite tout débordement horizontal */
+  .hero,.svc-hier,.comm-deep,.saas-deep,.stats-bar,.cta-final,.testi,.ab-section{
+    overflow:hidden;position:relative
+  }
+  /* Cards/grilles : pas de translation négative */
+  .svc-hier .grid,.saas-deep .grid,.saas-deep .grid-2,.comm-deep .grid{
+    transform:none!important;margin-left:0;margin-right:0
+  }
+  /* Hero mockup : garder visible mais contraindre */
+  .hero-mockup{padding-left:4vw;padding-right:4vw}
+  .hero-mockup img,.hero-mockup .saas-card,.hero-mockup .dash{max-width:100%}
+  /* Chips/tags Communication — force wrap */
+  .comm-deep .chips,.svc-hier .chips,.tags{
+    display:flex;flex-wrap:wrap;justify-content:center;gap:8px
+  }
+}
 </style>
 </head>
 <body>
@@ -1469,7 +1745,7 @@ body.vsl-locked{overflow:hidden}
 <!-- Loader -->
 <div class="loader" id="loader">
   <div class="lo-mark">
-    <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAASABIAAD/4QBMRXhpZgAATU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAyKADAAQAAAABAAAAyAAAAAD/7QA4UGhvdG9zaG9wIDMuMAA4QklNBAQAAAAAAAA4QklNBCUAAAAAABDUHYzZjwCyBOmACZjs+EJ+/8IAEQgAyADIAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAMCBAEFAAYHCAkKC//EAMMQAAEDAwIEAwQGBAcGBAgGcwECAAMRBBIhBTETIhAGQVEyFGFxIweBIJFCFaFSM7EkYjAWwXLRQ5I0ggjhU0AlYxc18JNzolBEsoPxJlQ2ZJR0wmDShKMYcOInRTdls1V1pJXDhfLTRnaA40dWZrQJChkaKCkqODk6SElKV1hZWmdoaWp3eHl6hoeIiYqQlpeYmZqgpaanqKmqsLW2t7i5usDExcbHyMnK0NTV1tfY2drg5OXm5+jp6vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAQIAAwQFBgcICQoL/8QAwxEAAgIBAwMDAgMFAgUCBASHAQACEQMQEiEEIDFBEwUwIjJRFEAGMyNhQhVxUjSBUCSRoUOxFgdiNVPw0SVgwUThcvEXgmM2cCZFVJInotIICQoYGRooKSo3ODk6RkdISUpVVldYWVpkZWZnaGlqc3R1dnd4eXqAg4SFhoeIiYqQk5SVlpeYmZqgo6SlpqeoqaqwsrO0tba3uLm6wMLDxMXGx8jJytDT1NXW19jZ2uDi4+Tl5ufo6ery8/T19vf4+fr/2wBDAAICAgICAgMCAgMFAwMDBQYFBQUFBggGBgYGBggKCAgICAgICgoKCgoKCgoMDAwMDAwODg4ODg8PDw8PDw8PDw//2wBDAQICAgQEBAcEBAcQCwkLEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBD/2gAMAwEAAhEDEQAAAfv7bVttW21bbVttW21bbVttW21bbVttW21bbVttW21bbVttW21bbVttW21bbVttW21bbVttW21bbVttW21bbVttW1XzXVl3OauubTbYHbattq22rbattq22rbattq22rcZ2fw99N5lJT7fuXxL76T+Xt5PX+im4Dv8A8F+62259Ntq22rbattq22rbattq22qg+Cvun4W/WPldtv0T5/bavob6O+dfor8K+322+Y9Pbattq22rbattq22rbattqafn3+h/xh+ifPedbb9Y+W23R4t9VejoX/Of6Htty67bVttW21bbVttW21bbVttW+b/pD56+m8z5w237t8RvqXxP7X/OPoSbb8q+p22rbattq22rbattq22rbattq3yJ9JfDX6N86F+1+v/tvG6bqtvwj7jbbJ9tq22rbattq22rbattq22rNBfIP0HnseLP9afq3y7X1/b8W+y224tttq22rbattq22rbattq22rIXq+NOW+62v6F8/zfb7fCe5tthpttW21bbVttW21bbVttW21bbVttW21bbVttW21bbVttW21bbVttW21bbVttW21bbVttW21bbVttW21bbVttW21bbVttW21bbVttW21bbVttW21bbVttW21bbV//9oACAEBAAEFAv8AlhN3e2tjFH4k2OQxTwzp/wBS73vMOzWt9f3W4zu3ubi0k8P+LPfF/wCpN/3JW57l9zw1uR3Pa/8AUW6zGDbfu+ApDl/qLfElWz/d8BRH/Uc8QnhWhUa/ueFbP3PZv9R+KrP3Tee+02Cty3BKQkf6j8exDPv4L2r3e1/1J49WMO2wbQrd75KUoT/qTxleC53Z21tNeT7PtcW0Wf8AqTeNzj2qxkWuVaELkX4b2BO0w/6knnitod+3mTeLtCFSK8N+G07an/UlzdQWcO/+IJt4kggmuZfD/huLak/6kVUJ8ST71Ndbdtl3uk+zbFabPF/qaWGKdFrZ21jF/wAsM//aAAgBAxEBPwH/AEBLPCJolB+n8p1vs4+PJZSJNl6TrZ4TcXFlE4iQ+l+8B++OvxH+Tx+l8/iuMZ6QgZHaHDi2QEB6fS+XH+p5afB9HZ96X0/nup+0Yg9B0JzTr0YQERtH0uv6+OGP9XpulydTk3H/AF3Bgjjjtj9Ofwm7JulLhx44wG2P+j//2gAIAQIRAT8B/wBAYuhz5I74QJH+BlEg0fp/ur8IOt6ip/hj5/3k4sUYREYCg/MfBYOshtyDn8/V6vpZYcssU/I+l/uHcR7OU/11/fEj+8clf0/2g+l/uHvWVlyYD6i/9b/gOmfNHHA5J+A9b1Rz5pZpep+l+5xP9446/r/tDp+/fzW2H6PG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" alt="You'Com" draggable="false"/>
+    <img src="logo-apos.png" alt="You'Com" draggable="false"/>
   </div>
   <div class="lo-row">
     <span>Y</span><span>o</span><span>u</span><span class="apos">'</span><span>C</span><span>o</span><span>m</span>
@@ -1564,10 +1840,10 @@ body.vsl-locked{overflow:hidden}
         <div class="svc s1"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><line x1="3" y1="9" x2="21" y2="9"/><circle cx="6" cy="6" r=".8" fill="#38bdf8"/></svg>SaaS</div>
         <div class="svc s2"><svg viewBox="0 0 24 24"><path d="M3 11a9 9 0 0 1 18 0v6l-3 3H3z"/><line x1="8" y1="11" x2="16" y2="11"/><line x1="8" y1="15" x2="13" y2="15"/></svg>Comm</div>
         <div class="svc s3"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9 9 L15 9 L15 15 L9 15 Z"/></svg>Graph</div>
-        <div class="svc s4"><svg viewBox="0 0 24 24"><polygon points="6 4 20 12 6 20"/></svg>Vidéo</div>
+        <div class="svc s4"><svg viewBox="0 0 24 24"><polygon points="6 4 20 12 6 20"/></svg>Création de contenu</div>
         <div class="svc s5"><svg viewBox="0 0 24 24"><polyline points="3 17 9 11 13 15 21 7"/><polyline points="14 7 21 7 21 14"/></svg>Acq</div>
-        <div class="svc s6"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><circle cx="6" cy="6" r="2"/><circle cx="18" cy="6" r="2"/><circle cx="6" cy="18" r="2"/><circle cx="18" cy="18" r="2"/><line x1="9.5" y1="9.5" x2="7.5" y2="7.5"/><line x1="14.5" y1="9.5" x2="16.5" y2="7.5"/><line x1="9.5" y1="14.5" x2="7.5" y2="16.5"/><line x1="14.5" y1="14.5" x2="16.5" y2="16.5"/></svg>Réseaux</div>
-        <div class="svc s7"><svg viewBox="0 0 24 24"><path d="M12 2 L13.8 8.4 L20 11 L13.8 13.6 L12 20 L10.2 13.6 L4 11 L10.2 8.4 Z"/></svg>IA</div>
+        <div class="svc s6"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><circle cx="6" cy="6" r="2"/><circle cx="18" cy="6" r="2"/><circle cx="6" cy="18" r="2"/><circle cx="18" cy="18" r="2"/><line x1="9.5" y1="9.5" x2="7.5" y2="7.5"/><line x1="14.5" y1="9.5" x2="16.5" y2="7.5"/><line x1="9.5" y1="14.5" x2="7.5" y2="16.5"/><line x1="14.5" y1="14.5" x2="16.5" y2="16.5"/></svg>Gestion des réseaux</div>
+        <div class="svc s7"><svg viewBox="0 0 24 24"><path d="M12 2 L13.8 8.4 L20 11 L13.8 13.6 L12 20 L10.2 13.6 L4 11 L10.2 8.4 Z"/></svg>Automatisation IA</div>
       </div>
     </div>
 
@@ -1612,19 +1888,28 @@ body.vsl-locked{overflow:hidden}
 <nav class="nav">
   <a href="#top" class="logo">
     <span class="logo-mark">
-      <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAASABIAAD/4QBMRXhpZgAATU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAyKADAAQAAAABAAAAyAAAAAD/7QA4UGhvdG9zaG9wIDMuMAA4QklNBAQAAAAAAAA4QklNBCUAAAAAABDUHYzZjwCyBOmACZjs+EJ+/8IAEQgAyADIAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAMCBAEFAAYHCAkKC//EAMMQAAEDAwIEAwQGBAcGBAgGcwECAAMRBBIhBTETIhAGQVEyFGFxIweBIJFCFaFSM7EkYjAWwXLRQ5I0ggjhU0AlYxc18JNzolBEsoPxJlQ2ZJR0wmDShKMYcOInRTdls1V1pJXDhfLTRnaA40dWZrQJChkaKCkqODk6SElKV1hZWmdoaWp3eHl6hoeIiYqQlpeYmZqgpaanqKmqsLW2t7i5usDExcbHyMnK0NTV1tfY2drg5OXm5+jp6vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAQIAAwQFBgcICQoL/8QAwxEAAgIBAwMDAgMFAgUCBASHAQACEQMQEiEEIDFBEwUwIjJRFEAGMyNhQhVxUjSBUCSRoUOxFgdiNVPw0SVgwUThcvEXgmM2cCZFVJInotIICQoYGRooKSo3ODk6RkdISUpVVldYWVpkZWZnaGlqc3R1dnd4eXqAg4SFhoeIiYqQk5SVlpeYmZqgo6SlpqeoqaqwsrO0tba3uLm6wMLDxMXGx8jJytDT1NXW19jZ2uDi4+Tl5ufo6ery8/T19vf4+fr/2wBDAAICAgICAgMCAgMFAwMDBQYFBQUFBggGBgYGBggKCAgICAgICgoKCgoKCgoMDAwMDAwODg4ODg8PDw8PDw8PDw//2wBDAQICAgQEBAcEBAcQCwkLEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBD/2gAMAwEAAhEDEQAAAfv7bVttW21bbVttW21bbVttW21bbVttW21bbVttW21bbVttW21bbVttW21bbVttW21bbVttW21bbVttW21bbVttW1XzXVl3OauubTbYHbattq22rbattq22rbattq22rcZ2fw99N5lJT7fuXxL76T+Xt5PX+im4Dv8A8F+62259Ntq22rbattq22rbattq22qg+Cvun4W/WPldtv0T5/bavob6O+dfor8K+322+Y9Pbattq22rbattq22rbattqafn3+h/xh+ifPedbb9Y+W23R4t9VejoX/Of6Htty67bVttW21bbVttW21bbVttW+b/pD56+m8z5w237t8RvqXxP7X/OPoSbb8q+p22rbattq22rbattq22rbattq3yJ9JfDX6N86F+1+v/tvG6bqtvwj7jbbJ9tq22rbattq22rbattq22rNBfIP0HnseLP9afq3y7X1/b8W+y224tttq22rbattq22rbattq22rIXq+NOW+62v6F8/zfb7fCe5tthpttW21bbVttW21bbVttW21bbVttW21bbVttW21bbVttW21bbVttW21bbVttW21bbVttW21bbVttW21bbVttW21bbVttW21bbVttW21bbVttW21bbVttW21bbV//9oACAEBAAEFAv8AlhN3e2tjFH4k2OQxTwzp/wBS73vMOzWt9f3W4zu3ubi0k8P+LPfF/wCpN/3JW57l9zw1uR3Pa/8AUW6zGDbfu+ApDl/qLfElWz/d8BRH/Uc8QnhWhUa/ueFbP3PZv9R+KrP3Tee+02Cty3BKQkf6j8exDPv4L2r3e1/1J49WMO2wbQrd75KUoT/qTxleC53Z21tNeT7PtcW0Wf8AqTeNzj2qxkWuVaELkX4b2BO0w/6knnitod+3mTeLtCFSK8N+G07an/UlzdQWcO/+IJt4kggmuZfD/huLak/6kVUJ8ST71Ndbdtl3uk+zbFabPF/qaWGKdFrZ21jF/wAsM//aAAgBAxEBPwH/AEBLPCJolB+n8p1vs4+PJZSJNl6TrZ4TcXFlE4iQ+l+8B++OvxH+Tx+l8/iuMZ6QgZHaHDi2QEB6fS+XH+p5afB9HZ96X0/nup+0Yg9B0JzTr0YQERtH0uv6+OGP9XpulydTk3H/AF3Bgjjjtj9Ofwm7JulLhx44wG2P+j//2gAIAQIRAT8B/wBAYuhz5I74QJH+BlEg0fp/ur8IOt6ip/hj5/3k4sUYREYCg/MfBYOshtyDn8/V6vpZYcssU/I+l/uHcR7OU/11/fEj+8clf0/2g+l/uHvWVlyYD6i/9b/gOmfNHHA5J+A9b1Rz5pZpep+l+5xP9446/r/tDp+/fzW2H6PG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" alt="You'Com" draggable="false"/>
+      <img src="logo-apos.png" alt="You'Com" draggable="false"/>
     </span>
-    <span class="logo-text">You<span class="apos">'</span>Com</span>
+    <span class="logo-text">You<img class="nav-apos-img" src="logo-apos.jpg" alt="'">Com</span>
   </a>
   <ul>
-    <li><a href="youcome.html" class="nav-home"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;margin-right:5px"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>Home</a></li>
+    <li><a href="youcome.html">Accueil</a></li>
     <li><a href="services.html">Services</a></li>
-    <li><a href="about.html">About us</a></li>
-    <li><a href="services.html#process">Méthode</a></li>
+    <li><a href="about.html">À propos</a></li>
     <li><a href="contact.html">Contact</a></li>
   </ul>
   <a href="contact.html" class="cta magnetic">Démarrer un projet →</a>
 </nav>
+
+<!-- Social pill — fixed, à côté de la nav -->
+<div class="social-nav" aria-label="Réseaux sociaux">
+  <a href="https://www.tiktok.com/@youcombusiness?_r=1&_t=ZN-96Ptub9OsA" target="_blank" rel="noopener" aria-label="TikTok">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43v-7.05a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.84-.05z"/></svg>
+  </a>
+  <a href="https://www.instagram.com/youcombusiness?igsh=MWQyNnNoOXZkaWIxZw%3D%3D" target="_blank" rel="noopener" aria-label="Instagram">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><circle cx="17.5" cy="6.5" r=".7" fill="currentColor"/></svg>
+  </a>
+</div>
 
 <!-- HERO -->
 <section class="hero" id="top">
@@ -1725,8 +2010,8 @@ body.vsl-locked{overflow:hidden}
 
   <!-- Centre You'Com — hors du fly-apps pour positionnement mobile indépendant -->
   <div class="fly-center">
-    <span class="fc-badge">Studio B2B · Paris &amp; Montréal</span>
-    <div class="fc-name">You<img class="fc-apos-img" src="" alt="'">Com</div>
+    <span class="fc-badge">Studio — Agence B2B &amp; B2C</span>
+    <div class="fc-name">You<img class="fc-apos-img" src="logo-apos.jpg" alt="'">Com</div>
     <div class="fc-divider"></div>
     <p class="fc-desc">Nous transformons les marques ambitieuses en <strong>moteurs de croissance scalables</strong> — SaaS sur-mesure, communication digitale, graphisme, vidéo et automatisation IA. <strong>Un seul interlocuteur. Toute la stack.</strong></p>
     <a href="contact.html" class="fc-cta">Démarrer un projet <svg viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18"/></svg></a>
@@ -2094,8 +2379,8 @@ body.vsl-locked{overflow:hidden}
 <!-- Marquee -->
 <div class="marquee">
   <div class="track">
-    <span>SaaS <i class="star"></i> Communication <i class="star"></i> Graphisme <i class="star"></i> Montage Vidéo <i class="star"></i> Acquisition <i class="star"></i> Réseaux Sociaux <i class="star"></i> Automatisation IA <i class="star"></i></span>
-    <span>SaaS <i class="star"></i> Communication <i class="star"></i> Graphisme <i class="star"></i> Montage Vidéo <i class="star"></i> Acquisition <i class="star"></i> Réseaux Sociaux <i class="star"></i> Automatisation IA <i class="star"></i></span>
+    <span>SaaS <i class="star"></i> Communication <i class="star"></i> Graphisme <i class="star"></i> Création de contenu <i class="star"></i> Stratégie d'acquisition <i class="star"></i> Gestion des réseaux <i class="star"></i> Automatisation IA <i class="star"></i></span>
+    <span>SaaS <i class="star"></i> Communication <i class="star"></i> Graphisme <i class="star"></i> Création de contenu <i class="star"></i> Stratégie d'acquisition <i class="star"></i> Gestion des réseaux <i class="star"></i> Automatisation IA <i class="star"></i></span>
   </div>
 </div>
 
@@ -2103,7 +2388,7 @@ body.vsl-locked{overflow:hidden}
 <section class="manifesto" id="about">
 
   <!-- Watermark ghost text -->
-  <div class="ab-ghost" aria-hidden="true">ABOUT US</div>
+  <div class="ab-ghost" aria-hidden="true">À PROPOS</div>
 
   <!-- Intro — headline left / text right -->
   <div class="ab-intro">
@@ -2439,39 +2724,6 @@ body.vsl-locked{overflow:hidden}
   <div class="stat"><div class="num" data-count="9">9</div><div class="lbl">Pays clients</div></div>
 </div>
 
-<!-- PROCESS -->
-<section class="process" id="process">
-  <span class="eyebrow">— Notre méthode</span>
-  <h2>De l'idée à <em>l'impact</em>, en quatre étapes.</h2>
-
-  <div class="timeline sr-stagger">
-    <div class="step">
-      <div class="dot"></div>
-      <div class="num">Étape 01</div>
-      <h4>Découverte</h4>
-      <p>Atelier stratégique de 90 min. On clarifie vos enjeux, vos KPIs, et on cartographie le terrain. Sortie : un brief partagé, signé.</p>
-    </div>
-    <div class="step">
-      <div class="dot"></div>
-      <div class="num">Étape 02</div>
-      <h4>Conception</h4>
-      <p>Architecture technique, prototypes, direction éditoriale. On itère vite, à l'écrit comme au pixel, jusqu'à validation.</p>
-    </div>
-    <div class="step">
-      <div class="dot"></div>
-      <div class="num">Étape 03</div>
-      <h4>Production</h4>
-      <p>Sprint dédié, équipes en flow. Livraisons hebdomadaires, points de revue clairs, transparence totale sur l'avancement.</p>
-    </div>
-    <div class="step">
-      <div class="dot"></div>
-      <div class="num">Étape 04</div>
-      <h4>Lancement &amp; suivi</h4>
-      <p>Mise en ligne, formation interne, suivi des KPIs. On reste partenaires pour piloter la performance et itérer.</p>
-    </div>
-  </div>
-</section>
-
 <!-- TESTIMONIALS -->
 <section class="testi" id="cas">
   <div class="top">
@@ -2513,7 +2765,6 @@ body.vsl-locked{overflow:hidden}
   <p>Un appel de 30 minutes, sans pitch commercial. On comprend vos enjeux, on vous dit honnêtement si on est le bon partenaire.</p>
   <div class="cta-btns">
     <a href="contact.html" class="btn primary">Démarrer un projet →</a>
-    <a href="services.html#process" class="btn ghost">Voir notre méthode</a>
   </div>
 </section>
 
@@ -2523,17 +2774,16 @@ body.vsl-locked{overflow:hidden}
     <div class="brand-block">
       <div class="logo size-lg inv">
         <span class="logo-mark">
-          <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAASABIAAD/4QBMRXhpZgAATU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAyKADAAQAAAABAAAAyAAAAAD/7QA4UGhvdG9zaG9wIDMuMAA4QklNBAQAAAAAAAA4QklNBCUAAAAAABDUHYzZjwCyBOmACZjs+EJ+/8IAEQgAyADIAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAMCBAEFAAYHCAkKC//EAMMQAAEDAwIEAwQGBAcGBAgGcwECAAMRBBIhBTETIhAGQVEyFGFxIweBIJFCFaFSM7EkYjAWwXLRQ5I0ggjhU0AlYxc18JNzolBEsoPxJlQ2ZJR0wmDShKMYcOInRTdls1V1pJXDhfLTRnaA40dWZrQJChkaKCkqODk6SElKV1hZWmdoaWp3eHl6hoeIiYqQlpeYmZqgpaanqKmqsLW2t7i5usDExcbHyMnK0NTV1tfY2drg5OXm5+jp6vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAQIAAwQFBgcICQoL/8QAwxEAAgIBAwMDAgMFAgUCBASHAQACEQMQEiEEIDFBEwUwIjJRFEAGMyNhQhVxUjSBUCSRoUOxFgdiNVPw0SVgwUThcvEXgmM2cCZFVJInotIICQoYGRooKSo3ODk6RkdISUpVVldYWVpkZWZnaGlqc3R1dnd4eXqAg4SFhoeIiYqQk5SVlpeYmZqgo6SlpqeoqaqwsrO0tba3uLm6wMLDxMXGx8jJytDT1NXW19jZ2uDi4+Tl5ufo6ery8/T19vf4+fr/2wBDAAICAgICAgMCAgMFAwMDBQYFBQUFBggGBgYGBggKCAgICAgICgoKCgoKCgoMDAwMDAwODg4ODg8PDw8PDw8PDw//2wBDAQICAgQEBAcEBAcQCwkLEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBD/2gAMAwEAAhEDEQAAAfv7bVttW21bbVttW21bbVttW21bbVttW21bbVttW21bbVttW21bbVttW21bbVttW21bbVttW21bbVttW21bbVttW1XzXVl3OauubTbYHbattq22rbattq22rbattq22rcZ2fw99N5lJT7fuXxL76T+Xt5PX+im4Dv8A8F+62259Ntq22rbattq22rbattq22qg+Cvun4W/WPldtv0T5/bavob6O+dfor8K+322+Y9Pbattq22rbattq22rbattqafn3+h/xh+ifPedbb9Y+W23R4t9VejoX/Of6Htty67bVttW21bbVttW21bbVttW+b/pD56+m8z5w237t8RvqXxP7X/OPoSbb8q+p22rbattq22rbattq22rbattq3yJ9JfDX6N86F+1+v/tvG6bqtvwj7jbbJ9tq22rbattq22rbattq22rNBfIP0HnseLP9afq3y7X1/b8W+y224tttq22rbattq22rbattq22rIXq+NOW+62v6F8/zfb7fCe5tthpttW21bbVttW21bbVttW21bbVttW21bbVttW21bbVttW21bbVttW21bbVttW21bbVttW21bbVttW21bbVttW21bbVttW21bbVttW21bbVttW21bbVttW21bbV//9oACAEBAAEFAv8AlhN3e2tjFH4k2OQxTwzp/wBS73vMOzWt9f3W4zu3ubi0k8P+LPfF/wCpN/3JW57l9zw1uR3Pa/8AUW6zGDbfu+ApDl/qLfElWz/d8BRH/Uc8QnhWhUa/ueFbP3PZv9R+KrP3Tee+02Cty3BKQkf6j8exDPv4L2r3e1/1J49WMO2wbQrd75KUoT/qTxleC53Z21tNeT7PtcW0Wf8AqTeNzj2qxkWuVaELkX4b2BO0w/6knnitod+3mTeLtCFSK8N+G07an/UlzdQWcO/+IJt4kggmuZfD/huLak/6kVUJ8ST71Ndbdtl3uk+zbFabPF/qaWGKdFrZ21jF/wAsM//aAAgBAxEBPwH/AEBLPCJolB+n8p1vs4+PJZSJNl6TrZ4TcXFlE4iQ+l+8B++OvxH+Tx+l8/iuMZ6QgZHaHDi2QEB6fS+XH+p5afB9HZ96X0/nup+0Yg9B0JzTr0YQERtH0uv6+OGP9XpulydTk3H/AF3Bgjjjtj9Ofwm7JulLhx44wG2P+j//2gAIAQIRAT8B/wBAYuhz5I74QJH+BlEg0fp/ur8IOt6ip/hj5/3k4sUYREYCg/MfBYOshtyDn8/V6vpZYcssU/I+l/uHcR7OU/11/fEj+8clf0/2g+l/uHvWVlyYD6i/9b/gOmfNHHA5J+A9b1Rz5pZpep+l+5xP9446/r/tDp+/fzW2H6PG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" alt="You'Com" draggable="false"/>
+          <img src="logo-apos.png" alt="You'Com" draggable="false"/>
         </span>
-        <span class="logo-text">You<span class="apos">'</span>Com</span>
+        <span class="logo-text">You<img class="apos-img" src="logo-apos.jpg" alt="'">Com</span>
       </div>
       <p>Studio B2B. SaaS sur-mesure et communication intégrée pour transformer les marques ambitieuses en moteurs de croissance.</p>
     </div>
     <div>
       <h5>Studio</h5>
       <ul>
-        <li><a href="about.html">About us</a></li>
-        <li><a href="services.html#process">Méthode</a></li>
+        <li><a href="about.html">À propos</a></li>
         <li><a href="services.html">Cas clients</a></li>
         <li><a href="contact.html">Carrières</a></li>
       </ul>
@@ -2544,9 +2794,9 @@ body.vsl-locked{overflow:hidden}
         <li><a href="services.html#saas">SaaS sur-mesure</a></li>
         <li><a href="services.html#comm">Communication</a></li>
         <li><a href="services.html#graph">Graphisme</a></li>
-        <li><a href="services.html#video">Montage vidéo</a></li>
-        <li><a href="services.html#acq">Acquisition</a></li>
-        <li><a href="services.html#social">Réseaux sociaux</a></li>
+        <li><a href="services.html#video">Création de contenu</a></li>
+        <li><a href="services.html#acq">Stratégie d'acquisition</a></li>
+        <li><a href="services.html#social">Gestion des réseaux</a></li>
         <li><a href="services.html#ia">Automatisation IA</a></li>
       </ul>
     </div>
@@ -2981,19 +3231,7 @@ document.querySelectorAll('.testi .card, .saas-deep .card, .manifesto .why .card
   setTimeout(initHero, 2200);
 })();
 
-/* ================================================
-   LOGO APOSTROPHE — injecte l'image du logo dans le titre
-================================================ */
-(function(){
-  function inject(){
-    const logoImg = document.querySelector('.logo-mark img');
-    const apoImg  = document.querySelector('.fc-name .fc-apos-img');
-    if(logoImg && apoImg && logoImg.src) apoImg.src = logoImg.src;
-  }
-  if(document.readyState === 'complete') inject();
-  else window.addEventListener('load', inject);
-  setTimeout(inject, 400); /* fallback */
-})();
+/* apostrophe SVG statique — src déjà défini en HTML */
 
 /* ================================================
    FLY-APP DEPTH — parallax souris + connexions SVG

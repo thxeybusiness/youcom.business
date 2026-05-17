@@ -5,6 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Contact — You'Com Studio B2B</title>
 <meta name="description" content="Discutons de votre projet. Un appel de 30 minutes, sans pitch commercial." />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+<link rel="icon" type="image/png" sizes="64x64" href="/favicon-64.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#2563eb">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
@@ -27,21 +33,24 @@ button{font:inherit;border:none;cursor:pointer;background:none;color:inherit}
 
 .logo{display:inline-flex;align-items:center;gap:10px;font-weight:700;line-height:1}
 .logo-mark{width:36px;height:auto;border-radius:0;background:none;box-shadow:none;display:flex;align-items:center;justify-content:center;position:relative;flex-shrink:0;transition:transform .35s ease}
-.logo-mark img{width:100%;height:auto;display:block;object-fit:contain}
+.logo-mark img{width:100%;height:auto;display:block;object-fit:contain;mix-blend-mode:multiply}
 .logo-mark .dot-apos{display:none}
 @keyframes pulseDot{50%{box-shadow:0 0 0 6px rgba(255,255,255,0)}}
-.logo-text{font-size:20px;letter-spacing:-.02em;color:var(--ink)}.logo-text .apos{color:var(--blue);font-weight:800}
+.logo-text{font-size:20px;letter-spacing:-.02em;color:var(--ink)}.logo-text .apos{color:var(--blue);font-weight:800}.logo-text .apos-img{display:inline-block;width:.68em;height:.68em;object-fit:contain;vertical-align:.12em;margin:0 -.06em;mix-blend-mode:multiply}.nav .logo .logo-text{white-space:nowrap;font-size:18px}
+.nav .logo-text .apos-img{margin:0 -.13em 0 -.06em}
+.logo.inv .logo-mark img{mix-blend-mode:screen}.logo.inv .logo-text .apos-img{mix-blend-mode:screen;vertical-align:.28em;margin:0 -.16em 0 -.06em}
 .logo.size-lg .logo-mark{width:48px;height:auto;border-radius:0}.logo.size-lg .logo-text{font-size:30px}.logo.inv .logo-text{color:#fff}
-.logo.inv .logo-mark{background:rgba(255,255,255,.95);border-radius:10px;padding:5px;box-shadow:0 2px 12px rgba(0,0,0,.15)}
+.logo.inv .logo-mark{background:none;box-shadow:none;padding:0}
+.logo.inv .logo-mark img{mix-blend-mode:screen}
 
 .nav{position:fixed;top:18px;left:50%;transform:translateX(-50%);z-index:80;display:inline-flex;align-items:center;gap:6px;padding:6px 6px 6px 16px;border:1px solid var(--line);background:rgba(255,255,255,.92);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-radius:999px;box-shadow:0 14px 50px -8px rgba(10,26,47,.14);height:54px}
 .nav .logo{padding:0 14px 0 0;height:42px;display:inline-flex;align-items:center;border-right:1px solid var(--line);margin-right:8px}
 .nav ul{display:inline-flex;align-items:center;gap:2px;list-style:none;height:100%}
 .nav ul li{display:inline-flex;align-items:center;height:100%}
-.nav ul a{padding:10px 16px;border-radius:999px;font-size:12px;font-weight:700;color:var(--ink-2);transition:.25s var(--ease);text-transform:uppercase;letter-spacing:.08em}
+.nav ul a{padding:10px 16px;border-radius:999px;font-size:12px;font-weight:700;color:var(--ink-2);transition:.25s var(--ease);text-transform:uppercase;letter-spacing:.08em;white-space:nowrap}
 .nav ul a:hover,.nav ul a.is-active{background:var(--bg-blue);color:var(--blue)}
-.nav .cta{margin-left:8px;padding:10px 18px;border-radius:999px;background:var(--ink);color:#fff;font-size:13px;font-weight:700;height:42px;display:inline-flex;align-items:center;letter-spacing:-.01em;transition:.25s var(--ease)}
-.nav .cta:hover{background:var(--blue);transform:translateY(-1px);box-shadow:0 10px 24px -6px rgba(37,99,235,.5)}
+.nav .cta{margin-left:8px;padding:10px 18px;border-radius:999px;background:var(--blue);color:#fff;font-size:13px;font-weight:700;height:42px;display:inline-flex;align-items:center;letter-spacing:-.01em;transition:.25s var(--ease);white-space:nowrap;box-shadow:0 6px 16px -4px rgba(37,99,235,.5)}
+.nav .cta:hover{background:var(--ink);transform:translateY(-1px);box-shadow:0 10px 24px -6px rgba(10,26,47,.5)}
 @media (max-width:980px){.nav ul{display:none}.nav .logo{border-right:none;margin-right:0;padding-right:8px}.nav{top:10px;height:50px}}
 
 /* HEADER */
@@ -143,6 +152,82 @@ footer .bot{display:flex;justify-content:space-between;padding-top:28px;font-siz
 .sr{opacity:0;transform:translateY(48px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
 .sr.in{opacity:1;transform:translateY(0)}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.sr{opacity:1;transform:none}}
+
+/* === SOCIAL NAV === */
+.social-nav{position:fixed;top:18px;right:30px;z-index:80;display:inline-flex;align-items:center;gap:4px;padding:6px;border:1px solid var(--line);background:rgba(255,255,255,.92);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-radius:999px;box-shadow:0 14px 50px -8px rgba(10,26,47,.14);height:54px}
+.social-nav a{display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;border-radius:50%;color:var(--ink-2);transition:.25s var(--ease);text-decoration:none}
+.social-nav a:hover{background:var(--blue);color:#fff;transform:translateY(-2px);box-shadow:0 10px 24px -6px rgba(37,99,235,.5)}
+.social-nav svg{width:18px;height:18px;display:block}
+
+/* ============================================================
+   MOBILE (≤780px) — alignement & cohérence
+============================================================ */
+@media (max-width:780px){
+  /* Apostrophe logo — version mobile optimisée */
+  .logo-mark img,
+  .nav-apos-img,
+  .fc-apos-img,
+  .apos-img{
+    content:url('logo-apos-mobile.png')!important
+  }
+
+  /* Social nav mobile */
+  .social-nav{top:auto;bottom:14px;right:50%;transform:translateX(50%);padding:4px;height:40px;gap:2px}
+  .social-nav a{width:32px;height:32px}
+  .social-nav svg{width:15px;height:15px}
+
+  /* Toast — invisible par défaut, ne dépasse pas */
+  .toast{opacity:0;visibility:hidden;pointer-events:none}
+  .toast.show{opacity:1;visibility:visible;pointer-events:auto}
+
+  .nav{padding:3px 3px 3px 8px;height:38px;gap:1px;width:calc(100vw - 12px);max-width:none}
+  .nav .logo{padding:0 6px 0 0;height:32px;margin-right:3px;border-right:1px solid var(--line);gap:3px}
+  .nav .logo .logo-text{font-size:11px;letter-spacing:-.01em}
+  .nav .logo-mark{width:17px}
+  .nav ul{display:inline-flex!important;gap:0;flex:1;justify-content:space-around}
+  .nav ul a{padding:6px 3px;font-size:8px;letter-spacing:.03em;line-height:1;border-radius:6px;white-space:nowrap}
+  .nav .cta{padding:5px 9px;height:28px;margin-left:3px;white-space:nowrap;border-radius:999px;flex-shrink:0;font-size:0}
+  .nav .cta::after{content:"Projet →";font-size:9px;font-weight:700;letter-spacing:-.01em}
+
+  .page-head{padding:120px 5vw 50px;text-align:center}
+  .page-head h1{font-size:clamp(40px,9vw,64px);text-align:center;line-height:1.05}
+  .page-head .pill{display:inline-block;text-align:center;margin:0 auto 18px}
+  .page-head p.lead{text-align:center;max-width:100%;margin:24px auto 0}
+
+  /* Form grid */
+  .contact-wrap{grid-template-columns:1fr;gap:32px;padding:40px 5vw 80px}
+  .form-card{padding:28px 22px;border-radius:20px}
+  .form-card h2{text-align:center}
+  .form-card .subt{text-align:center}
+  .form-row{grid-template-columns:1fr;gap:14px}
+  .budget-chips,.svc-chips-form{justify-content:center}
+
+  /* Side panel — infos */
+  .side-info{text-align:center}
+  .side-info h3,.side-info p{text-align:center}
+
+  /* FAQ */
+  .faq{padding:80px 5vw;text-align:center}
+  .faq h2{font-size:clamp(32px,7vw,46px);text-align:center}
+  .faq .grid,.faq .q-grid{grid-template-columns:1fr;gap:14px}
+  .faq .q,.faq .item{text-align:left}
+
+  /* Footer */
+  footer,.footer{padding:60px 6vw 40px;text-align:center}
+  footer .grid,.footer .grid,.footer-cols{grid-template-columns:1fr;gap:32px;text-align:center}
+  footer .logo,.footer .logo{justify-content:center}
+  footer ul,.footer ul{padding:0;list-style:none}
+  footer ul li,.footer ul li{padding:4px 0}
+
+  body{overflow-x:hidden}
+  section{padding-left:5vw;padding-right:5vw}
+
+  /* HIDE / CONTAIN visuals contact */
+  .page-head::before,.faq::before,.faq::after,
+  .contact-wrap::before,.contact-wrap::after{display:none!important}
+  .page-head,.faq,.contact-wrap{overflow:hidden;position:relative}
+  section img,section svg{max-width:100%;height:auto}
+}
 </style>
 </head>
 <body>
@@ -150,19 +235,27 @@ footer .bot{display:flex;justify-content:space-between;padding-top:28px;font-siz
 <nav class="nav">
   <a href="youcome.html" class="logo">
     <span class="logo-mark">
-      <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAASABIAAD/4QBMRXhpZgAATU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAyKADAAQAAAABAAAAyAAAAAD/7QA4UGhvdG9zaG9wIDMuMAA4QklNBAQAAAAAAAA4QklNBCUAAAAAABDUHYzZjwCyBOmACZjs+EJ+/8IAEQgAyADIAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAMCBAEFAAYHCAkKC//EAMMQAAEDAwIEAwQGBAcGBAgGcwECAAMRBBIhBTETIhAGQVEyFGFxIweBIJFCFaFSM7EkYjAWwXLRQ5I0ggjhU0AlYxc18JNzolBEsoPxJlQ2ZJR0wmDShKMYcOInRTdls1V1pJXDhfLTRnaA40dWZrQJChkaKCkqODk6SElKV1hZWmdoaWp3eHl6hoeIiYqQlpeYmZqgpaanqKmqsLW2t7i5usDExcbHyMnK0NTV1tfY2drg5OXm5+jp6vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAQIAAwQFBgcICQoL/8QAwxEAAgIBAwMDAgMFAgUCBASHAQACEQMQEiEEIDFBEwUwIjJRFEAGMyNhQhVxUjSBUCSRoUOxFgdiNVPw0SVgwUThcvEXgmM2cCZFVJInotIICQoYGRooKSo3ODk6RkdISUpVVldYWVpkZWZnaGlqc3R1dnd4eXqAg4SFhoeIiYqQk5SVlpeYmZqgo6SlpqeoqaqwsrO0tba3uLm6wMLDxMXGx8jJytDT1NXW19jZ2uDi4+Tl5ufo6ery8/T19vf4+fr/2wBDAAICAgICAgMCAgMFAwMDBQYFBQUFBggGBgYGBggKCAgICAgICgoKCgoKCgoMDAwMDAwODg4ODg8PDw8PDw8PDw//2wBDAQICAgQEBAcEBAcQCwkLEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBD/2gAMAwEAAhEDEQAAAfv7bVttW21bbVttW21bbVttW21bbVttW21bbVttW21bbVttW21bbVttW21bbVttW21bbVttW21bbVttW21bbVttW1XzXVl3OauubTbYHbattq22rbattq22rbattq22rcZ2fw99N5lJT7fuXxL76T+Xt5PX+im4Dv8A8F+62259Ntq22rbattq22rbattq22qg+Cvun4W/WPldtv0T5/bavob6O+dfor8K+322+Y9Pbattq22rbattq22rbattqafn3+h/xh+ifPedbb9Y+W23R4t9VejoX/Of6Htty67bVttW21bbVttW21bbVttW+b/pD56+m8z5w237t8RvqXxP7X/OPoSbb8q+p22rbattq22rbattq22rbattq3yJ9JfDX6N86F+1+v/tvG6bqtvwj7jbbJ9tq22rbattq22rbattq22rNBfIP0HnseLP9afq3y7X1/b8W+y224tttq22rbattq22rbattq22rIXq+NOW+62v6F8/zfb7fCe5tthpttW21bbVttW21bbVttW21bbVttW21bbVttW21bbVttW21bbVttW21bbVttW21bbVttW21bbVttW21bbVttW21bbVttW21bbVttW21bbVttW21bbVttW21bbV//9oACAEBAAEFAv8AlhN3e2tjFH4k2OQxTwzp/wBS73vMOzWt9f3W4zu3ubi0k8P+LPfF/wCpN/3JW57l9zw1uR3Pa/8AUW6zGDbfu+ApDl/qLfElWz/d8BRH/Uc8QnhWhUa/ueFbP3PZv9R+KrP3Tee+02Cty3BKQkf6j8exDPv4L2r3e1/1J49WMO2wbQrd75KUoT/qTxleC53Z21tNeT7PtcW0Wf8AqTeNzj2qxkWuVaELkX4b2BO0w/6knnitod+3mTeLtCFSK8N+G07an/UlzdQWcO/+IJt4kggmuZfD/huLak/6kVUJ8ST71Ndbdtl3uk+zbFabPF/qaWGKdFrZ21jF/wAsM//aAAgBAxEBPwH/AEBLPCJolB+n8p1vs4+PJZSJNl6TrZ4TcXFlE4iQ+l+8B++OvxH+Tx+l8/iuMZ6QgZHaHDi2QEB6fS+XH+p5afB9HZ96X0/nup+0Yg9B0JzTr0YQERtH0uv6+OGP9XpulydTk3H/AF3Bgjjjtj9Ofwm7JulLhx44wG2P+j//2gAIAQIRAT8B/wBAYuhz5I74QJH+BlEg0fp/ur8IOt6ip/hj5/3k4sUYREYCg/MfBYOshtyDn8/V6vpZYcssU/I+l/uHcR7OU/11/fEj+8clf0/2g+l/uHvWVlyYD6i/9b/gOmfNHHA5J+A9b1Rz5pZpep+l+5xP9446/r/tDp+/fzW2H6PG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" alt="You'Com" draggable="false"/>
+      <img src="logo-apos.png" alt="You'Com" draggable="false"/>
     </span>
-    <span class="logo-text">You<span class="apos">'</span>Com</span>
+    <span class="logo-text">You<img class="apos-img" src="logo-apos.jpg" alt="'">Com</span>
   </a>
   <ul>
-    <li><a href="youcome.html" class="nav-home"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;margin-right:5px"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>Home</a></li>
+    <li><a href="youcome.html">Accueil</a></li>
     <li><a href="services.html">Services</a></li>
-    <li><a href="about.html">About us</a></li>
-    <li><a href="services.html#process">Méthode</a></li>
-    <li><a href="contact.html" class="is-active">Contact</a></li>
+    <li><a href="about.html">À propos</a></li>
+        <li><a href="contact.html" class="is-active">Contact</a></li>
   </ul>
   <a href="contact.html" class="cta">Démarrer un projet →</a>
 </nav>
+
+<div class="social-nav" aria-label="Réseaux sociaux">
+  <a href="https://www.tiktok.com/@youcombusiness?_r=1&_t=ZN-96Ptub9OsA" target="_blank" rel="noopener" aria-label="TikTok">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43v-7.05a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.84-.05z"/></svg>
+  </a>
+  <a href="https://www.instagram.com/youcombusiness?igsh=MWQyNnNoOXZkaWIxZw%3D%3D" target="_blank" rel="noopener" aria-label="Instagram">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><circle cx="17.5" cy="6.5" r=".7" fill="currentColor"/></svg>
+  </a>
+</div>
 
 <header class="page-head">
   <span class="pill">Discutons</span>
@@ -172,9 +265,12 @@ footer .bot{display:flex;justify-content:space-between;padding-top:28px;font-siz
 
 <div class="contact-wrap">
   <!-- FORM -->
-  <form class="form-card sr" id="contactForm">
+  <form class="form-card sr" id="contactForm" method="post" action="/api/contact" novalidate>
     <h2>Démarrer un projet</h2>
     <p class="subt">Remplissez ce formulaire — nous revenons vers vous sous 24h ouvrées.</p>
+    <!-- Honeypot anti-spam (caché aux humains, rempli par les bots) -->
+    <input type="text" name="website" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;opacity:0;pointer-events:none" aria-hidden="true">
+    <div id="formError" role="alert" style="display:none;margin-bottom:14px;padding:12px 16px;border-radius:10px;background:#fee;color:#c00;font-size:13px;border:1px solid #fcc"></div>
 
     <div class="form-row">
       <div class="field">
@@ -205,23 +301,23 @@ footer .bot{display:flex;justify-content:space-between;padding-top:28px;font-siz
           <label><input type="checkbox" name="svc" value="saas"><span>SaaS</span></label>
           <label><input type="checkbox" name="svc" value="comm"><span>Communication</span></label>
           <label><input type="checkbox" name="svc" value="graph"><span>Graphisme</span></label>
-          <label><input type="checkbox" name="svc" value="video"><span>Vidéo</span></label>
-          <label><input type="checkbox" name="svc" value="acq"><span>Acquisition</span></label>
-          <label><input type="checkbox" name="svc" value="social"><span>Réseaux</span></label>
-          <label><input type="checkbox" name="svc" value="ia"><span>IA</span></label>
+          <label><input type="checkbox" name="svc" value="video"><span>Création de contenu</span></label>
+          <label><input type="checkbox" name="svc" value="acq"><span>Stratégie d'acquisition</span></label>
+          <label><input type="checkbox" name="svc" value="social"><span>Gestion des réseaux</span></label>
+          <label><input type="checkbox" name="svc" value="ia"><span>Automatisation IA</span></label>
         </div>
       </div>
     </div>
 
     <div class="form-row">
       <div class="field full">
-        <label>Budget envisagé</label>
-        <div class="budget-chips">
-          <label><input type="radio" name="budget" value="<10"><span>&lt; 10 k€</span></label>
-          <label><input type="radio" name="budget" value="10-30"><span>10 — 30 k€</span></label>
-          <label><input type="radio" name="budget" value="30-80"><span>30 — 80 k€</span></label>
-          <label><input type="radio" name="budget" value="80-200"><span>80 — 200 k€</span></label>
-          <label><input type="radio" name="budget" value="200+"><span>200 k€+</span></label>
+        <label>Budget envisagé <span class="budget-hint" style="color:var(--muted);font-weight:500;text-transform:none;letter-spacing:0;font-size:12px">— adapté aux services sélectionnés</span></label>
+        <div class="budget-chips" id="budgetChips">
+          <label><input type="radio" name="budget" value="t1"><span data-tier="0">&lt; 5 k€</span></label>
+          <label><input type="radio" name="budget" value="t2"><span data-tier="1">5 — 15 k€</span></label>
+          <label><input type="radio" name="budget" value="t3"><span data-tier="2">15 — 40 k€</span></label>
+          <label><input type="radio" name="budget" value="t4"><span data-tier="3">40 — 100 k€</span></label>
+          <label><input type="radio" name="budget" value="t5"><span data-tier="4">100 k€+</span></label>
         </div>
       </div>
     </div>
@@ -241,8 +337,8 @@ footer .bot{display:flex;justify-content:space-between;padding-top:28px;font-siz
 
     <div class="form-row">
       <div class="field full">
-        <label for="message">Décrivez votre projet *</label>
-        <textarea id="message" name="message" required placeholder="Contexte, objectifs, contraintes — soyez aussi précis que possible."></textarea>
+        <label for="message">Décrivez votre projet * <span style="color:var(--muted);font-weight:500;text-transform:none;letter-spacing:0;font-size:12px">(précisez le budget si dans une tranche)</span></label>
+        <textarea id="message" name="message" required placeholder="Contexte, objectifs, contraintes — soyez aussi précis que possible. Si vous avez choisi une tranche, précisez ici un budget cible."></textarea>
       </div>
     </div>
 
@@ -299,13 +395,13 @@ footer .bot{display:flex;justify-content:space-between;padding-top:28px;font-siz
   <div class="grid">
     <div class="brand-block">
       <div class="logo size-lg inv">
-        <span class="logo-mark"><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAASABIAAD/4QBMRXhpZgAATU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAyKADAAQAAAABAAAAyAAAAAD/7QA4UGhvdG9zaG9wIDMuMAA4QklNBAQAAAAAAAA4QklNBCUAAAAAABDUHYzZjwCyBOmACZjs+EJ+/8IAEQgAyADIAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAMCBAEFAAYHCAkKC//EAMMQAAEDAwIEAwQGBAcGBAgGcwECAAMRBBIhBTETIhAGQVEyFGFxIweBIJFCFaFSM7EkYjAWwXLRQ5I0ggjhU0AlYxc18JNzolBEsoPxJlQ2ZJR0wmDShKMYcOInRTdls1V1pJXDhfLTRnaA40dWZrQJChkaKCkqODk6SElKV1hZWmdoaWp3eHl6hoeIiYqQlpeYmZqgpaanqKmqsLW2t7i5usDExcbHyMnK0NTV1tfY2drg5OXm5+jp6vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAQIAAwQFBgcICQoL/8QAwxEAAgIBAwMDAgMFAgUCBASHAQACEQMQEiEEIDFBEwUwIjJRFEAGMyNhQhVxUjSBUCSRoUOxFgdiNVPw0SVgwUThcvEXgmM2cCZFVJInotIICQoYGRooKSo3ODk6RkdISUpVVldYWVpkZWZnaGlqc3R1dnd4eXqAg4SFhoeIiYqQk5SVlpeYmZqgo6SlpqeoqaqwsrO0tba3uLm6wMLDxMXGx8jJytDT1NXW19jZ2uDi4+Tl5ufo6ery8/T19vf4+fr/2wBDAAICAgICAgMCAgMFAwMDBQYFBQUFBggGBgYGBggKCAgICAgICgoKCgoKCgoMDAwMDAwODg4ODg8PDw8PDw8PDw//2wBDAQICAgQEBAcEBAcQCwkLEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBD/2gAMAwEAAhEDEQAAAfv7bVttW21bbVttW21bbVttW21bbVttW21bbVttW21bbVttW21bbVttW21bbVttW21bbVttW21bbVttW21bbVttW1XzXVl3OauubTbYHbattq22rbattq22rbattq22rcZ2fw99N5lJT7fuXxL76T+Xt5PX+im4Dv8A8F+62259Ntq22rbattq22rbattq22qg+Cvun4W/WPldtv0T5/bavob6O+dfor8K+322+Y9Pbattq22rbattq22rbattqafn3+h/xh+ifPedbb9Y+W23R4t9VejoX/Of6Htty67bVttW21bbVttW21bbVttW+b/pD56+m8z5w237t8RvqXxP7X/OPoSbb8q+p22rbattq22rbattq22rbattq3yJ9JfDX6N86F+1+v/tvG6bqtvwj7jbbJ9tq22rbattq22rbattq22rNBfIP0HnseLP9afq3y7X1/b8W+y224tttq22rbattq22rbattq22rIXq+NOW+62v6F8/zfb7fCe5tthpttW21bbVttW21bbVttW21bbVttW21bbVttW21bbVttW21bbVttW21bbVttW21bbVttW21bbVttW21bbVttW21bbVttW21bbVttW21bbVttW21bbVttW21bbV//9oACAEBAAEFAv8AlhN3e2tjFH4k2OQxTwzp/wBS73vMOzWt9f3W4zu3ubi0k8P+LPfF/wCpN/3JW57l9zw1uR3Pa/8AUW6zGDbfu+ApDl/qLfElWz/d8BRH/Uc8QnhWhUa/ueFbP3PZv9R+KrP3Tee+02Cty3BKQkf6j8exDPv4L2r3e1/1J49WMO2wbQrd75KUoT/qTxleC53Z21tNeT7PtcW0Wf8AqTeNzj2qxkWuVaELkX4b2BO0w/6knnitod+3mTeLtCFSK8N+G07an/UlzdQWcO/+IJt4kggmuZfD/huLak/6kVUJ8ST71Ndbdtl3uk+zbFabPF/qaWGKdFrZ21jF/wAsM//aAAgBAxEBPwH/AEBLPCJolB+n8p1vs4+PJZSJNl6TrZ4TcXFlE4iQ+l+8B++OvxH+Tx+l8/iuMZ6QgZHaHDi2QEB6fS+XH+p5afB9HZ96X0/nup+0Yg9B0JzTr0YQERtH0uv6+OGP9XpulydTk3H/AF3Bgjjjtj9Ofwm7JulLhx44wG2P+j//2gAIAQIRAT8B/wBAYuhz5I74QJH+BlEg0fp/ur8IOt6ip/hj5/3k4sUYREYCg/MfBYOshtyDn8/V6vpZYcssU/I+l/uHcR7OU/11/fEj+8clf0/2g+l/uHvWVlyYD6i/9b/gOmfNHHA5J+A9b1Rz5pZpep+l+5xP9446/r/tDp+/fzW2H6PG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" alt="You'Com" draggable="false"/></span>
-        <span class="logo-text">You<span class="apos">'</span>Com</span>
+        <span class="logo-mark"><img src="logo-apos.png" alt="You'Com" draggable="false"/></span>
+        <span class="logo-text">You<img class="apos-img" src="logo-apos.jpg" alt="'">Com</span>
       </div>
       <p>Studio B2B. SaaS sur-mesure et communication intégrée pour transformer les marques ambitieuses en moteurs de croissance.</p>
     </div>
-    <div><h5>Studio</h5><ul><li><a href="about.html">About us</a></li><li><a href="services.html#process">Méthode</a></li><li><a href="services.html">Cas clients</a></li><li><a href="contact.html">Carrières</a></li></ul></div>
-    <div><h5>Services</h5><ul><li><a href="services.html#saas">SaaS sur-mesure</a></li><li><a href="services.html#comm">Communication</a></li><li><a href="services.html#graph">Graphisme</a></li><li><a href="services.html#video">Vidéo</a></li><li><a href="services.html#acq">Acquisition</a></li><li><a href="services.html#social">Réseaux</a></li><li><a href="services.html#ia">IA</a></li></ul></div>
+    <div><h5>Studio</h5><ul><li><a href="about.html">À propos</a></li><li><a href="services.html">Cas clients</a></li><li><a href="contact.html">Carrières</a></li></ul></div>
+    <div><h5>Services</h5><ul><li><a href="services.html#saas">SaaS sur-mesure</a></li><li><a href="services.html#comm">Communication</a></li><li><a href="services.html#graph">Graphisme</a></li><li><a href="services.html#video">Création de contenu</a></li><li><a href="services.html#acq">Stratégie d'acquisition</a></li><li><a href="services.html#social">Gestion des réseaux</a></li><li><a href="services.html#ia">Automatisation IA</a></li></ul></div>
     <div><h5>Contact</h5><ul><li><a href="mailto:hello@youcom.studio">hello@youcom.studio</a></li><li><a href="contact.html">Formulaire</a></li><li><a href="#">LinkedIn</a></li><li><a href="#">Behance</a></li></ul></div>
   </div>
   <div class="bot"><span>© 2026 You'Com Studio · Tous droits réservés</span><span>Paris &amp; Montréal · Remote-first</span></div>
@@ -317,13 +413,125 @@ const sio = new IntersectionObserver((entries)=>{
 },{threshold:0.15, rootMargin:'0px 0px -60px 0px'});
 document.querySelectorAll('.sr').forEach(el=>sio.observe(el));
 
-document.getElementById('contactForm').addEventListener('submit', function(e){
-  e.preventDefault();
+/* ============================================================
+   BUDGET DYNAMIQUE — adapte les tranches aux services sélectionnés
+   Chaque service a 4 bornes (k€). La 5e tranche est ouverte (X+).
+   Multiple services → somme des bornes pour donner une enveloppe globale.
+============================================================ */
+(function(){
+  const SERVICE_TIERS = {
+    saas:   [10, 30, 75, 200],
+    comm:   [3, 10, 25, 60],
+    graph:  [1, 4, 10, 25],
+    video:  [2, 6, 15, 40],
+    acq:    [2, 6, 15, 40],
+    social: [1, 4, 10, 25],
+    ia:     [5, 15, 40, 100]
+  };
+  const DEFAULT_TIERS = [5, 15, 40, 100];
+
+  function fmtNum(n){
+    if (n >= 1000) return (n/1000).toFixed(n%1000===0?0:1).replace('.0','') + ' M€';
+    return n + ' k€';
+  }
+
+  function computeTiers(selected){
+    if (!selected.length) return DEFAULT_TIERS.slice();
+    const t = [0,0,0,0];
+    selected.forEach(s => {
+      const st = SERVICE_TIERS[s];
+      if (!st) return;
+      for (let i=0;i<4;i++) t[i] += st[i];
+    });
+    return t;
+  }
+
+  function updateBudgetChips(){
+    const selected = Array.from(document.querySelectorAll('input[name="svc"]:checked')).map(i=>i.value);
+    const tiers = computeTiers(selected);
+    const spans = document.querySelectorAll('#budgetChips span[data-tier]');
+    spans.forEach(s => {
+      const i = parseInt(s.dataset.tier,10);
+      if (i === 0)      s.textContent = '< ' + fmtNum(tiers[0]);
+      else if (i < 4)   s.textContent = fmtNum(tiers[i-1]) + ' — ' + fmtNum(tiers[i]);
+      else              s.textContent = fmtNum(tiers[3]) + '+';
+    });
+    // Reset radio si chips ont changé pour éviter incohérence
+    document.querySelectorAll('input[name="budget"]').forEach(r => r.checked = false);
+  }
+
+  document.querySelectorAll('input[name="svc"]').forEach(cb => {
+    cb.addEventListener('change', updateBudgetChips);
+  });
+  // Init au chargement (par défaut)
+  updateBudgetChips();
+
+  const form = document.getElementById('contactForm');
   const toast = document.getElementById('toast');
-  toast.classList.add('show');
-  setTimeout(()=>toast.classList.remove('show'), 4500);
-  this.reset();
-});
+  const errBox = document.getElementById('formError');
+  const submitBtn = form.querySelector('.submit-btn');
+  const originalLabel = submitBtn.innerHTML;
+
+  form.addEventListener('submit', async function(e){
+    e.preventDefault();
+    errBox.style.display = 'none';
+    errBox.textContent = '';
+
+    // Validation native côté client
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
+
+    // Désactive le bouton pendant l'envoi
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = 'Envoi en cours…';
+
+    // Collecte les données — budget en texte humain (chip span)
+    const data = new FormData(form);
+    let budgetLabel = '';
+    const checkedBudget = form.querySelector('input[name="budget"]:checked');
+    if (checkedBudget) {
+      const span = checkedBudget.parentElement.querySelector('span');
+      budgetLabel = span ? span.textContent.trim() : '';
+    }
+    const payload = {
+      firstname: data.get('firstname') || '',
+      lastname:  data.get('lastname')  || '',
+      email:     data.get('email')     || '',
+      company:   data.get('company')   || '',
+      budget:    budgetLabel,
+      timeline:  data.get('timeline')  || '',
+      message:   data.get('message')   || '',
+      website:   data.get('website')   || '',  // honeypot
+      svc:       data.getAll('svc')
+    };
+
+    try {
+      const resp = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify(payload)
+      });
+      const json = await resp.json().catch(()=>({}));
+
+      if (!resp.ok || !json.ok) {
+        throw new Error(json.error || 'Une erreur est survenue. Réessayez ou écrivez-nous directement à hello@youcom.studio.');
+      }
+
+      // Succès — toast + reset
+      toast.classList.add('show');
+      setTimeout(()=>toast.classList.remove('show'), 4500);
+      form.reset();
+    } catch (err) {
+      errBox.textContent = err.message;
+      errBox.style.display = 'block';
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = originalLabel;
+    }
+  });
+})();
 </script>
 </body>
 </html>
