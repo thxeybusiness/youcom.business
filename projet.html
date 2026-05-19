@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Contact — You'Com Studio B2B</title>
-<meta name="description" content="Contactez directement les directeurs de pôle You'Com — IA & SaaS, Création de contenu, Graphisme. Réponse rapide et expert." />
+<title>Démarrer un projet — You'Com Studio B2B</title>
+<meta name="description" content="Remplissez le formulaire et nous revenons vers vous sous 24h ouvrées avec un cadre de mission clair." />
 <!-- Favicons & PWA (multi-navigateur, cache + Google) -->
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
@@ -162,88 +162,6 @@ footer .bot{display:flex;justify-content:space-between;padding-top:28px;font-siz
 .sr.in{opacity:1;transform:translateY(0)}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.sr{opacity:1;transform:none}}
 
-/* === DIRECTORS PAGE === */
-/* ---------- LEAD CONTACT — Thomas Malen PDG ---------- */
-.lead-contact{max-width:1280px;margin:0 auto;padding:60px 6vw 20px}
-.lead-card{background:linear-gradient(135deg,#0a1a2f 0%,#1a2942 50%,#0f213d 100%);color:#fff;border-radius:32px;padding:60px 56px;position:relative;overflow:hidden;display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:center;box-shadow:0 40px 100px -20px rgba(10,26,47,.4)}
-.lead-card::before{content:"";position:absolute;top:-200px;right:-100px;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(56,189,248,.32),transparent 60%);filter:blur(60px);pointer-events:none}
-.lead-card::after{content:"";position:absolute;bottom:-150px;left:-100px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(37,99,235,.25),transparent 60%);filter:blur(50px);pointer-events:none}
-.lead-left,.lead-right{position:relative;z-index:2}
-.lead-pill{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border-radius:999px;background:rgba(56,189,248,.14);border:1px solid rgba(56,189,248,.32);color:var(--sky);font-size:10.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-bottom:22px}
-.lead-pill::before{content:"";width:7px;height:7px;border-radius:50%;background:#22c55e;box-shadow:0 0 10px #22c55e;animation:ndotPulse 1.8s ease-in-out infinite}
-@keyframes ndotPulse{0%,100%{box-shadow:0 0 0 0 rgba(34,197,94,.55)}50%{box-shadow:0 0 0 8px rgba(34,197,94,0)}}
-.lead-name{font-size:clamp(40px,4.6vw,62px);font-weight:800;letter-spacing:-.04em;line-height:1;margin-bottom:8px}
-.lead-role{font-size:12.5px;font-weight:700;color:var(--sky);text-transform:uppercase;letter-spacing:.14em;margin-bottom:24px}
-.lead-desc{font-size:16px;line-height:1.65;color:rgba(255,255,255,.78);margin-bottom:32px;max-width:520px}
-.lead-actions{display:flex;flex-wrap:wrap;gap:12px}
-.lead-btn{display:inline-flex;align-items:center;gap:10px;padding:14px 26px;border-radius:999px;font-size:14px;font-weight:700;letter-spacing:-.01em;transition:.3s var(--ease)}
-.lead-btn.primary{background:#fff;color:var(--ink);box-shadow:0 14px 30px -8px rgba(255,255,255,.22)}
-.lead-btn.primary:hover{transform:translateY(-2px);box-shadow:0 22px 50px -10px rgba(255,255,255,.32);background:var(--sky);color:#fff}
-.lead-btn.ghost{border:1.5px solid rgba(255,255,255,.25);color:#fff}
-.lead-btn.ghost:hover{border-color:#fff;background:rgba(255,255,255,.06);transform:translateY(-2px)}
-.lead-right{display:flex;justify-content:center;align-items:center}
-.lead-avatar-big{width:200px;height:200px;border-radius:50%;background:linear-gradient(135deg,var(--blue),var(--sky));display:flex;align-items:center;justify-content:center;font-weight:800;font-size:78px;color:#fff;letter-spacing:.02em;box-shadow:0 30px 60px -10px rgba(37,99,235,.5),0 0 0 8px rgba(255,255,255,.04);position:relative}
-.lead-avatar-big::before{content:"";position:absolute;inset:-16px;border-radius:50%;border:1px solid rgba(56,189,248,.3);animation:rotateRing 14s linear infinite}
-.lead-avatar-big::after{content:"";position:absolute;inset:-30px;border-radius:50%;border:1px solid rgba(56,189,248,.12);animation:rotateRing 22s linear infinite reverse}
-@keyframes rotateRing{from{transform:rotate(0)}to{transform:rotate(360deg)}}
-@media (max-width:880px){
-  .lead-card{grid-template-columns:1fr;text-align:center;padding:48px 32px;gap:32px}
-  .lead-left{order:2}
-  .lead-right{order:1}
-  .lead-desc{margin-left:auto;margin-right:auto}
-  .lead-actions{justify-content:center}
-  .lead-avatar-big{width:140px;height:140px;font-size:54px}
-  .lead-pill{display:inline-flex}
-}
-
-/* ---------- DIRECTORS ---------- */
-.directors{padding:60px 6vw 140px;max-width:1280px;margin:0 auto}
-.directors-head{text-align:center;margin-bottom:50px;max-width:680px;margin-left:auto;margin-right:auto}
-.d-section-pill{display:inline-block;padding:6px 14px;border-radius:999px;background:var(--ice);color:var(--blue);font-size:10.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-bottom:18px}
-.directors-head h2{font-size:clamp(32px,4vw,52px);font-weight:800;letter-spacing:-.03em;line-height:1.08;margin-bottom:14px;color:var(--ink)}
-.directors-head h2 em{font-family:"Instrument Serif",serif;font-style:italic;font-weight:400;background:linear-gradient(135deg,var(--blue),var(--sky));-webkit-background-clip:text;background-clip:text;color:transparent}
-.directors-head p{font-size:15.5px;color:var(--muted);line-height:1.6}
-.directors-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
-.d-card{background:#fff;border:1px solid var(--line);border-radius:24px;padding:34px 30px;display:flex;flex-direction:column;gap:14px;transition:.35s var(--ease);position:relative;overflow:hidden}
-.d-card::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--blue),var(--sky));transform:scaleX(0);transform-origin:left;transition:.45s var(--ease)}
-.d-card:hover{transform:translateY(-8px);border-color:var(--blue);box-shadow:0 30px 70px -20px rgba(37,99,235,.22)}
-.d-card:hover::before{transform:scaleX(1)}
-.d-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:6px}
-.d-avatar{width:60px;height:60px;border-radius:50%;background:linear-gradient(135deg,var(--blue),var(--sky));color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:22px;letter-spacing:.02em;box-shadow:0 10px 24px -6px rgba(37,99,235,.45)}
-.d-pill{display:inline-block;padding:5px 12px;border-radius:999px;background:var(--ice);color:var(--blue);font-size:10.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
-.d-card h3{font-size:24px;font-weight:800;letter-spacing:-.02em;line-height:1.1;margin:0;color:var(--ink)}
-.d-role{font-size:11.5px;font-weight:700;color:var(--blue);text-transform:uppercase;letter-spacing:.1em;margin-top:-6px}
-.d-specialty{font-size:13.5px;color:var(--ink-2);font-weight:500;line-height:1.4}
-.d-pitch{font-size:13.5px;color:var(--muted);line-height:1.6;flex:1}
-.d-contact{padding-top:14px;border-top:1px solid var(--line);display:flex;flex-direction:column;gap:8px}
-.d-mail{display:inline-flex;align-items:center;gap:8px;font-size:13.5px;font-weight:600;color:var(--ink-2);transition:.2s var(--ease)}
-.d-mail:hover{color:var(--blue)}
-.d-mail svg{color:var(--blue);flex-shrink:0}
-.d-tel{font-variant-numeric:tabular-nums;letter-spacing:.01em}
-.d-cta{margin-top:6px;display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 22px;border-radius:999px;background:var(--blue);color:#fff;font-size:13.5px;font-weight:700;letter-spacing:-.01em;transition:.3s var(--ease);box-shadow:0 8px 22px -6px rgba(37,99,235,.45)}
-.d-cta:hover{background:var(--ink);transform:translateY(-2px);box-shadow:0 14px 30px -8px rgba(10,26,47,.5)}
-.d-cta span{transition:transform .25s var(--ease)}
-.d-cta:hover span{transform:translateX(4px)}
-
-.contact-general{margin-top:80px;background:linear-gradient(135deg,var(--ink) 0%,#0f213d 100%);border-radius:28px;padding:60px 48px;color:#fff;position:relative;overflow:hidden}
-.contact-general::before{content:"";position:absolute;top:-150px;right:-150px;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(56,189,248,.35),transparent 60%);filter:blur(40px);pointer-events:none}
-.cg-inner{position:relative;z-index:2;max-width:780px}
-.contact-general h2{font-size:clamp(28px,3.5vw,42px);font-weight:800;letter-spacing:-.025em;line-height:1.1;margin-bottom:14px}
-.contact-general p{font-size:15.5px;color:rgba(255,255,255,.75);line-height:1.65;margin-bottom:28px}
-.contact-general p a{color:var(--sky);font-weight:600;text-decoration:underline;text-underline-offset:3px}
-.cg-actions{display:flex;gap:12px;flex-wrap:wrap}
-.cg-btn{display:inline-flex;align-items:center;gap:8px;padding:14px 24px;border-radius:999px;font-size:13.5px;font-weight:700;letter-spacing:-.01em;transition:.25s var(--ease)}
-.cg-btn.primary{background:var(--blue);color:#fff;box-shadow:0 8px 22px -6px rgba(37,99,235,.55)}
-.cg-btn.primary:hover{background:#fff;color:var(--ink);transform:translateY(-2px)}
-.cg-btn.ghost{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.25)}
-.cg-btn.ghost:hover{border-color:#fff;background:rgba(255,255,255,.08)}
-
-@media (max-width:980px){
-  .directors-grid{grid-template-columns:1fr;gap:18px}
-  .directors{padding:40px 5vw 80px}
-  .contact-general{padding:40px 28px}
-}
-
 /* === SOCIAL NAV === */
 .social-nav{position:fixed;top:18px;right:30px;z-index:80;display:inline-flex;align-items:center;gap:4px;padding:6px;border:1px solid var(--line);background:rgba(255,255,255,.92);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-radius:999px;box-shadow:0 14px 50px -8px rgba(10,26,47,.14);height:54px}
 .social-nav a{display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;border-radius:50%;color:var(--ink-2);transition:.25s var(--ease);text-decoration:none}
@@ -334,7 +252,7 @@ footer .bot{display:flex;justify-content:space-between;padding-top:28px;font-siz
     <li><a href="youcome.html">Accueil</a></li>
     <li><a href="services.html">Services</a></li>
     <li><a href="about.html">À propos</a></li>
-        <li><a href="contact.html" class="is-active">Contact</a></li>
+        <li><a href="contact.html">Contact</a></li>
   </ul>
   <a href="projet.html" class="cta">Démarrer un projet →</a>
 </nav>
@@ -349,123 +267,138 @@ footer .bot{display:flex;justify-content:space-between;padding-top:28px;font-siz
 </div>
 
 <header class="page-head">
-  <span class="pill">Notre équipe</span>
-  <h1>Parlez à <em>la bonne</em><br/>personne.</h1>
-  <p class="lead">Chaque pôle a son directeur dédié. Choisissez le contact qui correspond à votre besoin pour une réponse rapide et un échange direct avec l'expert.</p>
+  <span class="pill">Démarrer un projet</span>
+  <h1>Parlons de votre<br/><em>prochain</em> chapitre.</h1>
+  <p class="lead">Un appel de 30 minutes, sans pitch commercial. On comprend vos enjeux, on vous dit honnêtement si on est le bon partenaire — et si oui, on vous propose un cadre de mission clair sous 5 jours.</p>
 </header>
 
-<!-- THOMAS MANEL — Contact principal PDG -->
-<section class="lead-contact">
-  <article class="lead-card sr">
-    <div class="lead-left">
-      <span class="lead-pill">PDG · Contact principal</span>
-      <h2 class="lead-name">Thomas Malen</h2>
-      <div class="lead-role">Fondateur · You'Com Studio</div>
-      <p class="lead-desc">Partenariats stratégiques, opportunités de mission long-terme, advisory ou simplement une question — c'est par ici. Je réponds personnellement sous 24h ouvrées.</p>
-      <div class="lead-actions">
-        <a href="mailto:t.malen.pro@gmail.com" class="lead-btn primary">t.malen.pro@gmail.com →</a>
-        <a href="tel:+33613335736" class="lead-btn ghost">
-          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          +33 6 13 33 57 36
-        </a>
-        <a href="https://www.linkedin.com/" target="_blank" rel="noopener" class="lead-btn ghost">LinkedIn →</a>
+<div class="contact-wrap">
+  <!-- FORM -->
+  <form class="form-card sr" id="contactForm" method="post" action="/api/contact" novalidate>
+    <h2>Démarrer un projet</h2>
+    <p class="subt">Remplissez ce formulaire — nous revenons vers vous sous 24h ouvrées.</p>
+    <!-- Honeypot anti-spam (caché aux humains, rempli par les bots) -->
+    <input type="text" name="website" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;opacity:0;pointer-events:none" aria-hidden="true">
+    <div id="formError" role="alert" style="display:none;margin-bottom:14px;padding:12px 16px;border-radius:10px;background:#fee;color:#c00;font-size:13px;border:1px solid #fcc"></div>
+
+    <div class="form-row">
+      <div class="field">
+        <label for="firstname">Prénom *</label>
+        <input id="firstname" name="firstname" type="text" required placeholder="Votre prénom">
+      </div>
+      <div class="field">
+        <label for="lastname">Nom *</label>
+        <input id="lastname" name="lastname" type="text" required placeholder="Votre nom">
       </div>
     </div>
-    <div class="lead-right">
-      <div class="lead-avatar-big">TM</div>
+
+    <div class="form-row">
+      <div class="field">
+        <label for="email">Email pro *</label>
+        <input id="email" name="email" type="email" required placeholder="vous@entreprise.com">
+      </div>
+      <div class="field">
+        <label for="company">Société</label>
+        <input id="company" name="company" type="text" placeholder="Nom de votre société">
+      </div>
     </div>
-  </article>
+
+    <div class="form-row">
+      <div class="field full">
+        <label>Services qui vous intéressent</label>
+        <div class="svc-chips-form">
+          <label><input type="checkbox" name="svc" value="saas"><span>SaaS</span></label>
+          <label><input type="checkbox" name="svc" value="comm"><span>Communication</span></label>
+          <label><input type="checkbox" name="svc" value="graph"><span>Graphisme</span></label>
+          <label><input type="checkbox" name="svc" value="video"><span>Création de contenu</span></label>
+          <label><input type="checkbox" name="svc" value="acq"><span>Stratégie d'acquisition</span></label>
+          <label><input type="checkbox" name="svc" value="social"><span>Gestion des réseaux</span></label>
+          <label><input type="checkbox" name="svc" value="ia"><span>Automatisation IA</span></label>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="field full">
+        <label>Budget envisagé <span class="budget-hint" style="color:var(--muted);font-weight:500;text-transform:none;letter-spacing:0;font-size:12px">— adapté aux services sélectionnés</span></label>
+        <div class="budget-chips" id="budgetChips">
+          <label><input type="radio" name="budget" value="t1"><span data-tier="0">&lt; 5 k€</span></label>
+          <label><input type="radio" name="budget" value="t2"><span data-tier="1">5 — 15 k€</span></label>
+          <label><input type="radio" name="budget" value="t3"><span data-tier="2">15 — 40 k€</span></label>
+          <label><input type="radio" name="budget" value="t4"><span data-tier="3">40 — 100 k€</span></label>
+          <label><input type="radio" name="budget" value="t5"><span data-tier="4">100 k€+</span></label>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="field full">
+        <label for="timeline">Timing</label>
+        <select id="timeline" name="timeline">
+          <option value="">Choisir une option…</option>
+          <option value="urgent">Urgent — démarrage immédiat</option>
+          <option value="1m">Sous 1 mois</option>
+          <option value="3m">Sous 3 mois</option>
+          <option value="explore">En exploration — pas de timing fixé</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="field full">
+        <label for="message">Décrivez votre projet * <span style="color:var(--muted);font-weight:500;text-transform:none;letter-spacing:0;font-size:12px">(précisez le budget si dans une tranche)</span></label>
+        <textarea id="message" name="message" required placeholder="Contexte, objectifs, contraintes — soyez aussi précis que possible. Si vous avez choisi une tranche, précisez ici un budget cible."></textarea>
+      </div>
+    </div>
+
+    <div class="submit-row">
+      <button type="submit" class="submit-btn">Envoyer ma demande <svg viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18"/></svg></button>
+      <p class="privacy">En envoyant ce formulaire, vous acceptez notre <a href="#">politique de confidentialité</a>. Vos données ne sont jamais partagées.</p>
+    </div>
+  </form>
+
+  <!-- SIDE INFO -->
+  <aside class="side">
+    <div class="info-card sr">
+      <div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="13" rx="2"/><polyline points="3 7 12 13 21 7"/></svg></div>
+      <h4>Email direct</h4>
+      <p><a href="mailto:hello@youcom.studio">hello@youcom.studio</a><br>Réponse sous 24h ouvrées</p>
+    </div>
+    <div class="info-card sr">
+      <div class="ic"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+      <h4>Présence</h4>
+      <p>Annecy<br>Remote-first · Déplacements possibles</p>
+    </div>
+    <div class="info-card sr">
+      <div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+      <h4>Disponibilité</h4>
+      <p>2 nouveaux projets / mois maximum<br>Pour rester focus sur la qualité</p>
+    </div>
+    <div class="info-card sr">
+      <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 2 L13.8 8.4 L20 11 L13.8 13.6 L12 20 L10.2 13.6 L4 11 L10.2 8.4 Z"/></svg></div>
+      <h4>Formats</h4>
+      <p>Mission ponctuelle, partenariat long-terme ou advisory technique mensuel.</p>
+    </div>
+  </aside>
+</div>
+
+<!-- FAQ -->
+<section class="faq">
+  <div class="top sr">
+    <span class="pill">Questions fréquentes</span>
+    <h2>Avant de <em>nous écrire</em>.</h2>
+  </div>
+  <div class="list">
+    <details class="sr"><summary>Comment fonctionne notre première rencontre ?</summary><p>Un appel de 30 minutes en visio, sans préparation lourde. Vous expliquez votre contexte, on pose les bonnes questions, et on vous dit honnêtement si on est le bon partenaire. Sortie : un compte-rendu écrit + recommandation, même si on ne travaille pas ensemble.</p></details>
+    <details class="sr"><summary>Quels sont vos délais et tarifs typiques ?</summary><p>Une mission SaaS démarre généralement entre 30 et 80 k€ pour un MVP, 80 à 200 k€ pour une plateforme complète. Une mission de communication intégrée démarre à 8 k€/mois. Les délais : 4 à 12 semaines selon le périmètre.</p></details>
+    <details class="sr"><summary>Travaillez-vous avec des startups early-stage ?</summary><p>Oui, mais sous conditions : vous devez avoir une vision claire du problème que vous résolvez et un budget cohérent. Nous proposons aussi un format "advisory" pour les fondateurs qui ont besoin de conseil stratégique sans budget de prod.</p></details>
+    <details class="sr"><summary>Pouvez-vous travailler avec notre équipe interne ?</summary><p>C'est même notre format préféré. Nous nous intégrons dans vos rituels (Slack, Notion, Linear) et formons vos équipes au passage. À la fin de la mission, vous repartez avec un produit que vous savez maintenir.</p></details>
+    <details class="sr"><summary>Êtes-vous éligibles aux dispositifs publics (CIR, France 2030, etc.) ?</summary><p>Oui, nous sommes éligibles au Crédit Impôt Recherche en France et accompagnons régulièrement des projets financés par France 2030, Bpifrance ou des dispositifs canadiens. Nous fournissons toute la documentation requise.</p></details>
+  </div>
 </section>
 
-<!-- DIRECTORS GRID -->
-<section class="directors">
-  <div class="directors-head sr">
-    <span class="d-section-pill">Directeurs de pôle</span>
-    <h2>Contactez l'expert <em>de votre besoin</em></h2>
-    <p>Pour aller vite, écrivez directement au responsable du pôle qui correspond à votre projet.</p>
-  </div>
-  <div class="directors-grid">
-
-    <article class="d-card sr">
-      <div class="d-head">
-        <div class="d-avatar">NH</div>
-        <span class="d-pill">Pôle IA &amp; Tech</span>
-      </div>
-      <h3>Noa Helwina</h3>
-      <div class="d-role">Directeur IA</div>
-      <p class="d-specialty">Responsable SaaS · Responsable Web</p>
-      <p class="d-pitch">Pour tout projet de développement SaaS sur-mesure, intégration IA, plateforme web, automatisation de workflows.</p>
-      <div class="d-contact">
-        <a class="d-mail" href="mailto:noasim.pro@gmail.com">
-          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="13" rx="2"/><polyline points="3 7 12 13 21 7"/></svg>
-          noasim.pro@gmail.com
-        </a>
-        <a class="d-mail d-tel" href="tel:+33612893194">
-          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          +33 6 12 89 31 94
-        </a>
-      </div>
-      <a class="d-cta" href="mailto:noasim.pro@gmail.com">Démarrer la conversation <span>&rarr;</span></a>
-    </article>
-
-    <article class="d-card sr">
-      <div class="d-head">
-        <div class="d-avatar">RM</div>
-        <span class="d-pill">Pôle Création</span>
-      </div>
-      <h3>Roth Mattéo</h3>
-      <div class="d-role">Responsable Création</div>
-      <p class="d-specialty">Création de contenu · Gestion réseaux</p>
-      <p class="d-pitch">Pour toute stratégie éditoriale, production vidéo, gestion de communauté et social media.</p>
-      <div class="d-contact">
-        <a class="d-mail" href="mailto:matteorth.pro@gmail.com">
-          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="13" rx="2"/><polyline points="3 7 12 13 21 7"/></svg>
-          matteorth.pro@gmail.com
-        </a>
-        <a class="d-mail d-tel" href="tel:+33647517565">
-          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          +33 6 47 51 75 65
-        </a>
-      </div>
-      <a class="d-cta" href="mailto:matteorth.pro@gmail.com">Démarrer la conversation <span>&rarr;</span></a>
-    </article>
-
-    <article class="d-card sr">
-      <div class="d-head">
-        <div class="d-avatar">BC</div>
-        <span class="d-pill">Pôle Graphisme</span>
-      </div>
-      <h3>Batiste Cholot</h3>
-      <div class="d-role">Responsable Graphisme</div>
-      <p class="d-specialty">Identité visuelle · Direction artistique</p>
-      <p class="d-pitch">Pour tout projet d'identité visuelle, design system, supports print et digital, motion graphics.</p>
-      <div class="d-contact">
-        <a class="d-mail" href="mailto:batistecht.pro@gmail.com">
-          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="13" rx="2"/><polyline points="3 7 12 13 21 7"/></svg>
-          batistecht.pro@gmail.com
-        </a>
-        <a class="d-mail d-tel" href="tel:+33658028883">
-          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          +33 6 58 02 88 83
-        </a>
-      </div>
-      <a class="d-cta" href="mailto:batistecht.pro@gmail.com">Démarrer la conversation <span>&rarr;</span></a>
-    </article>
-
-  </div>
-
-  <!-- General fallback -->
-  <div class="contact-general sr">
-    <div class="cg-inner">
-      <h2>Vous ne savez pas vers qui vous tourner ?</h2>
-      <p>Écrivez-nous à <a href="mailto:hello@youcom.studio">hello@youcom.studio</a> — on vous oriente vers la bonne personne sous 24h ouvrées.</p>
-      <div class="cg-actions">
-        <a href="mailto:hello@youcom.studio" class="cg-btn primary">Email général</a>
-        <a href="projet.html" class="cg-btn ghost">Démarrer un projet via formulaire <span>&rarr;</span></a>
-      </div>
-    </div>
-  </div>
-</section>
+<!-- TOAST -->
+<div class="toast" id="toast"><span class="check">✓</span><span>Message envoyé. On revient vers vous sous 24h.</span></div>
 
 <footer>
   <div class="grid">
@@ -478,7 +411,7 @@ footer .bot{display:flex;justify-content:space-between;padding-top:28px;font-siz
     </div>
     <div><h5>Studio</h5><ul><li><a href="about.html">À propos</a></li><li><a href="services.html">Cas clients</a></li><li><a href="contact.html">Carrières</a></li></ul></div>
     <div><h5>Services</h5><ul><li><a href="services.html#saas">SaaS sur-mesure</a></li><li><a href="services.html#comm">Communication</a></li><li><a href="services.html#graph">Graphisme</a></li><li><a href="services.html#video">Contenu & réseaux</a></li><li><a href="services.html#acq">Stratégie d'acquisition</a></li><li><a href="services.html#ia">Automatisation IA</a></li></ul></div>
-    <div><h5>Contact</h5><ul><li><a href="mailto:hello@youcom.studio">hello@youcom.studio</a></li><li><a href="projet.html">Démarrer un projet</a></li><li><a href="#">LinkedIn</a></li><li><a href="#">Behance</a></li></ul></div>
+    <div><h5>Contact</h5><ul><li><a href="mailto:hello@youcom.studio">hello@youcom.studio</a></li><li><a href="projet.html">Formulaire</a></li><li><a href="#">LinkedIn</a></li><li><a href="#">Behance</a></li></ul></div>
   </div>
   <div class="bot"><span>© 2026 You'Com Studio · Tous droits réservés</span><span>Annecy · Remote-first</span></div>
 </footer>
@@ -489,7 +422,125 @@ const sio = new IntersectionObserver((entries)=>{
 },{threshold:0.15, rootMargin:'0px 0px -60px 0px'});
 document.querySelectorAll('.sr').forEach(el=>sio.observe(el));
 
+/* ============================================================
+   BUDGET DYNAMIQUE — adapte les tranches aux services sélectionnés
+   Chaque service a 4 bornes (k€). La 5e tranche est ouverte (X+).
+   Multiple services → somme des bornes pour donner une enveloppe globale.
+============================================================ */
+(function(){
+  const SERVICE_TIERS = {
+    saas:   [10, 30, 75, 200],
+    comm:   [3, 10, 25, 60],
+    graph:  [1, 4, 10, 25],
+    video:  [2, 6, 15, 40],
+    acq:    [2, 6, 15, 40],
+    social: [1, 4, 10, 25],
+    ia:     [5, 15, 40, 100]
+  };
+  const DEFAULT_TIERS = [5, 15, 40, 100];
 
+  function fmtNum(n){
+    if (n >= 1000) return (n/1000).toFixed(n%1000===0?0:1).replace('.0','') + ' M€';
+    return n + ' k€';
+  }
+
+  function computeTiers(selected){
+    if (!selected.length) return DEFAULT_TIERS.slice();
+    const t = [0,0,0,0];
+    selected.forEach(s => {
+      const st = SERVICE_TIERS[s];
+      if (!st) return;
+      for (let i=0;i<4;i++) t[i] += st[i];
+    });
+    return t;
+  }
+
+  function updateBudgetChips(){
+    const selected = Array.from(document.querySelectorAll('input[name="svc"]:checked')).map(i=>i.value);
+    const tiers = computeTiers(selected);
+    const spans = document.querySelectorAll('#budgetChips span[data-tier]');
+    spans.forEach(s => {
+      const i = parseInt(s.dataset.tier,10);
+      if (i === 0)      s.textContent = '< ' + fmtNum(tiers[0]);
+      else if (i < 4)   s.textContent = fmtNum(tiers[i-1]) + ' — ' + fmtNum(tiers[i]);
+      else              s.textContent = fmtNum(tiers[3]) + '+';
+    });
+    // Reset radio si chips ont changé pour éviter incohérence
+    document.querySelectorAll('input[name="budget"]').forEach(r => r.checked = false);
+  }
+
+  document.querySelectorAll('input[name="svc"]').forEach(cb => {
+    cb.addEventListener('change', updateBudgetChips);
+  });
+  // Init au chargement (par défaut)
+  updateBudgetChips();
+
+  const form = document.getElementById('contactForm');
+  const toast = document.getElementById('toast');
+  const errBox = document.getElementById('formError');
+  const submitBtn = form.querySelector('.submit-btn');
+  const originalLabel = submitBtn.innerHTML;
+
+  form.addEventListener('submit', async function(e){
+    e.preventDefault();
+    errBox.style.display = 'none';
+    errBox.textContent = '';
+
+    // Validation native côté client
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
+
+    // Désactive le bouton pendant l'envoi
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = 'Envoi en cours…';
+
+    // Collecte les données — budget en texte humain (chip span)
+    const data = new FormData(form);
+    let budgetLabel = '';
+    const checkedBudget = form.querySelector('input[name="budget"]:checked');
+    if (checkedBudget) {
+      const span = checkedBudget.parentElement.querySelector('span');
+      budgetLabel = span ? span.textContent.trim() : '';
+    }
+    const payload = {
+      firstname: data.get('firstname') || '',
+      lastname:  data.get('lastname')  || '',
+      email:     data.get('email')     || '',
+      company:   data.get('company')   || '',
+      budget:    budgetLabel,
+      timeline:  data.get('timeline')  || '',
+      message:   data.get('message')   || '',
+      website:   data.get('website')   || '',  // honeypot
+      svc:       data.getAll('svc')
+    };
+
+    try {
+      const resp = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify(payload)
+      });
+      const json = await resp.json().catch(()=>({}));
+
+      if (!resp.ok || !json.ok) {
+        throw new Error(json.error || 'Une erreur est survenue. Réessayez ou écrivez-nous directement à hello@youcom.studio.');
+      }
+
+      // Succès — toast + reset
+      toast.classList.add('show');
+      setTimeout(()=>toast.classList.remove('show'), 4500);
+      form.reset();
+    } catch (err) {
+      errBox.textContent = err.message;
+      errBox.style.display = 'block';
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = originalLabel;
+    }
+  });
+})();
 </script>
 </body>
 </html>

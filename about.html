@@ -5,12 +5,21 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>À propos — You'Com Studio B2B</title>
 <meta name="description" content="L'histoire de You'Com — studio B2B obsessionnel de la performance. SaaS, communication et croissance sous le même toit." />
+<!-- Favicons & PWA (multi-navigateur, cache + Google) -->
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
 <link rel="icon" type="image/png" sizes="64x64" href="/favicon-64.png">
 <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/favicon-512.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="mask-icon" href="/favicon.svg" color="#2563eb">
+<link rel="manifest" href="/site.webmanifest">
 <meta name="theme-color" content="#2563eb">
+<meta name="application-name" content="You'Com">
+<meta name="apple-mobile-web-app-title" content="You'Com">
+<meta name="msapplication-TileColor" content="#2563eb">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
@@ -240,6 +249,11 @@ footer .bot{display:flex;justify-content:space-between;padding-top:28px;font-siz
   .team .av,.person .av{margin-left:auto;margin-right:auto}
   section img,section svg{max-width:100%;height:auto}
 }
+
+/* === FOND BLANC GLOBAL — sections jadis gris pâle === */
+.page-head,.values,.manifesto{background:#fff!important}
+.page-head::before{display:none!important}
+.values .top .pill{background:var(--ice)}
 </style>
 </head>
 <body>
@@ -257,7 +271,7 @@ footer .bot{display:flex;justify-content:space-between;padding-top:28px;font-siz
     <li><a href="about.html" class="is-active">À propos</a></li>
         <li><a href="contact.html">Contact</a></li>
   </ul>
-  <a href="contact.html" class="cta">Démarrer un projet →</a>
+  <a href="projet.html" class="cta">Démarrer un projet →</a>
 </nav>
 
 <div class="social-nav" aria-label="Réseaux sociaux">
@@ -299,7 +313,7 @@ footer .bot{display:flex;justify-content:space-between;padding-top:28px;font-siz
     <div class="num">03</div>
     <div>
       <h3>Le studio <em>aujourd'hui.</em></h3>
-      <p>14 spécialistes répartis entre Paris et Montréal, en remote-first. Une dizaine de clients accompagnés en parallèle, du SaaS B2B en série A à l'industrie en transformation digitale. Une seule règle : chaque livrable est connecté à un KPI, chaque mois est documenté, chaque euro investi est tracé.</p>
+      <p>14 spécialistes basés à Annecy, en remote-first. Une dizaine de clients accompagnés en parallèle, du SaaS B2B en série A à l'industrie en transformation digitale. Une seule règle : chaque livrable est connecté à un KPI, chaque mois est documenté, chaque euro investi est tracé.</p>
       <p>Nous refusons les missions où nous ne pouvons pas mesurer notre impact. Et nous acceptons celles où le client est prêt à itérer avec nous, sur la durée, comme un vrai partenaire.</p>
     </div>
   </div>
@@ -369,7 +383,7 @@ footer .bot{display:flex;justify-content:space-between;padding-top:28px;font-siz
 <section class="cta-final">
   <h2 class="sr">Travaillons<br/><em>ensemble</em>.</h2>
   <p>Un appel de 30 minutes pour comprendre vos enjeux. Sans pitch commercial, sans engagement.</p>
-  <a href="contact.html" class="btn">Démarrer un projet →</a>
+  <a href="projet.html" class="btn">Démarrer un projet →</a>
 </section>
 
 <footer>
@@ -382,10 +396,10 @@ footer .bot{display:flex;justify-content:space-between;padding-top:28px;font-siz
       <p>Studio B2B. SaaS sur-mesure et communication intégrée pour transformer les marques ambitieuses en moteurs de croissance.</p>
     </div>
     <div><h5>Studio</h5><ul><li><a href="about.html">À propos</a></li><li><a href="services.html">Cas clients</a></li><li><a href="contact.html">Carrières</a></li></ul></div>
-    <div><h5>Services</h5><ul><li><a href="services.html#saas">SaaS sur-mesure</a></li><li><a href="services.html#comm">Communication</a></li><li><a href="services.html#graph">Graphisme</a></li><li><a href="services.html#video">Création de contenu</a></li><li><a href="services.html#acq">Stratégie d'acquisition</a></li><li><a href="services.html#social">Gestion des réseaux</a></li><li><a href="services.html#ia">Automatisation IA</a></li></ul></div>
-    <div><h5>Contact</h5><ul><li><a href="mailto:hello@youcom.studio">hello@youcom.studio</a></li><li><a href="contact.html">Formulaire</a></li><li><a href="#">LinkedIn</a></li><li><a href="#">Behance</a></li></ul></div>
+    <div><h5>Services</h5><ul><li><a href="services.html#saas">SaaS sur-mesure</a></li><li><a href="services.html#comm">Communication</a></li><li><a href="services.html#graph">Graphisme</a></li><li><a href="services.html#video">Contenu & réseaux</a></li><li><a href="services.html#acq">Stratégie d'acquisition</a></li><li><a href="services.html#ia">Automatisation IA</a></li></ul></div>
+    <div><h5>Contact</h5><ul><li><a href="mailto:hello@youcom.studio">hello@youcom.studio</a></li><li><a href="projet.html">Formulaire</a></li><li><a href="#">LinkedIn</a></li><li><a href="#">Behance</a></li></ul></div>
   </div>
-  <div class="bot"><span>© 2026 You'Com Studio · Tous droits réservés</span><span>Paris &amp; Montréal · Remote-first</span></div>
+  <div class="bot"><span>© 2026 You'Com Studio · Tous droits réservés</span><span>Annecy · Remote-first</span></div>
 </footer>
 
 <script>

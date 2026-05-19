@@ -8,12 +8,21 @@
 <meta http-equiv="Expires" content="0" />
 <title>You'Com — Studio B2B • SaaS, Communication & Croissance</title>
 <meta name="description" content="You'Com — Studio B2B. SaaS sur-mesure, Communication, Graphisme, Montage, Stratégie d'acquisition, Gestion réseaux et Automatisation IA." />
+<!-- Favicons & PWA (multi-navigateur, cache + Google) -->
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
 <link rel="icon" type="image/png" sizes="64x64" href="/favicon-64.png">
 <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/favicon-512.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="mask-icon" href="/favicon.svg" color="#2563eb">
+<link rel="manifest" href="/site.webmanifest">
 <meta name="theme-color" content="#2563eb">
+<meta name="application-name" content="You'Com">
+<meta name="apple-mobile-web-app-title" content="You'Com">
+<meta name="msapplication-TileColor" content="#2563eb">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
@@ -60,16 +69,18 @@ button{font:inherit;border:none;cursor:pointer;background:none;color:inherit}
 ::selection{background:var(--blue);color:#fff}
 
 /* ---------- Cursor ---------- */
-.cursor{position:fixed;top:0;left:0;width:14px;height:14px;border-radius:50%;background:var(--blue);pointer-events:none;z-index:9999;mix-blend-mode:multiply;will-change:transform;transition:none}
-.cursor.is-hover{width:54px;height:54px;mix-blend-mode:multiply;background:rgba(37,99,235,.3)}
-@media (max-width:900px){.cursor{display:none}}
+/* Curseur — zero-latence, GPU-accéléré, sans mix-blend-mode (évite les bugs de compositing) */
+.cursor{position:fixed;top:0;left:0;width:14px;height:14px;border-radius:50%;background:var(--blue);pointer-events:none;z-index:9999;will-change:transform;transition:none;transform:translate3d(-100px,-100px,0);contain:layout style;backface-visibility:hidden}
+.cursor::before{content:"";position:absolute;inset:0;border-radius:50%;background:inherit;transform:translate3d(0,0,0);transform-origin:center;transition:transform .18s cubic-bezier(.2,.7,.2,1),background .18s}
+.cursor.is-hover::before{transform:scale(3.6);background:rgba(37,99,235,.28)}
+@media (max-width:900px),(pointer:coarse){.cursor{display:none!important}}
 
 /* ---------- Loader ---------- */
 /* Failsafe CSS : le loader disparaît automatiquement après 2.8s même sans JS */
 @keyframes loFailsafe{0%,85%{opacity:1;transform:none;visibility:visible}100%{opacity:0;transform:translateY(-100%);visibility:hidden}}
 .loader{position:fixed;inset:0;background:#fff;color:var(--ink);z-index:10000;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:28px;overflow:hidden;animation:loFailsafe 2.8s ease forwards}
 .loader .lo-mark{width:120px;height:120px;border-radius:30px;background:linear-gradient(135deg,var(--blue),var(--blue-3));display:flex;align-items:center;justify-content:center;position:relative;animation:logoPop .18s var(--ease) forwards;box-shadow:0 30px 60px -10px rgba(37,99,235,.45)}
-.loader .lo-mark img{width:58%;height:auto;opacity:0;animation:fadein .12s var(--ease) forwards .1s;object-fit:contain;border-radius:10px;background:rgba(255,255,255,.96);padding:9px}
+.loader .lo-mark img{width:72%;height:auto;opacity:0;animation:fadein .12s var(--ease) forwards .1s;object-fit:contain;filter:brightness(0) invert(1)}
 .loader .lo-mark::after{content:"";position:absolute;top:12px;right:12px;width:12px;height:12px;border-radius:50%;background:#fff;opacity:0;animation:fadein .1s var(--ease) forwards .18s}
 .loader .lo-row{display:flex;gap:.04em;font-size:clamp(34px,5vw,52px);font-weight:700;letter-spacing:-.03em;line-height:1;overflow:hidden;height:1em}
 .loader .lo-row span{display:inline-block;transform:translateY(110%);animation:upIn .15s var(--ease) forwards}
@@ -91,8 +102,9 @@ button{font:inherit;border:none;cursor:pointer;background:none;color:inherit}
 
 /* ---------- LOGO (bulletproof, no glitch) ---------- */
 .logo{display:inline-flex;align-items:center;gap:10px;font-weight:700;letter-spacing:-.02em;line-height:1}
+.nav .logo{gap:3px}
 .logo-mark{width:32px;height:auto;border-radius:0;background:none;box-shadow:none;display:flex;align-items:center;justify-content:center;position:relative;flex-shrink:0;transition:transform .35s var(--ease)}
-.nav .logo .logo-text{white-space:nowrap;font-size:18px}
+.nav .logo .logo-text{white-space:nowrap;font-size:22px;font-weight:800}
 .logo-mark img{width:100%;height:auto;display:block;object-fit:contain}
 .logo-mark .dot-apos{display:none}
 @keyframes pulseDot{50%{box-shadow:0 0 0 6px rgba(255,255,255,0)}}
@@ -100,7 +112,7 @@ button{font:inherit;border:none;cursor:pointer;background:none;color:inherit}
 .logo-text{font-size:20px;letter-spacing:-.02em;color:var(--ink)}
 .logo-text .apos{color:var(--blue);font-weight:800}
 .logo-text .apos-img,.logo-text .nav-apos-img{display:inline-block;width:.68em;height:.68em;object-fit:contain;vertical-align:.12em;margin:0 -.06em;mix-blend-mode:multiply}
-.nav .logo-text .apos-img,.nav .logo-text .nav-apos-img{margin:0 -.13em 0 -.06em}
+.nav .logo-text .apos-img,.nav .logo-text .nav-apos-img{width:.95em;height:.95em;vertical-align:.06em;margin:0 -.2em 0 -.08em}
 .logo-mark img{mix-blend-mode:multiply}
 .logo.size-lg{gap:14px}
 .logo.size-lg .logo-mark{width:44px;height:auto;border-radius:0}
@@ -211,7 +223,7 @@ section{position:relative;padding:140px 6vw}
 .orbit-app{position:static;display:flex;flex-direction:column;align-items:center;gap:8px;will-change:transform;background:none;box-shadow:none;border-radius:0;width:auto;height:auto}
 .orbit-app .app-icon{position:relative;width:62px;height:62px;border-radius:16px;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 22px -6px rgba(10,26,47,.22)}
 .orbit-app svg{width:26px;height:26px;stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-.orbit-app .lbl{font-size:11px;letter-spacing:.04em;text-transform:uppercase;font-weight:700;color:var(--ink);white-space:nowrap;line-height:1}
+.orbit-app .lbl{font-size:11.5px;letter-spacing:.04em;text-transform:uppercase;font-weight:900;color:#000;white-space:nowrap;line-height:1}
 .orbit-app .ndot{position:absolute;top:-3px;right:-3px;width:10px;height:10px;border-radius:50%;background:#22c55e;border:2px solid #fff;box-shadow:0 0 0 0 rgba(34,197,94,.55);animation:ndotPulse 1.8s ease-in-out infinite}
 @keyframes ndotPulse{50%{box-shadow:0 0 0 8px rgba(34,197,94,0)}}
 
@@ -284,8 +296,8 @@ section{position:relative;padding:140px 6vw}
 /* MID — neutral */
 .orbit-app.a3 .app-icon,.orbit-app.a4 .app-icon{filter:brightness(.94)}
 /* FAR — dimmed + blur */
-.orbit-app.a2 .app-icon{filter:brightness(.78) blur(.65px);transform:scale(.93)}
-.orbit-app.a6 .app-icon{filter:brightness(.7) blur(1.1px);transform:scale(.88)}
+.orbit-app.a2 .app-icon{transform:scale(.93)}
+.orbit-app.a6 .app-icon{transform:scale(.88)}
 /* Depth reflected in label opacity */
 .orbit-app.a1 .lbl,.orbit-app.a5 .lbl{opacity:1}
 .orbit-app.a3 .lbl,.orbit-app.a4 .lbl{opacity:.8}
@@ -814,7 +826,15 @@ section{position:relative;padding:140px 6vw}
 .svc-primary .pcard.saas .more:hover{background:#fff}
 .svc-primary .pcard.saas .visual{background:radial-gradient(circle,rgba(56,189,248,.25),transparent 70%)}
 
-.svc-primary .pcard.comm{background:linear-gradient(160deg,#dbeafe 0%,#fff 60%);border:1px solid var(--ice)}
+.svc-primary .pcard.comm{background:linear-gradient(135deg,#0a1a2f 0%,#162a4a 100%);color:#fff;border:none}
+.svc-primary .pcard.comm h3,.svc-primary .pcard.comm .rank{color:#fff}
+.svc-primary .pcard.comm .rank .badge{background:var(--sky);color:var(--ink)}
+.svc-primary .pcard.comm p{color:rgba(255,255,255,.7)}
+.svc-primary .pcard.comm .feats div{color:rgba(255,255,255,.85)}
+.svc-primary .pcard.comm .feats div::before{background:var(--sky)}
+.svc-primary .pcard.comm .more{background:var(--sky);color:var(--ink)}
+.svc-primary .pcard.comm .more:hover{background:#fff}
+.svc-primary .pcard.comm .visual{background:radial-gradient(circle,rgba(56,189,248,.25),transparent 70%)}
 
 /* Secondary services grid */
 .svc-secondary-head{display:flex;justify-content:space-between;align-items:flex-end;margin:80px 0 40px;gap:30px;flex-wrap:wrap;position:relative;z-index:2}
@@ -1173,6 +1193,7 @@ body.vsl-locked{overflow:hidden}
 .fly-center .fc-name{
   font-size:clamp(58px,7vw,100px);font-weight:800;
   letter-spacing:-.05em;line-height:.92;color:var(--ink);
+  text-align:center;display:block;width:100%;
 }
 .fly-center .fc-name .apos{color:var(--blue)}
 .fc-name .fc-apos-img{
@@ -1181,7 +1202,7 @@ body.vsl-locked{overflow:hidden}
   height:.82em;
   object-fit:contain;
   vertical-align:.16em;
-  margin:0 -.18em 0 -.12em;
+  margin:0 -.22em 0 -.12em;
   mix-blend-mode:multiply;
 }
 .fly-center .fc-desc{
@@ -1198,12 +1219,11 @@ body.vsl-locked{overflow:hidden}
 .fly-app{
   position:absolute;display:inline-flex;align-items:center;gap:14px;
   padding:16px 26px 16px 16px;border-radius:22px;
-  background:rgba(255,255,255,.96);
+  background:#fff;
   border:1px solid rgba(255,255,255,.9);
   box-shadow:0 28px 72px -12px rgba(10,26,47,.3),0 10px 28px -6px rgba(37,99,235,.2);
-  font-size:16px;font-weight:700;color:var(--ink);letter-spacing:.01em;
+  font-size:16px;font-weight:800;color:var(--ink);letter-spacing:-.005em;
   white-space:nowrap;
-  backdrop-filter:blur(28px);-webkit-backdrop-filter:blur(28px);
   opacity:0;will-change:transform,opacity
 }
 .fly-app .fa-ic{width:44px;height:44px;border-radius:13px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
@@ -1898,7 +1918,7 @@ body.vsl-locked{overflow:hidden}
     <li><a href="about.html">À propos</a></li>
     <li><a href="contact.html">Contact</a></li>
   </ul>
-  <a href="contact.html" class="cta magnetic">Démarrer un projet →</a>
+  <a href="projet.html" class="cta magnetic">Démarrer un projet →</a>
 </nav>
 
 <!-- Social pill — fixed, à côté de la nav -->
@@ -2013,8 +2033,8 @@ body.vsl-locked{overflow:hidden}
     <span class="fc-badge">Studio — Agence B2B &amp; B2C</span>
     <div class="fc-name">You<img class="fc-apos-img" src="logo-apos.jpg" alt="'">Com</div>
     <div class="fc-divider"></div>
-    <p class="fc-desc">Nous transformons les marques ambitieuses en <strong>moteurs de croissance scalables</strong> — SaaS sur-mesure, communication digitale, graphisme, vidéo et automatisation IA. <strong>Un seul interlocuteur. Toute la stack.</strong></p>
-    <a href="contact.html" class="fc-cta">Démarrer un projet <svg viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18"/></svg></a>
+    <p class="fc-desc">Nous transformons les marques ambitieuses en <strong>moteurs de croissance scalables</strong> — SaaS sur-mesure, communication digitale, graphisme, <strong>Montage</strong> et <strong>IA agent</strong>. <strong>Un seul interlocuteur. Toute la stack.</strong></p>
+    <a href="projet.html" class="fc-cta">Démarrer un projet <svg viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18"/></svg></a>
   </div>
 
   <h1 style="visibility:hidden;height:0;margin:0;overflow:hidden" aria-hidden="true">
@@ -2379,8 +2399,8 @@ body.vsl-locked{overflow:hidden}
 <!-- Marquee -->
 <div class="marquee">
   <div class="track">
-    <span>SaaS <i class="star"></i> Communication <i class="star"></i> Graphisme <i class="star"></i> Création de contenu <i class="star"></i> Stratégie d'acquisition <i class="star"></i> Gestion des réseaux <i class="star"></i> Automatisation IA <i class="star"></i></span>
-    <span>SaaS <i class="star"></i> Communication <i class="star"></i> Graphisme <i class="star"></i> Création de contenu <i class="star"></i> Stratégie d'acquisition <i class="star"></i> Gestion des réseaux <i class="star"></i> Automatisation IA <i class="star"></i></span>
+    <span>SaaS <i class="star"></i> Communication <i class="star"></i> Graphisme <i class="star"></i> Contenu & réseaux <i class="star"></i> Stratégie d'acquisition <i class="star"></i> Automatisation IA <i class="star"></i></span>
+    <span>SaaS <i class="star"></i> Communication <i class="star"></i> Graphisme <i class="star"></i> Contenu & réseaux <i class="star"></i> Stratégie d'acquisition <i class="star"></i> Automatisation IA <i class="star"></i></span>
   </div>
 </div>
 
@@ -2393,14 +2413,14 @@ body.vsl-locked{overflow:hidden}
   <!-- Intro — headline left / text right -->
   <div class="ab-intro">
     <div class="sr-x reveal">
-      <div class="ab-pill">Studio B2B · Paris &amp; Montréal · Actif depuis 2023</div>
+      <div class="ab-pill">Studio B2B · Annecy · Actif depuis 2023</div>
       <h2 class="ab-headline">Le studio qui construit <em>ce qui propulse</em> les entreprises.</h2>
     </div>
     <div class="ab-intro-right sr reveal">
       <p class="ab-desc">You'Com est un <strong>studio B2B nouvelle génération</strong> qui fusionne développement SaaS, communication digitale et automatisation IA sous le même toit. Notre mission : transformer les marques ambitieuses en <strong>moteurs de croissance scalables</strong>.<br><br>Pas de sous-traitance. Pas de silos. Une équipe de <strong>14 spécialistes</strong> qui pilotent votre stratégie de A à Z — du produit logiciel à la campagne de marque.</p>
       <div class="ab-cta-row">
         <a href="services.html" class="ab-btn solid">Nos services →</a>
-        <a href="contact.html" class="ab-btn ghost">Prendre contact</a>
+        <a href="projet.html" class="ab-btn ghost">Prendre contact</a>
       </div>
     </div>
   </div>
@@ -2447,7 +2467,7 @@ body.vsl-locked{overflow:hidden}
     </div>
     <div class="ab-stat sr reveal">
       <div class="ab-sval">2023</div>
-      <div class="ab-slbl">Fondé à Paris</div>
+      <div class="ab-slbl">Fondé à Annecy</div>
       <div class="ab-sdesc">Né de la scène startup tech française</div>
     </div>
   </div>
@@ -2456,7 +2476,7 @@ body.vsl-locked{overflow:hidden}
   <div class="ab-footer">
     <p class="ab-footer-title">Prêt à construire quelque chose <em>de mémorable</em>&nbsp;?</p>
     <div class="ab-cta-row">
-      <a href="contact.html" class="ab-btn solid" style="font-size:15px;padding:16px 38px">Démarrer un projet →</a>
+      <a href="projet.html" class="ab-btn solid" style="font-size:15px;padding:16px 38px">Démarrer un projet →</a>
       <a href="services.html" class="ab-btn ghost" style="font-size:15px;padding:16px 38px">Voir nos services</a>
     </div>
   </div>
@@ -2468,9 +2488,9 @@ body.vsl-locked{overflow:hidden}
   <div class="head sr">
     <div>
       <span class="pill">Hiérarchie de services</span>
-      <h2 class="reveal">Deux piliers <em>majeurs</em>, cinq leviers pour scaler.</h2>
+      <h2 class="reveal">Deux piliers <em>majeurs</em>.</h2>
     </div>
-    <p class="lead">Nos clients viennent d'abord pour notre expertise SaaS et notre communication. Nous complétons l'offre avec cinq services satellites pour couvrir tout le spectre de leur croissance.</p>
+    <p class="lead">SaaS et Communication forment notre cœur de métier. Tout s'orchestre autour de ces deux pôles — graphisme, acquisition, contenu, IA — pour livrer une croissance complète et cohérente.</p>
   </div>
 
   <!-- Primary services -->
@@ -2478,13 +2498,13 @@ body.vsl-locked{overflow:hidden}
     <div class="pcard saas reveal">
       <div>
         <div class="rank"><span class="badge">01 · Cœur de métier</span></div>
-        <h3>SaaS sur-mesure</h3>
-        <p>Le développement logiciel est notre principale expertise. Plateformes B2B, dashboards, portails clients, automatisations internes. Conçus comme des produits — pas comme des prototypes.</p>
+        <h3>SaaS x Automatisation IA</h3>
+        <p>SaaS sur-mesure et agents IA opérationnels. Plateformes B2B, dashboards, portails clients et workflows IA — conçus comme des produits, pas comme des prototypes.</p>
         <div class="feats">
-          <div>Dashboards & reporting BI</div>
-          <div>Portails clients white-label</div>
+          <div>Plateformes SaaS sur-mesure</div>
+          <div>Agents IA & workflows custom</div>
+          <div>Intégrations LLM & automatisations</div>
           <div>Architecture scalable & API</div>
-          <div>Maintenance & roadmap continue</div>
         </div>
       </div>
       <a href="services.html#saas" class="more">Découvrir le pôle SaaS →</a>
@@ -2500,12 +2520,12 @@ body.vsl-locked{overflow:hidden}
       <div>
         <div class="rank"><span class="badge">02 · Pilier majeur</span></div>
         <h3>Communication</h3>
-        <p>Notre second métier le plus sollicité. Nous structurons la prise de parole de votre marque sur tous les canaux — éditorial, social, presse, événementiel — pour transformer votre visibilité en pipeline.</p>
+        <p>Notre second métier le plus sollicité. Nous orchestrons toute la prise de parole de votre marque — acquisition, contenu et identité visuelle — pour transformer votre visibilité en pipeline.</p>
         <div class="feats">
-          <div>Stratégie éditoriale & ligne</div>
-          <div>Production de contenu (texte/visuel)</div>
+          <div>Stratégie d'acquisition</div>
+          <div>Contenu & réseaux</div>
+          <div>Graphisme</div>
           <div>Relations presse & influence</div>
-          <div>Brand content & storytelling</div>
         </div>
       </div>
       <a href="services.html#comm" class="more">Découvrir la Communication →</a>
@@ -2521,59 +2541,6 @@ body.vsl-locked{overflow:hidden}
     </div>
   </div>
 
-  <!-- Secondary services -->
-  <div class="svc-secondary-head">
-    <h3>Cinq leviers <em>complémentaires</em><br/>activés selon vos besoins.</h3>
-    <p>Ces services s'articulent autour de SaaS et Communication pour orchestrer une croissance cohérente.</p>
-  </div>
-
-  <div class="svc-secondary sr-stagger">
-    <a href="services.html#graph" class="scard reveal">
-      <div>
-        <div class="ic">◆</div>
-        <div class="num" style="margin-top:24px">03</div>
-        <h4>Graphisme</h4>
-        <p>Identité visuelle, design system, supports print et digital.</p>
-      </div>
-      <div class="arrow">↗</div>
-    </a>
-    <a href="services.html#video" class="scard reveal">
-      <div>
-        <div class="ic">▶</div>
-        <div class="num" style="margin-top:24px">04</div>
-        <h4>Montage Vidéo</h4>
-        <p>Pubs, capsules sociales, motion design éditorial.</p>
-      </div>
-      <div class="arrow">↗</div>
-    </a>
-    <a href="services.html#acq" class="scard reveal">
-      <div>
-        <div class="ic">↗</div>
-        <div class="num" style="margin-top:24px">05</div>
-        <h4>Stratégie d'acquisition</h4>
-        <p>SEO, ads, funnels et performance marketing.</p>
-      </div>
-      <div class="arrow">↗</div>
-    </a>
-    <a href="services.html#social" class="scard reveal">
-      <div>
-        <div class="ic">⏱</div>
-        <div class="num" style="margin-top:24px">06</div>
-        <h4>Gestion des réseaux</h4>
-        <p>Optimisation du temps, planning et community management.</p>
-      </div>
-      <div class="arrow">↗</div>
-    </a>
-    <a href="services.html#ia" class="scard reveal">
-      <div>
-        <div class="ic">✦</div>
-        <div class="num" style="margin-top:24px">07</div>
-        <h4>Automatisation IA</h4>
-        <p>Agents custom, workflows IA, intégrations LLM dans vos outils.</p>
-      </div>
-      <div class="arrow">↗</div>
-    </a>
-  </div>
 </section>
 
 <!-- SAAS DEEP -->
@@ -2759,15 +2726,6 @@ body.vsl-locked{overflow:hidden}
   </div>
 </section>
 
-<!-- CTA FINAL -->
-<section class="cta-final sr-zoom" id="contact">
-  <h2>Parlons de votre <em>prochain</em><br/>chapitre.</h2>
-  <p>Un appel de 30 minutes, sans pitch commercial. On comprend vos enjeux, on vous dit honnêtement si on est le bon partenaire.</p>
-  <div class="cta-btns">
-    <a href="contact.html" class="btn primary">Démarrer un projet →</a>
-  </div>
-</section>
-
 <!-- FOOTER -->
 <footer>
   <div class="grid">
@@ -2794,9 +2752,8 @@ body.vsl-locked{overflow:hidden}
         <li><a href="services.html#saas">SaaS sur-mesure</a></li>
         <li><a href="services.html#comm">Communication</a></li>
         <li><a href="services.html#graph">Graphisme</a></li>
-        <li><a href="services.html#video">Création de contenu</a></li>
+        <li><a href="services.html#video">Contenu & réseaux</a></li>
         <li><a href="services.html#acq">Stratégie d'acquisition</a></li>
-        <li><a href="services.html#social">Gestion des réseaux</a></li>
         <li><a href="services.html#ia">Automatisation IA</a></li>
       </ul>
     </div>
@@ -2804,7 +2761,7 @@ body.vsl-locked{overflow:hidden}
       <h5>Contact</h5>
       <ul>
         <li><a href="mailto:hello@youcom.studio">hello@youcom.studio</a></li>
-        <li><a href="contact.html">Formulaire</a></li>
+        <li><a href="projet.html">Formulaire</a></li>
         <li><a href="#">LinkedIn</a></li>
         <li><a href="#">Behance</a></li>
       </ul>
@@ -2812,7 +2769,7 @@ body.vsl-locked{overflow:hidden}
   </div>
   <div class="bot">
     <span>© 2026 You'Com Studio · Tous droits réservés</span>
-    <span>Paris &amp; Montréal · Remote-first</span>
+    <span>Annecy · Remote-first</span>
   </div>
 </footer>
 
@@ -3029,17 +2986,24 @@ else {
   targets.forEach(t=>sio.observe(t));
 })();
 
-/* Cursor follower — zero lag, direct mousemove */
-const cursor = document.getElementById('cursor');
-if(cursor){
-  document.addEventListener('mousemove', e => {
-    cursor.style.transform = `translate(${e.clientX}px,${e.clientY}px) translate(-50%,-50%)`;
-  }, {passive: true});
-}
-document.querySelectorAll('a, button, .scard, .pcard, .step, .tile, .card, .chip').forEach(el=>{
-  el.addEventListener('mouseenter',()=>cursor && cursor.classList.add('is-hover'));
-  el.addEventListener('mouseleave',()=>cursor && cursor.classList.remove('is-hover'));
-});
+/* Cursor follower — zero-latence, GPU translate3d, capture phase pour ne jamais rater un event */
+(function(){
+  const cursor = document.getElementById('cursor');
+  if(!cursor) return;
+  if(matchMedia('(pointer:coarse)').matches){cursor.style.display='none';return;}
+  const move = e => {
+    cursor.style.transform = `translate3d(${e.clientX}px,${e.clientY}px,0) translate(-50%,-50%)`;
+  };
+  window.addEventListener('mousemove', move, {passive:true, capture:true});
+  window.addEventListener('pointermove', move, {passive:true, capture:true});
+  /* Délégation hover (1 listener au lieu de N) — robuste sur éléments dynamiques */
+  const HOVER_SEL = 'a,button,.scard,.pcard,.step,.tile,.card,.chip,[role="button"],input,textarea,select';
+  document.addEventListener('mouseover', e => { if(e.target.closest && e.target.closest(HOVER_SEL)) cursor.classList.add('is-hover'); }, {passive:true, capture:true});
+  document.addEventListener('mouseout',  e => { if(e.target.closest && e.target.closest(HOVER_SEL)) cursor.classList.remove('is-hover'); }, {passive:true, capture:true});
+  /* Hide hors fenêtre, réapparaît au retour */
+  document.addEventListener('mouseleave', ()=>cursor.style.opacity='0');
+  document.addEventListener('mouseenter', ()=>cursor.style.opacity='1');
+})();
 
 /* Reveal on scroll */
 const io = new IntersectionObserver((entries)=>{

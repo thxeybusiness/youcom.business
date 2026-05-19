@@ -5,12 +5,21 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Services — You'Com Studio B2B</title>
 <meta name="description" content="Les 7 services You'Com : SaaS sur-mesure, Communication, Graphisme, Montage Vidéo, Acquisition, Réseaux sociaux, Automatisation IA." />
+<!-- Favicons & PWA (multi-navigateur, cache + Google) -->
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
 <link rel="icon" type="image/png" sizes="64x64" href="/favicon-64.png">
 <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/favicon-512.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="mask-icon" href="/favicon.svg" color="#2563eb">
+<link rel="manifest" href="/site.webmanifest">
 <meta name="theme-color" content="#2563eb">
+<meta name="application-name" content="You'Com">
+<meta name="apple-mobile-web-app-title" content="You'Com">
+<meta name="msapplication-TileColor" content="#2563eb">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
@@ -341,6 +350,10 @@ footer .bot{display:flex;justify-content:space-between;padding-top:28px;font-siz
   .svc,.process,.page-head{overflow:hidden;position:relative}
   section img,section svg{max-width:100%;height:auto}
 }
+
+/* === FOND BLANC GLOBAL — sections jadis gris pâle === */
+.page-head,.svc,.svc:nth-child(even){background:#fff!important}
+.page-head::before{display:none!important}
 </style>
 </head>
 <body>
@@ -359,7 +372,7 @@ footer .bot{display:flex;justify-content:space-between;padding-top:28px;font-siz
     <li><a href="about.html">À propos</a></li>
     <li><a href="contact.html">Contact</a></li>
   </ul>
-  <a href="contact.html" class="cta">Démarrer un projet →</a>
+  <a href="projet.html" class="cta">Démarrer un projet →</a>
 </nav>
 
 <div class="social-nav" aria-label="Réseaux sociaux">
@@ -374,9 +387,19 @@ footer .bot{display:flex;justify-content:space-between;padding-top:28px;font-siz
 <!-- HEADER -->
 <header class="page-head">
   <span class="pill">Catalogue complet</span>
-  <h1>Sept expertises.<br/>Une seule <em>équipe.</em></h1>
-  <p class="lead">SaaS sur-mesure et communication intégrée comme piliers, complétés par cinq leviers stratégiques. Chaque service est designé pour s'orchestrer avec les autres.</p>
+  <h1>Six expertises.<br/>Une seule <em>équipe.</em></h1>
+  <p class="lead">SaaS sur-mesure et communication intégrée comme piliers, complétés par quatre leviers stratégiques. Chaque service est designé pour s'orchestrer avec les autres.</p>
 </header>
+
+<!-- CHIPS — sommaire entre "Sept expertises" et "De l'idée à l'impact" -->
+<nav class="svc-chips" aria-label="Sommaire des services">
+  <a href="#saas"><span>01</span> SaaS</a>
+  <a href="#comm"><span>02</span> Communication</a>
+  <a href="#graph"><span>03</span> Graphisme</a>
+  <a href="#video"><span>04</span> Contenu & réseaux</a>
+  <a href="#acq"><span>05</span> Stratégie d'acquisition</a>
+  <a href="#ia"><span>06</span> Automatisation IA</a>
+</nav>
 
 <!-- PROCESS -->
 <section class="process" id="process">
@@ -390,17 +413,6 @@ footer .bot{display:flex;justify-content:space-between;padding-top:28px;font-siz
     <div class="step sr"><div class="dot"></div><div class="num">Étape 04</div><h4>Lancement</h4><p>Mise en ligne, formation, suivi des KPIs. On reste partenaires pour piloter la performance et itérer.</p></div>
   </div>
 </section>
-
-<!-- CHIPS -->
-<nav class="svc-chips" aria-label="Sommaire des services">
-  <a href="#saas"><span>01</span> SaaS</a>
-  <a href="#comm"><span>02</span> Communication</a>
-  <a href="#graph"><span>03</span> Graphisme</a>
-  <a href="#video"><span>04</span> Création de contenu</a>
-  <a href="#acq"><span>05</span> Stratégie d'acquisition</a>
-  <a href="#social"><span>06</span> Gestion des réseaux</a>
-  <a href="#ia"><span>07</span> Automatisation IA</a>
-</nav>
 
 <!-- 01 SAAS -->
 <section class="svc" id="saas">
@@ -419,7 +431,7 @@ footer .bot{display:flex;justify-content:space-between;padding-top:28px;font-siz
         <li>Stack moderne (Next, Supabase…)</li>
       </ul>
       <div class="actions">
-        <a href="contact.html" class="btn primary">Lancer un projet SaaS →</a>      </div>
+        <a href="projet.html" class="btn primary">Lancer un projet SaaS →</a>      </div>
     </div>
     <div class="visual sr-zoom">
       <div class="vbox">
@@ -464,7 +476,7 @@ footer .bot{display:flex;justify-content:space-between;padding-top:28px;font-siz
         <li>Événements & lancements</li>
       </ul>
       <div class="actions">
-        <a href="contact.html" class="btn primary">Structurer ma communication →</a>      </div>
+        <a href="projet.html" class="btn primary">Structurer ma communication →</a>      </div>
     </div>
     <div class="visual sr-zoom">
       <div class="vbox">
@@ -502,7 +514,7 @@ footer .bot{display:flex;justify-content:space-between;padding-top:28px;font-siz
         <li>Motion graphics</li>
       </ul>
       <div class="actions">
-        <a href="contact.html" class="btn primary">Refondre mon identité →</a>      </div>
+        <a href="projet.html" class="btn primary">Refondre mon identité →</a>      </div>
     </div>
     <div class="visual sr-zoom">
       <div class="vbox">
@@ -519,22 +531,24 @@ footer .bot{display:flex;justify-content:space-between;padding-top:28px;font-siz
 
 <!-- 04 VIDEO -->
 <section class="svc flip" id="video">
+  <a id="social" style="position:absolute;top:-90px"></a>
   <div class="grid">
     <div class="copy sr-x">
       <span class="num">04</span>
-      <span class="pill">Production vidéo</span>
-      <h2>Montage <em>vidéo</em></h2>
-      <p class="desc">Pubs, capsules sociales, motion design éditorial, vidéos produit. De l'écriture du script au mixage final, nous produisons des vidéos qui captivent dès la 3e seconde et convertissent dès la première vue.</p>
+      <span class="pill">Contenu & social</span>
+      <h2>Création de contenu &amp; <em>gestion des réseaux</em></h2>
+      <p class="desc">Production vidéo, capsules sociales et motion design — orchestrés avec un community management premium. Nous produisons les formats qui captivent dès la 3e seconde et gérons la cadence de publication. Vous gardez la voix, nous prenons l'opérationnel et le reporting.</p>
       <ul>
-        <li>Capsules réseaux sociaux</li>
+        <li>Capsules réseaux & reels</li>
         <li>Vidéos produit & démo</li>
-        <li>Pubs YouTube/Meta</li>
-        <li>Motion design</li>
-        <li>Sous-titrage & versions</li>
-        <li>Reels & shorts</li>
+        <li>Motion design éditorial</li>
+        <li>Planning éditorial mensuel</li>
+        <li>Community management</li>
+        <li>Analytics & reporting</li>
       </ul>
       <div class="actions">
-        <a href="contact.html" class="btn primary">Produire une vidéo →</a>      </div>
+        <a href="projet.html" class="btn primary">Démarrer le projet →</a>
+      </div>
     </div>
     <div class="visual sr-zoom">
       <div class="vbox">
@@ -567,7 +581,7 @@ footer .bot{display:flex;justify-content:space-between;padding-top:28px;font-siz
         <li>Tracking GA4/Plausible</li>
       </ul>
       <div class="actions">
-        <a href="contact.html" class="btn primary">Booster mon acquisition →</a>      </div>
+        <a href="projet.html" class="btn primary">Booster mon acquisition →</a>      </div>
     </div>
     <div class="visual sr-zoom">
       <div class="vbox">
@@ -582,43 +596,11 @@ footer .bot{display:flex;justify-content:space-between;padding-top:28px;font-siz
   </div>
 </section>
 
-<!-- 06 SOCIAL -->
-<section class="svc flip" id="social">
-  <div class="grid">
-    <div class="copy sr-x">
-      <span class="num">06</span>
-      <span class="pill">Community management</span>
-      <h2>Gestion des <em>réseaux</em></h2>
-      <p class="desc">Optimisation du temps, planning éditorial et community management pro. Nous prenons en main la cadence de publication, la modération et le reporting — vous gardez la voix, nous gérons l'opérationnel.</p>
-      <ul>
-        <li>Planning éditorial mensuel</li>
-        <li>Community management</li>
-        <li>Modération & réponses</li>
-        <li>Analytics & reporting</li>
-        <li>Audit & repositionnement</li>
-        <li>LinkedIn personal branding</li>
-      </ul>
-      <div class="actions">
-        <a href="contact.html" class="btn primary">Déléguer mes réseaux →</a>      </div>
-    </div>
-    <div class="visual sr-zoom">
-      <div class="vbox">
-        <div class="v-social">
-          <div class="post"><div class="head"><div class="av"></div><div class="name">@youcom</div></div><div class="img"></div><div class="lines"><span></span><span></span></div><div class="stats"><span>♥ 248</span><span>↗ 64</span></div></div>
-          <div class="post"><div class="head"><div class="av"></div><div class="name">@youcom</div></div><div class="img" style="background:linear-gradient(135deg,#fb923c,#fbbf24)"></div><div class="lines"><span></span><span></span></div><div class="stats"><span>♥ 412</span><span>↗ 88</span></div></div>
-          <div class="post"><div class="head"><div class="av"></div><div class="name">@youcom</div></div><div class="img" style="background:linear-gradient(135deg,#0a1a2f,#1e3a8a)"></div><div class="lines"><span></span><span></span></div><div class="stats"><span>♥ 192</span><span>↗ 32</span></div></div>
-          <div class="post"><div class="head"><div class="av"></div><div class="name">@youcom</div></div><div class="img"></div><div class="lines"><span></span><span></span></div><div class="stats"><span>♥ 678</span><span>↗ 124</span></div></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 07 IA -->
+<!-- 06 IA -->
 <section class="svc" id="ia">
   <div class="grid">
     <div class="copy sr-x">
-      <span class="num">07</span>
+      <span class="num">06</span>
       <span class="pill">Intelligence artificielle</span>
       <h2>Automatisation <em>IA</em></h2>
       <p class="desc">Agents custom, workflows IA, intégrations LLM dans vos outils. Nous identifions les tâches manuelles à fort coût et nous les remplaçons par des automatisations intelligentes — RAG, agents, scoring, génération de contenu.</p>
@@ -631,7 +613,7 @@ footer .bot{display:flex;justify-content:space-between;padding-top:28px;font-siz
         <li>Fine-tuning sectoriel</li>
       </ul>
       <div class="actions">
-        <a href="contact.html" class="btn primary">Lancer un projet IA →</a>      </div>
+        <a href="projet.html" class="btn primary">Lancer un projet IA →</a>      </div>
     </div>
     <div class="visual sr-zoom">
       <div class="vbox">
@@ -661,7 +643,7 @@ footer .bot{display:flex;justify-content:space-between;padding-top:28px;font-siz
 <section class="cta-final sr-zoom">
   <h2>Un seul service.<br/>Un seul <em>partenaire.</em></h2>
   <p>Vous pouvez nous solliciter pour un projet ponctuel ou pour orchestrer toute votre stack. Démarrons par un appel de 30 min.</p>
-  <a href="contact.html" class="btn">Démarrer un projet →</a>
+  <a href="projet.html" class="btn">Démarrer un projet →</a>
 </section>
 
 <!-- FOOTER -->
@@ -690,9 +672,8 @@ footer .bot{display:flex;justify-content:space-between;padding-top:28px;font-siz
         <li><a href="services.html#saas">SaaS sur-mesure</a></li>
         <li><a href="services.html#comm">Communication</a></li>
         <li><a href="services.html#graph">Graphisme</a></li>
-        <li><a href="services.html#video">Création de contenu</a></li>
+        <li><a href="services.html#video">Contenu & réseaux</a></li>
         <li><a href="services.html#acq">Stratégie d'acquisition</a></li>
-        <li><a href="services.html#social">Gestion des réseaux</a></li>
         <li><a href="services.html#ia">Automatisation IA</a></li>
       </ul>
     </div>
@@ -700,7 +681,7 @@ footer .bot{display:flex;justify-content:space-between;padding-top:28px;font-siz
       <h5>Contact</h5>
       <ul>
         <li><a href="mailto:hello@youcom.studio">hello@youcom.studio</a></li>
-        <li><a href="contact.html">Formulaire</a></li>
+        <li><a href="projet.html">Formulaire</a></li>
         <li><a href="#">LinkedIn</a></li>
         <li><a href="#">Behance</a></li>
       </ul>
@@ -708,7 +689,7 @@ footer .bot{display:flex;justify-content:space-between;padding-top:28px;font-siz
   </div>
   <div class="bot">
     <span>© 2026 You'Com Studio · Tous droits réservés</span>
-    <span>Paris &amp; Montréal · Remote-first</span>
+    <span>Annecy · Remote-first</span>
   </div>
 </footer>
 
