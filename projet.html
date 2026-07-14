@@ -307,13 +307,12 @@ footer .bot{display:flex;justify-content:space-between;padding-top:28px;font-siz
       <div class="field full">
         <label>Services qui vous intéressent</label>
         <div class="svc-chips-form">
-          <label><input type="checkbox" name="svc" value="saas"><span>SaaS</span></label>
+          <label><input type="checkbox" name="svc" value="site"><span>Création de site internet</span></label>
           <label><input type="checkbox" name="svc" value="comm"><span>Communication</span></label>
           <label><input type="checkbox" name="svc" value="graph"><span>Graphisme</span></label>
           <label><input type="checkbox" name="svc" value="video"><span>Création de contenu</span></label>
           <label><input type="checkbox" name="svc" value="acq"><span>Stratégie d'acquisition</span></label>
           <label><input type="checkbox" name="svc" value="social"><span>Gestion des réseaux</span></label>
-          <label><input type="checkbox" name="svc" value="ia"><span>Automatisation IA</span></label>
         </div>
       </div>
     </div>
@@ -390,7 +389,7 @@ footer .bot{display:flex;justify-content:space-between;padding-top:28px;font-siz
   </div>
   <div class="list">
     <details class="sr"><summary>Comment fonctionne notre première rencontre ?</summary><p>Un appel de 30 minutes en visio, sans préparation lourde. Vous expliquez votre contexte, on pose les bonnes questions, et on vous dit honnêtement si on est le bon partenaire. Sortie : un compte-rendu écrit + recommandation, même si on ne travaille pas ensemble.</p></details>
-    <details class="sr"><summary>Quels sont vos délais et tarifs typiques ?</summary><p>Une mission SaaS démarre généralement entre 30 et 80 k€ pour un MVP, 80 à 200 k€ pour une plateforme complète. Une mission de communication intégrée démarre à 8 k€/mois. Les délais : 4 à 12 semaines selon le périmètre.</p></details>
+    <details class="sr"><summary>Quels sont vos délais et tarifs typiques ?</summary><p>Un site internet démarre entre 3 et 15 k€ selon le périmètre — vitrine, e-commerce ou sur-mesure. Une mission de communication intégrée démarre à 2 k€/mois. Les délais : 2 à 8 semaines selon le périmètre.</p></details>
     <details class="sr"><summary>Travaillez-vous avec des startups early-stage ?</summary><p>Oui, mais sous conditions : vous devez avoir une vision claire du problème que vous résolvez et un budget cohérent. Nous proposons aussi un format "advisory" pour les fondateurs qui ont besoin de conseil stratégique sans budget de prod.</p></details>
     <details class="sr"><summary>Pouvez-vous travailler avec notre équipe interne ?</summary><p>C'est même notre format préféré. Nous nous intégrons dans vos rituels (Slack, Notion, Linear) et formons vos équipes au passage. À la fin de la mission, vous repartez avec un produit que vous savez maintenir.</p></details>
     <details class="sr"><summary>Êtes-vous éligibles aux dispositifs publics (CIR, France 2030, etc.) ?</summary><p>Oui, nous sommes éligibles au Crédit Impôt Recherche en France et accompagnons régulièrement des projets financés par France 2030, Bpifrance ou des dispositifs canadiens. Nous fournissons toute la documentation requise.</p></details>
@@ -407,10 +406,10 @@ footer .bot{display:flex;justify-content:space-between;padding-top:28px;font-siz
         <span class="logo-mark"><img src="logo-apos.png" alt="You'Com" draggable="false"/></span>
         <span class="logo-text">You<img class="apos-img" src="logo-apos.jpg" alt="'">Com</span>
       </div>
-      <p>Studio B2B. SaaS sur-mesure et communication intégrée pour transformer les marques ambitieuses en moteurs de croissance.</p>
+      <p>Studio B2B & B2C. Communication intégrée et création de sites internet pour transformer les marques ambitieuses en moteurs de croissance.</p>
     </div>
     <div><h5>Studio</h5><ul><li><a href="about.html">À propos</a></li><li><a href="services.html">Cas clients</a></li><li><a href="contact.html">Carrières</a></li></ul></div>
-    <div><h5>Services</h5><ul><li><a href="services.html#saas">SaaS sur-mesure</a></li><li><a href="services.html#comm">Communication</a></li><li><a href="services.html#graph">Graphisme</a></li><li><a href="services.html#video">Contenu & réseaux</a></li><li><a href="services.html#acq">Stratégie d'acquisition</a></li><li><a href="services.html#ia">Automatisation IA</a></li></ul></div>
+    <div><h5>Services</h5><ul><li><a href="services.html#site">Création de site internet</a></li><li><a href="services.html#comm">Communication</a></li><li><a href="services.html#graph">Graphisme</a></li><li><a href="services.html#video">Contenu & réseaux</a></li><li><a href="services.html#acq">Stratégie d'acquisition</a></li></ul></div>
     <div><h5>Contact</h5><ul><li><a href="mailto:hello@youcom.studio">hello@youcom.studio</a></li><li><a href="projet.html">Formulaire</a></li><li><a href="#">LinkedIn</a></li><li><a href="#">Behance</a></li></ul></div>
   </div>
   <div class="bot"><span>© 2026 You'Com Studio · Tous droits réservés</span><span>Annecy · Remote-first</span></div>
@@ -429,13 +428,12 @@ document.querySelectorAll('.sr').forEach(el=>sio.observe(el));
 ============================================================ */
 (function(){
   const SERVICE_TIERS = {
-    saas:   [10, 30, 75, 200],
+    site:   [3, 6, 12, 25],
     comm:   [3, 10, 25, 60],
     graph:  [1, 4, 10, 25],
     video:  [2, 6, 15, 40],
     acq:    [2, 6, 15, 40],
-    social: [1, 4, 10, 25],
-    ia:     [5, 15, 40, 100]
+    social: [1, 4, 10, 25]
   };
   const DEFAULT_TIERS = [5, 15, 40, 100];
 
