@@ -1,0 +1,16 @@
+# Dependencies
+node_modules/
+
+# Environnement & secrets — ne JAMAIS committer
+.env
+.env.*
+!.env.example
+*.local
+
+# Vercel
+.vercel
+
+# OS / éditeurs
+.DS_Store
+Thumbs.db
+*.log
